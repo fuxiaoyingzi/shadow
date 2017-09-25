@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.administrator.shadowapplication.activity.CustomViewActivity">
+
+    <com.example.administrator.shadowapplication.widget.CustomView
+        app:circle_width="10dp"
+        app:paint_color="@color/md_pink_400"
+        app:paint_width="1dp"
+       app:paint_text_size="20dp"
+        app:rect_color="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+</LinearLayout>

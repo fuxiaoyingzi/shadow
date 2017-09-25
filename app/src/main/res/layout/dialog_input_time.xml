@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:gravity="start"
+    android:background="@drawable/bg_white_rounded_rect"
+    android:padding="10dp">
+    <TextView
+        android:textColor="@color/md_pink_600"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text="请输入时间"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:textColor="@color/md_pink_400"
+        android:id="@+id/inputTime"
+        android:hint="输入时间"
+        android:textColorHint="@color/grey"
+        android:textSize="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@color/md_pink_A100"
+            android:layout_marginRight="20dp"
+            android:id="@+id/conFirm"
+            android:text="确定"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="@color/md_pink_A100"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/cancle"
+            android:text="取消"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

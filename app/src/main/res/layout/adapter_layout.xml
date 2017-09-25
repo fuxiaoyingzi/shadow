@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <TextView
+        android:id="@+id/subjectText"
+        android:background="@color/md_red_300"
+        android:paddingLeft="30dp"
+        android:gravity="center_vertical"
+        android:text="时间都去哪里"
+        android:textColor="@color/md_pink_500"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>
