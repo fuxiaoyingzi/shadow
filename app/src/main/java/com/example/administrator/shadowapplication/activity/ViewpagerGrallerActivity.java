@@ -13,6 +13,9 @@ import android.widget.RelativeLayout;
 
 import com.example.administrator.shadowapplication.R;
 
+/**
+ * 测试viewpager的画廊效果 setPageTransformer
+ */
 public class ViewpagerGrallerActivity extends AppCompatActivity {
     ViewPager mViewPager;
     RelativeLayout mViewPagerBox;
@@ -125,8 +128,6 @@ public class ViewpagerGrallerActivity extends AppCompatActivity {
             }
 
         }
-
-
     }
 
 }

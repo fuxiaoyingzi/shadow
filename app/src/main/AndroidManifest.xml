@@ -46,15 +46,20 @@
         </activity>
         <activity android:name=".sport.activity.CountDownActivity" />
         <activity android:name=".sport.activity.TestCompatActivity" />
-        <activity android:name=".activity.CustomViewActivity">
-
-        </activity>
+        <activity android:name=".activity.CustomViewActivity"></activity>
         <activity android:name=".activity.ViewpagerGrallerActivity">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".activity.NotificationActivity">
+             <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+
+              <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
         </activity>
     </application>
 
