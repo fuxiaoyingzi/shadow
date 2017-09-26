@@ -5,18 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.administrator.shadowapplication.activity.NotificationActivity">
+
     <Button
         android:id="@+id/buttonPanel"
-        android:text="发送通知"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="发送通知" />
+
+    <Button
+        android:id="@+id/buttonPane2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendCustomNotification"
+        android:text="发送自定义通知"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPanel" />
+
+    <Button
+        android:id="@+id/buttonPane3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendStandardNotification"
+        android:text="发送标准通知"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPane2" />
+
     <TextView
-        app:layout_constraintTop_toBottomOf="@+id/buttonPanel"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        app:layout_constraintLeft_toRightOf="@+id/buttonPanel"
-        android:text="测试constraintLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="测试constraintLayout"
+        app:layout_constraintLeft_toRightOf="@+id/buttonPane2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPanel" />
 
 </android.support.constraint.ConstraintLayout>
