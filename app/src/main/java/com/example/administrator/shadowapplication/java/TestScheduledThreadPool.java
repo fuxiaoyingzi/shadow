@@ -1,9 +1,7 @@
 package com.example.administrator.shadowapplication.java;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Created by Administrator on 2017/9/28.

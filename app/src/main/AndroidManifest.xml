@@ -58,10 +58,18 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".activity.NotificationActivity">
-
-        </activity>
+        <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.TestContentProvideActivity">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".activity.TestWebActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".thread_test.AsyncTaskActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
