@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--android:defaultValue 设置默认值-->
+    <!--android:key 在Preference里面存储的key,在代码中通过此key索引Preference对象-->
+    <!--android:title 标题-->
+    <!--android:summary 描述,对选项进一步补充描述    -->
+    <!--PreferenceCategory一组分类-->
+    <com.example.administrator.shadowapplication.setting.CustomPreference
+        android:key="custom_pre"
+        android:title="自定义测试"
+        app:preference_title="测试自定义属性"
+        app:preference_value="shadow" />
+
+    <PreferenceCategory android:title="@string/category_network">
+        <!--选择控件-->
+        <SwitchPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:key="setting_wifi"
+            android:title="Wi-Fi" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:key="setting_bluetouh"
+            android:title="蓝牙" />
+
+        <!--PreferenceScreen代表一页选项,当点击进去的时候会跳转到另一个页面,点击返回按钮会回到上一个页面-->
+        <PreferenceScreen
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:key="setting_traffic_usage"
+            android:title="流量使用情况" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/category_device">
+        <PreferenceScreen
+            android:key="setting_sound"
+            android:title="声音" />
+        <PreferenceScreen
+            android:key="setting_display"
+            android:title="显示" />
+        <PreferenceScreen
+            android:key="setting_storage"
+            android:title="存储" />
+        <PreferenceScreen
+            android:key="setting_battery"
+            android:title="电池" />
+        <PreferenceScreen
+            android:key="setting_application"
+            android:title="应用" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/category_system">
+        <PreferenceScreen
+            android:key="setting_date_time"
+            android:title="日期和时间">
+            <CheckBoxPreference
+                android:key="auto_set_date_time"
+                android:summary="使用网络上的时间"
+                android:title="自动确定日期和时间" />
+            <CheckBoxPreference
+                android:key="auto_set_timezone"
+                android:summary="使用网络上的时区"
+                android:title="自动确定时区" />
+            <Preference
+                android:dependency="auto_set_date_time"
+                android:summary="2016-1-21"
+                android:title="设置日期" />
+            <Preference
+                android:dependency="auto_set_date_time"
+                android:summary="上午 10:43"
+                android:title="设置时间" />
+            <ListPreference
+                android:dependency="auto_set_timezone"
+                android:entries="@array/time_zone"
+                android:entryValues="@array/time_zone"
+                android:key="setting_timezone"
+                android:title="现在时区" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="setting_auxiliary_function"
+            android:title="辅助功能" />
+        <PreferenceScreen
+            android:key="setting_developer_options"
+            android:title="开发者选项">
+            <Preference
+                android:summary="桌面备份密码"
+                android:title="桌面完成备份当前未设置密码保护" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="charge_lock_screen"
+                android:summary="充电时屏幕不会休眠"
+                android:title="不锁定屏幕" />
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="never_sleep"
+                android:summary="Screen will never sleep"
+                android:title="Always stay awake" />
+
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="setting_about_phone"
+            android:title="关于手机">
+            <Preference
+                android:summary="电话号码、信号等"
+                android:title="状态信息" />
+            <Preference android:title="法律信息" />
+            <Preference
+                android:summary="Samsung Galaxy S2 - 4.1.1 - API 16 - 480*800"
+                android:title="信号" />
+            <Preference
+                android:summary="4.1.1"
+                android:title="Android版本" />
+            <Preference
+                android:summary="未知"
+                android:title="基带版本" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <Preference android:title="关于">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://blog.csdn.net/zq2114522" />
+    </Preference>
+</PreferenceScreen>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="preference_atts">
+        <attr name="preference_title" format="string"/>
+        <attr name="preference_value" format="string"/>
+    </declare-styleable>
+</resources>

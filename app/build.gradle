@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'shadow'
+            keyPassword PASSWORD
+            storeFile file('D:/apk/apk.jks')
+            storePassword PASSWORD
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
@@ -11,11 +19,54 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    /*   signingConfigs { //签名配置文件
+           xingzhe_keystore { //配置文件的自定义名称
+               keyAlias 'xingzhe' //钥匙别名
+               keyPassword KEYSTORE_PASSWORD //秘钥密码
+               storeFile file('xingzhe.keystore') //签名文件
+               storePassword KEYSTORE_PASSWORD //文件密码
+               //v2SigningEnabled false //⒈打包是否开启签名
+           }
+
+       }*/
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true //打开混淆
+            shrinkResources true //打开压缩资源
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.xingzhe_keystore
+            debuggable false
+            signingConfig signingConfigs.config
         }
+        debug {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.config
+        }
+    }
+//productFlavors打包渠道就在这儿配置咯 同时在AndroidManifest里面加上，渠道标识
+    productFlavors {
+        Baidu {}
+        Tencent {}
+        Xiaomi {}
+        _360 {}
+        WanDouJia {}
+        AppChina {}
+        MeiZu {}
+        HuaWei {}
+        Oppo {}
+        Vivo {}
+        Lenovo {}
+        AnZhi {}
+        GooglePlay {}
+        ZTE {}
+        XingZhe {}
+    }
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+    dexOptions {
+        incremental true
     }
 }
 
@@ -24,7 +75,7 @@ ext {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -35,7 +86,10 @@ dependencies {
     compile "com.android.support:support-vector-drawable:$supportVersion"
     compile "com.android.support:support-v4:$supportVersion"
     compile "com.android.support:support-vector-drawable:$supportVersion"
-
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
     testCompile 'junit:junit:4.12'
 }

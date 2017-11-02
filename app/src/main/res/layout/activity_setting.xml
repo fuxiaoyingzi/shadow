@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.administrator.shadowapplication.setting.SettingActivity">
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="58dp">
+      <android.support.v7.widget.Toolbar
+          android:title="参数设置"
+          android:id="@+id/toolbar"
+          android:gravity="center"
+          android:background="@color/md_pink_300"
+          android:layout_gravity="center"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+  </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:id="@+id/contentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

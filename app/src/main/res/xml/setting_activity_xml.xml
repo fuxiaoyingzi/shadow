@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="fragment1"
+        android:fragment="com.example.administrator.shadowapplication.setting.TestPreferenceFragment"
+        android:summary="hello shadow"/>
+    <header
+        android:fragment="com.example.administrator.shadowapplication.setting.TestPreferenceFragment2"
+        android:title="fragment2"
+        android:summary="hello world" />
+
+
+
+</preference-headers>

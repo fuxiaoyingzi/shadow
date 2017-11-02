@@ -24,11 +24,11 @@
         <activity android:name=".activity.MainActivity">
 
             <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
             -->
         </activity>
         <activity android:name=".activity.MaterialDesignActivity" />
@@ -60,16 +60,39 @@
         </activity>
         <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.TestContentProvideActivity">
-           <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            <!--
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".activity.TestWebActivity"
             android:launchMode="singleTask" />
         <activity android:name=".thread_test.AsyncTaskActivity">
+
+            <!--
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".setting.TestPreferenceActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".setting.SettingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

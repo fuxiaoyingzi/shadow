@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:key="isShow"
+        android:defaultValue="true"
+        android:title="是否开启wifi"/>
+    <PreferenceCategory android:title="分组1">
+        <CheckBoxPreference android:key="check2"
+            android:title="你喜欢吃苹果吗？"
+            android:summary="酸酸的青苹果"
+            android:defaultValue="false"
+            />
+        <EditTextPreference android:key="name"
+            android:dialogTitle="please input your name ?"
+            android:defaultValue="@string/app_name"
+            android:title="请输入你的名字"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="分组2">
+        <ListPreference android:key="age"
+            android:defaultValue="15"
+            android:dialogTitle="选择你的年龄"
+            android:title="年龄"
+            android:entries="@array/age_key"
+            android:entryValues="@array/age_value"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
