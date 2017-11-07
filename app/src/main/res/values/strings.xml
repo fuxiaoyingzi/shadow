@@ -136,4 +136,9 @@
         <item>GMT - 22:00</item>
         <item>GMT - 23:00</item>
     </array>
+
+    //GLIDE
+    <string name="image_description">An image from the list of results for a search query</string>
+    <string name="giphy_logo_description">An animated version of the Giphy company logo</string>
+    <string name="fullscreen_description">Full screen view of an image</string>
 </resources>
