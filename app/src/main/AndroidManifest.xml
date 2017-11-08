@@ -96,6 +96,14 @@
 
         </activity>
         <activity android:name=".glide.GiphyActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".dagger.FlowerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

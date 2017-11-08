@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+
 android {
     signingConfigs {
         config {
@@ -66,6 +67,10 @@ android {
         flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
 
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 ext {
@@ -77,6 +82,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+
     // compile 'com.android.support:appcompat-v7:25.3.1'
     //compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile "com.android.support:appcompat-v7:$supportVersion"
@@ -92,6 +99,15 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:4.3.0'
     compile 'jp.wasabeef:glide-transformations:3.0.1'
     compile 'com.google.code.gson:gson:2.8.0'
+
+    //dagger
+    compile 'com.google.dagger:dagger:2.11'
+    compile 'com.google.dagger:dagger-android:2.11'
+    compile 'com.google.dagger:dagger-android-support:2.11'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.0'
 }
