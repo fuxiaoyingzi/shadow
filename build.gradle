@@ -27,8 +27,6 @@ allprojects {
 ext{
     //app dependencies
     daggerVersion = "2.11"
-
-
 }
 
 task clean(type: Delete) {

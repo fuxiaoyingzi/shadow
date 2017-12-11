@@ -2,9 +2,9 @@
     <string name="app_name">运动人生</string>
 
     //测试字符串数组
-    <string name="language">语文</string>
-    <string name="math">数学</string>
-    <string name="english">英语</string>
+    <string name="language" translatable="false">语文</string>
+    <string name="math" translatable="false">数学</string>
+    <string name="english" translatable="false">英语</string>
 
 
     <string-array name="subject">
@@ -106,9 +106,9 @@
     </string-array>
 
 
-    <string name="category_network">无线和网络</string>
-    <string name="category_device">设备</string>
-    <string name="category_system">系统</string>
+    <string name="category_network" translatable="false">无线和网络</string>
+    <string name="category_device" translatable="false">设备</string>
+    <string name="category_system" translatable="false">系统</string>
 
     <array name="time_zone">
         <item>GMT - 00:00</item>
@@ -138,7 +138,14 @@
     </array>
 
     //GLIDE
-    <string name="image_description">An image from the list of results for a search query</string>
-    <string name="giphy_logo_description">An animated version of the Giphy company logo</string>
-    <string name="fullscreen_description">Full screen view of an image</string>
+    <string name="image_description" translatable="false">An image from the list of results for a search query</string>
+    <string name="giphy_logo_description" translatable="false">An animated version of the Giphy company logo</string>
+    <string name="fullscreen_description" translatable="false">Full screen view of an image</string>
+
+    //多语言
+    <string name="name">姓名</string>
+    <string name="sex">性别</string>
+    <string name="age">年龄</string>
+    <string name="desc">描述</string>
+    <string name="change_data">更改数据</string>
 </resources>

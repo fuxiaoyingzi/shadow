@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="userModel"
+            type="com.example.administrator.shadowapplication.databing.UserModel" />
+
+        <variable
+            name="userHandle"
+            type="com.example.administrator.shadowapplication.databing.UserHandle" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text"
+            android:text="@string/name" />
+
+        <TextView
+            style="@style/text"
+            android:layout_marginLeft="30dp"
+            android:text="@{userModel.userName}" />
+
+        <TextView
+            style="@style/text"
+            android:text="@string/sex" />
+
+        <TextView
+            style="@style/text"
+            android:layout_marginLeft="30dp"
+            android:text="@{userModel.userSex}" />
+
+        <TextView
+            style="@style/text"
+            android:text="@string/age" />
+
+        <TextView
+            style="@style/text"
+            android:layout_marginLeft="30dp"
+            android:text="@{userModel.userAge}" />
+
+        <TextView
+            style="@style/text"
+            android:text="@string/desc" />
+
+        <TextView
+            style="@style/text"
+            android:layout_marginLeft="30dp"
+            android:text="@{userModel.desc}" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_chang_data"
+            android:onClick="@{() -> userHandle.changeData()}"
+            android:text="@string/change_data" />
+
+    </LinearLayout>
+
+</layout>

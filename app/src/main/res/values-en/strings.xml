@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">sport life</string>
+    <string name="name">name</string>
+    <string name="sex">sex</string>
+    <string name="age">age</string>
+    <string name="desc">desc</string>
+    <string name="change_data">data change</string>
+</resources>

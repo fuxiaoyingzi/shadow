@@ -92,23 +92,28 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".setting.SettingActivity">
-
-        </activity>
+        <activity android:name=".setting.SettingActivity" />
         <activity android:name=".glide.GiphyActivity">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
-
         <activity android:name=".dagger.FlowerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".databing.UserActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
