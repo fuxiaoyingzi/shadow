@@ -7,135 +7,10 @@
     <string name="english" translatable="false">英语</string>
 
 
-    <string-array name="subject">
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-        <item>@string/language</item>
-        <item>@string/math</item>
-        <item>@string/english</item>
-    </string-array>
-
-    <integer-array name="number">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-    </integer-array>
-
-    <string-array name="age_key">
-        <item>15岁</item>
-        <item>20岁</item>
-        <item>30岁</item>
-        <item>40岁</item>
-        <item>50岁</item>
-    </string-array>
-
-    <string-array name="age_value">
-        <item>15</item>
-        <item>20</item>
-        <item>30</item>
-        <item>40</item>
-        <item>50</item>
-    </string-array>
-
-    <string-array name="recycle_list_item">
-        <item>付影影1</item>
-        <item>付影影2</item>
-        <item>付影影3</item>
-        <item>付影影4</item>
-        <item>付影影5</item>
-        <item>付影影6</item>
-        <item>付影影7</item>
-        <item>付影影8</item>
-        <item>付影影9</item>
-        <item>付影影10</item>
-    </string-array>
-
-    <string-array name="recycle_list_item_value">
-        <item>付影影11</item>
-        <item>付影影22</item>
-        <item>付影影33</item>
-        <item>付影影44</item>
-        <item>付影影55</item>
-        <item>付影影66</item>
-        <item>付影影77</item>
-        <item>付影影88</item>
-        <item>付影影99</item>
-        <item>付影影100</item>
-    </string-array>
-
-    <string-array name="sport_categroy">
-        <item>俯撑平板</item>
-        <item>仰撑平版</item>
-        <item>左侧平板</item>
-        <item>右侧平板</item>
-        <item>深蹲</item>
-        <item>波比跳</item>
-        <item>吸腿（前，外，左右）</item>
-        <item>单侧抬腿</item>
-        <item>跪姿俯卧撑</item>
-        <item>跳绳</item>
-        <item>前后弓步跳</item>
-        <item>正面卷腹</item>
-        <item>侧面卷腹</item>
-        <item>登山者</item>
-        <item>其它</item>
-    </string-array>
-
-
     <string name="category_network" translatable="false">无线和网络</string>
     <string name="category_device" translatable="false">设备</string>
     <string name="category_system" translatable="false">系统</string>
 
-    <array name="time_zone">
-        <item>GMT - 00:00</item>
-        <item>GMT - 01:00</item>
-        <item>GMT - 02:00</item>
-        <item>GMT - 03:00</item>
-        <item>GMT - 04:00</item>
-        <item>GMT - 05:00</item>
-        <item>GMT - 06:00</item>
-        <item>GMT - 07:00</item>
-        <item>GMT - 08:00</item>
-        <item>GMT - 09:00</item>
-        <item>GMT - 10:00</item>
-        <item>GMT - 11:00</item>
-        <item>GMT - 12:00</item>
-        <item>GMT - 13:00</item>
-        <item>GMT - 14:00</item>
-        <item>GMT - 15:00</item>
-        <item>GMT - 16:00</item>
-        <item>GMT - 17:00</item>
-        <item>GMT - 18:00</item>
-        <item>GMT - 19:00</item>
-        <item>GMT - 20:00</item>
-        <item>GMT - 21:00</item>
-        <item>GMT - 22:00</item>
-        <item>GMT - 23:00</item>
-    </array>
 
     //GLIDE
     <string name="image_description" translatable="false">An image from the list of results for a search query</string>
@@ -148,4 +23,10 @@
     <string name="age">年龄</string>
     <string name="desc">描述</string>
     <string name="change_data">更改数据</string>
+
+    //百度 map
+    <string name="map_location" translatable="false">当前定位</string>
+    <string name="map_marker" translatable="false">添加marker</string>
+    <string name="map_search" translatable="false">附近搜索</string>
+    <string name="map_change" translatable="false">坐标转换</string>
 </resources>

@@ -8,6 +8,13 @@
     <color name="grey">#ff666666</color>
     <color name="grey_333333">#ff333333</color>
 
+    <color name="common_blue">#189ADB</color>
+    <color name="common_back">#f2f2f2</color>
+    <color name="common_red">#FE4545</color>
+    <color name="common_grey_dark">#ff333333</color>
+    <color name="common_grey_light">#ff999999</color>
+    <color name="common_back_light">#fff3f3f3</color>
+
     //material color
     <!--粉色-->
     <array name="pinks">

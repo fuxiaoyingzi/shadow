@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -18,6 +18,22 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            android:gravity="center"
+            app:popupTheme="?attr/actionBarPopupTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+        </android.support.v7.widget.Toolbar>
 
         <TextView
             style="@style/text"
@@ -56,12 +72,12 @@
             android:text="@{userModel.desc}" />
 
         <TextView
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/bg_chang_data"
+            android:gravity="center"
             android:onClick="@{() -> userHandle.changeData()}"
             android:text="@string/change_data" />
 

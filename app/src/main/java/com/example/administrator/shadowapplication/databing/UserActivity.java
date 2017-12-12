@@ -1,11 +1,15 @@
 package com.example.administrator.shadowapplication.databing;
 
-import android.content.Context;
+
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.databinding.DataBindingUtil;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ShareActionProvider;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.databinding.ActivityUserBinding;
@@ -17,6 +21,7 @@ public class UserActivity extends AppCompatActivity {
 
     private ActivityUserBinding userBinding;
     private UserModel userModel;
+    private ShareActionProvider mShareActionProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +33,7 @@ public class UserActivity extends AppCompatActivity {
         } else {
             configuration.locale = Locale.ENGLISH;
         }
-         getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
+        getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
 
         userBinding = DataBindingUtil.setContentView(this, R.layout.activity_user);
 
@@ -53,5 +58,37 @@ public class UserActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate menu resource file.
+        getMenuInflater().inflate(R.menu.menu_share_action, menu);
+
+        // Locate MenuItem with ShareActionProvider
+        MenuItem item = menu.findItem(R.id.menu_item_share);
+
+        // Fetch and store ShareActionProvider
+        mShareActionProvider = (ShareActionProvider) item.getActionProvider();
+
+        // Return true to display menu
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_item_share:
+                Intent intent = new Intent();
+                setShareIntent(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+
+    private void setShareIntent(Intent shareIntent) {
+        if (mShareActionProvider != null) {
+            mShareActionProvider.setShareIntent(shareIntent);
+        }
+    }
 
 }
