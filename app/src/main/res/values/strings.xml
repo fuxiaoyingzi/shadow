@@ -26,7 +26,7 @@
 
     //百度 map
     <string name="map_location" translatable="false">当前定位</string>
-    <string name="map_marker" translatable="false">添加marker</string>
+    <string name="map_marker" translatable="false">清除marker</string>
     <string name="map_search" translatable="false">附近搜索</string>
-    <string name="map_change" translatable="false">坐标转换</string>
+    <string name="map_change" translatable="false">地图切换</string>
 </resources>

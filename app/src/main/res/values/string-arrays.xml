@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="subject" >
+    <string-array name="subject">
         <item>@string/language</item>
         <item>@string/math</item>
         <item>@string/english</item>
@@ -125,4 +125,12 @@
         <item>GMT - 22:00</item>
         <item>GMT - 23:00</item>
     </array>
+
+    <!--map style-->
+    <string-array name="map_style" translatable="false">
+        <item>普通地图</item>
+        <item>卫星地图</item>
+        <item>交通地图</item>
+        <item>百度地图热力图</item>
+    </string-array>
 </resources>

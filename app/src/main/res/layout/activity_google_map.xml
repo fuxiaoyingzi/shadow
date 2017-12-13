@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/common_back"
-    android:orientation="vertical"
-    tools:context="com.example.administrator.shadowapplication.map.MapActivity">
+<layout>
 
-    <com.baidu.mapapi.map.MapView
-        android:id="@+id/bmapView"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:clickable="true" />
+    <data>
 
-    <LinearLayout
+        <variable
+            name="handle"
+            type="com.example.administrator.shadowapplication.map.databinding.MapDataVBindingHandlle" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:background="@color/common_back"
+        android:orientation="vertical"
+        tools:context="com.example.administrator.shadowapplication.map.MapActivity">
 
-        <TextView
-            style="@style/map_btn"
-            android:text="@string/map_location" />
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true" />
 
-        <TextView
-            style="@style/map_btn"
-            android:text="@string/map_marker" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
 
-        <TextView
-            style="@style/map_btn"
-            android:text="@string/map_change" />
+            <TextView
+                style="@style/map_btn"
+                android:onClick="@{() -> handle.location()}"
+                android:text="@string/map_location" />
 
-        <TextView
-            style="@style/map_btn"
-            android:text="@string/map_search" />
+            <TextView
+                style="@style/map_btn"
+                android:onClick="@{() -> handle.addMarker()}"
+                android:text="@string/map_marker" />
+
+            <TextView
+                style="@style/map_btn"
+                android:onClick="@{() -> handle.mapChange()}"
+                android:text="@string/map_change" />
+
+            <TextView
+                style="@style/map_btn"
+                android:onClick="@{() -> handle.poiSearch()}"
+                android:text="@string/map_search" />
+        </LinearLayout>
+
     </LinearLayout>
-
-</LinearLayout>
+</layout>
