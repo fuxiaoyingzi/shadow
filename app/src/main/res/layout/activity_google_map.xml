@@ -16,6 +16,19 @@
         android:background="@color/common_back"
         android:orientation="vertical"
         tools:context="com.example.administrator.shadowapplication.map.MapActivity">
+        <android.support.v7.widget.Toolbar
+            android:theme="@style/AppTheme.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <TextView
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="hello shadow"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.Toolbar>
 
         <com.baidu.mapapi.map.MapView
             android:id="@+id/bmapView"

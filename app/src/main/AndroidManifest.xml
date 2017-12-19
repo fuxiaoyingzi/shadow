@@ -26,8 +26,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.Dark.NoActionBar">
-
+        android:theme="@style/AppTheme.Dark">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="0tdhK3LAOrmGD9QuxV7VmqbpnGotlkLe" />
@@ -122,9 +121,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".databing.UserActivity" />
+        <activity android:name=".map.MapActivity" />
         <activity
-            android:name=".map.MapActivity"
-            android:exported="true" />
+            android:name=".material_design.MaterialActivity"
+            android:exported="true"
+            android:label="shadow"
+            android:theme="@style/custom_status"></activity>
     </application>
 
 </manifest>
