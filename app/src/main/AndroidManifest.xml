@@ -124,9 +124,15 @@
         <activity android:name=".map.MapActivity" />
         <activity
             android:name=".material_design.MaterialActivity"
-            android:exported="true"
             android:label="shadow"
-            android:theme="@style/custom_status"></activity>
+            android:theme="@style/custom_status" />
+        <activity
+            android:name=".activity.TextViewActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".http.HttpUrlConnectionActivity"
+            android:exported="true" />
+        <activity android:name=".http.OkHttpActivity"></activity>
     </application>
 
 </manifest>

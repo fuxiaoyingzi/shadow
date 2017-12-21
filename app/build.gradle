@@ -86,4 +86,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.0'
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/httpmime-4.1.2.jar')
+    //http
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile 'com.squareup:android-times-square:1.6.5@aar'
 }
