@@ -10,10 +10,22 @@ import android.widget.TextView;
 
 import com.example.administrator.shadowapplication.R;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -43,6 +55,8 @@ public class HttpUrlConnectionActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.anim_in, R.anim.anim_out);
             }
         });
+
+
     }
 
     public void sendRequest(final String url) {
@@ -51,6 +65,26 @@ public class HttpUrlConnectionActivity extends AppCompatActivity {
             public void run() {
                 HttpURLConnection urlConnection = null;
                 BufferedReader reader = null;
+               /* try {
+                    InputStream inputStream = new FileInputStream("shadow.txt");
+                    byte[] bytes = new byte[1024];
+                    int len = 0;
+                    while ((len = inputStream.read(bytes)) != -1) { //没读完
+
+                    }
+                    BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream); //缓冲区，默认8192 byte
+                    bufferedInputStream.read(); //读取8192字节
+                    InputStreamReader inputStreamReader = new InputStreamReader(bufferedInputStream);//字节流转换为字符流
+                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader); //字符缓冲流
+                    bufferedReader.readLine();
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }*/
+
+
                 try {
                     URL url1 = new URL(url);
                     urlConnection = (HttpURLConnection) url1.openConnection();
@@ -58,7 +92,8 @@ public class HttpUrlConnectionActivity extends AppCompatActivity {
                     urlConnection.setConnectTimeout(8000);
                     urlConnection.setReadTimeout(8000);
                     InputStream inputStream = urlConnection.getInputStream();
-                    reader = new BufferedReader(new InputStreamReader(inputStream));
+                    InputStreamReader streamReader = new InputStreamReader(inputStream);
+                    reader = new BufferedReader(streamReader);
                     StringBuilder stringBuilder = new StringBuilder();
                     String line;
                     while ((line = reader.readLine()) != null) {

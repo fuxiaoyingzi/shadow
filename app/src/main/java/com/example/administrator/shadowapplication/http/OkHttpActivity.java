@@ -1,5 +1,8 @@
 package com.example.administrator.shadowapplication.http;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -28,6 +31,27 @@ public class OkHttpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ok_http);
         sendRequest = (Button) findViewById(R.id.sendRequest);
         httpContent = (TextView) findViewById(R.id.httpContent);
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            String networkType;
+            switch (networkInfo.getType()) {
+                case ConnectivityManager.TYPE_WIFI:
+                    networkType = "WiFi";
+                    break;
+                case ConnectivityManager.TYPE_MOBILE:
+                    networkType = "移动数据";
+                    break;
+                default:
+                    networkType = "不知道的类型";
+                    break;
+
+            }
+            Toast.makeText(this, "type  =" + networkType, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "没网", Toast.LENGTH_SHORT).show();
+        }
+
         sendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

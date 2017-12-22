@@ -21,18 +21,22 @@ import com.example.administrator.shadowapplication.activity.MaterialDesignActivi
 public class TestFragment extends Fragment {
     private TextView textView;
     private static TestFragment fragment;
-   public static TestFragment newInstance(){
-       Bundle bundle = new Bundle();
-       bundle.putString("name","shadow");
-       fragment = new TestFragment();
-       fragment.setArguments(bundle);
-       return fragment;
+    private FragmentCallBack callBack;
 
-   }
+
+    public static TestFragment newInstance() {
+        Bundle bundle = new Bundle();
+        bundle.putString("name", "shadow");
+        fragment = new TestFragment();
+        fragment.setArguments(bundle);
+        return fragment;
+
+    }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        callBack = (FragmentCallBack) getActivity();
     }
 
     @Override
@@ -43,24 +47,29 @@ public class TestFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_layout,container,false);
+        View view = inflater.inflate(R.layout.fragment_layout, container, false);
         textView = (TextView) view.findViewById(R.id.tv_fragment);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                callBack.callBack("hello shadow ，我是testFragment的回调");
                 Intent intent = new Intent(getActivity(), MaterialDesignActivity.class);
                 startActivity(intent);
-                getActivity().overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                getActivity().overridePendingTransition(R.anim.anim_in, R.anim.anim_out);
 
             }
         });
         return view;
     }
 
+    public void updateFragmentContent(String content) {
+        textView.setText(content);
+    }
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Log.d("hh",getArguments().getString("name"));
+        Log.d("hh", getArguments().getString("name"));
     }
 
     @Override

@@ -32,94 +32,37 @@
             android:value="0tdhK3LAOrmGD9QuxV7VmqbpnGotlkLe" />
 
         <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <!--
-             <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
-
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-            -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activity.MaterialDesignActivity" />
         <activity android:name=".activity.TestRecycleViewActivity" />
         <activity android:name=".activity.WindowServiceActivity" />
         <activity android:name=".service_demo.MessengerServiceActivity" />
-        <activity android:name=".sport.activity.SportActivity">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
+        <activity android:name=".sport.activity.SportActivity"></activity>
         <activity android:name=".sport.activity.CountDownActivity" />
         <activity android:name=".sport.activity.TestCompatActivity" />
         <activity android:name=".activity.CustomViewActivity" />
         <activity android:name=".activity.ViewpagerGrallerActivity">
 
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <activity android:name=".activity.NotificationActivity" />
-        <activity android:name=".activity.TestContentProvideActivity">
-
-            <!--
-             <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
-
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-            -->
-        </activity>
+        <activity android:name=".activity.TestContentProvideActivity"></activity>
         <activity
             android:name=".activity.TestWebActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".thread_test.AsyncTaskActivity">
-
-            <!--
-             <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
-
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-            -->
-        </activity>
+        <activity android:name=".thread_test.AsyncTaskActivity"></activity>
         <activity android:name=".setting.TestPreferenceActivity">
 
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <activity android:name=".setting.SettingActivity" />
         <activity android:name=".glide.GiphyActivity">
 
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
-        <activity android:name=".dagger.FlowerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".dagger.FlowerActivity" />
         <activity android:name=".databing.UserActivity" />
         <activity android:name=".map.MapActivity" />
         <activity
@@ -129,10 +72,8 @@
         <activity
             android:name=".activity.TextViewActivity"
             android:windowSoftInputMode="stateAlwaysVisible" />
-        <activity
-            android:name=".http.HttpUrlConnectionActivity"
-            android:exported="true" />
-        <activity android:name=".http.OkHttpActivity"></activity>
+        <activity android:name=".http.HttpUrlConnectionActivity" />
+        <activity android:name=".http.OkHttpActivity" />
     </application>
 
 </manifest>
