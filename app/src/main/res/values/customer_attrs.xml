@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CustomView">
-        <attr name="paint_color" format="color"/>
-        <attr name="paint_width" format="dimension"/>
-        <attr name="circle_width" format="dimension"/>
-        <attr name="rect_color" format="color"/>
-        <attr name="paint_text_size" format="dimension"/>
+        <attr name="paint_color" format="color" />
+        <attr name="paint_width" format="dimension" />
+        <attr name="circle_width" format="dimension" />
+        <attr name="rect_color" format="color" />
+        <attr name="paint_text_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomViewGroup">
+        <attr name="custom_background" format="reference"></attr>
     </declare-styleable>
 </resources>
