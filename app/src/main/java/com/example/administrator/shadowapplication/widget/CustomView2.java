@@ -17,7 +17,7 @@ import android.view.View;
  * <pre>
  *     author : Administrator
  *     time   : 2018/1/23
- *     desc   :
+ *     desc   :画布操作
  * </pre>
  */
 
@@ -185,11 +185,11 @@ public class CustomView2 extends View {
         //小太阳
         canvas.translate(mWidth / 2, mHeight / 2);
         mPaint.setColor(Color.BLACK);
-        canvas.drawCircle(0, 0, 200, mPaint);
-        canvas.drawCircle(0, 0, 180, mPaint);
+        canvas.drawCircle(0, 0, 100, mPaint);
+        canvas.drawCircle(0, 0, 80, mPaint);
         mPaint.setColor(Color.RED);
         for (int i = 0; i <= 360; i += 10) {
-            canvas.drawLine(0, 280, 0, 300, mPaint);
+            canvas.drawLine(0, 100, 0, 120, mPaint);
             canvas.rotate(10);
         }
 

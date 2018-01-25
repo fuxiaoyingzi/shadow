@@ -6,15 +6,53 @@
     android:orientation="vertical"
     tools:context="com.example.administrator.shadowapplication.activity.NewCustomViewActivity">
 
-    <com.example.administrator.shadowapplication.widget.PieChartView
-        android:id="@+id/pieChart"
-        android:layout_width="200dp"
-        android:layout_height="300dp"
-        android:background="@color/common_blue" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-    <com.example.administrator.shadowapplication.widget.CustomView2
+        <com.example.administrator.shadowapplication.widget.PieChartView
+            android:id="@+id/pieChart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.example.administrator.shadowapplication.widget.CustomView2
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <!--<com.example.administrator.shadowapplication.widget.CustomPictureView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />-->
+    <com.example.administrator.shadowapplication.widget.CustomCheckView
+        android:id="@+id/checkView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/checkBnt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="check" />
+
+        <Button
+            android:id="@+id/unCheckBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="uncheck" />
+    </LinearLayout>
 
 </LinearLayout>
