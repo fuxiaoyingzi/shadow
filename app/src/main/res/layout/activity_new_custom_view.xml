@@ -12,4 +12,9 @@
         android:layout_height="300dp"
         android:background="@color/common_blue" />
 
+    <com.example.administrator.shadowapplication.widget.CustomView2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
 </LinearLayout>
