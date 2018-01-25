@@ -89,4 +89,5 @@ dependencies {
     //http
     compile 'com.squareup.okhttp3:okhttp:3.9.1'
     compile 'com.squareup:android-times-square:1.6.5@aar'
+    compile project(':javalib')
 }

@@ -42,26 +42,20 @@
         <activity android:name=".activity.TestRecycleViewActivity" />
         <activity android:name=".activity.WindowServiceActivity" />
         <activity android:name=".service_demo.MessengerServiceActivity" />
-        <activity android:name=".sport.activity.SportActivity"></activity>
+        <activity android:name=".sport.activity.SportActivity" />
         <activity android:name=".sport.activity.CountDownActivity" />
         <activity android:name=".sport.activity.TestCompatActivity" />
         <activity android:name=".activity.CustomViewActivity" />
-        <activity android:name=".activity.ViewpagerGrallerActivity">
-
-        </activity>
+        <activity android:name=".activity.ViewpagerGrallerActivity"></activity>
         <activity android:name=".activity.NotificationActivity" />
-        <activity android:name=".activity.TestContentProvideActivity"></activity>
+        <activity android:name=".activity.TestContentProvideActivity" />
         <activity
             android:name=".activity.TestWebActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".thread_test.AsyncTaskActivity"></activity>
-        <activity android:name=".setting.TestPreferenceActivity">
-
-        </activity>
+        <activity android:name=".thread_test.AsyncTaskActivity" />
+        <activity android:name=".setting.TestPreferenceActivity"></activity>
         <activity android:name=".setting.SettingActivity" />
-        <activity android:name=".glide.GiphyActivity">
-
-        </activity>
+        <activity android:name=".glide.GiphyActivity"></activity>
         <activity android:name=".dagger.FlowerActivity" />
         <activity android:name=".databing.UserActivity" />
         <activity android:name=".map.MapActivity" />
@@ -74,6 +68,7 @@
             android:windowSoftInputMode="stateAlwaysVisible" />
         <activity android:name=".http.HttpUrlConnectionActivity" />
         <activity android:name=".http.OkHttpActivity" />
+        <activity android:name=".activity.NewCustomViewActivity" android:exported="true"></activity>
     </application>
 
 </manifest>
