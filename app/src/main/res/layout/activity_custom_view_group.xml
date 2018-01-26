@@ -26,11 +26,17 @@
 
 
         <TextView
+            android:id="@+id/tree"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@color/common_blue"
             android:text="child three"
             android:textSize="20dp" />
+
+        <com.example.administrator.shadowapplication.widget.CustomView2
+            android:id="@+id/customSun"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
     </com.example.administrator.shadowapplication.widget.CustomViewGroup>
 
 </LinearLayout>

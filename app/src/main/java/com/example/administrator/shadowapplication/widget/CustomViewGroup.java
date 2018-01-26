@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -74,7 +76,7 @@ public class CustomViewGroup extends ViewGroup {
             setMeasuredDimension(0, 0);
         } else {
             if (widthModel == MeasureSpec.AT_MOST && heightModel == MeasureSpec.AT_MOST) {
-                setMeasuredDimension(getMaxChildWidth(),getChildHeightCount());
+                setMeasuredDimension(getMaxChildWidth(), getChildHeightCount());
             } else if (widthModel == MeasureSpec.AT_MOST) {
                 setMeasuredDimension(getMaxChildWidth(), heightSize);
             } else if (heightModel == MeasureSpec.AT_MOST) {
@@ -104,5 +106,44 @@ public class CustomViewGroup extends ViewGroup {
             childHeightCount += getChildAt(i).getMeasuredHeight();
         }
         return childHeightCount;
+    }
+
+
+    /**
+     * view 和 viewGroup的事件分发机制：点击事件分发过程如下 dispatchTouchEvent—->OnTouchListener的onTouch方法—->onTouchEvent–>OnClickListener的onClick方法。
+     * 也就是说，我们平时调用的setOnClickListener，优先级是最低的，所以，onTouchEvent或OnTouchListener的onTouch方法如果返回true，
+     * 则不响应onClick方法…
+     *
+     * @param ev
+     * @return true, 只会响应此类的dispatchTouchEvent 两次，其它的方法都不会调用,false 什么都不会调用
+     * super.dispatchTouchEvent(ev) 根据情况调用onInterceptTouchEvent,onTouchEvent
+     */
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.d("hh", "CustomViewGroup dispatchTouchEvent");
+        return super.dispatchTouchEvent(ev);
+    }
+
+    /**
+     * @param ev
+     * @return true 拦截 不向下分发，所以子view就不会调用 dispatchTouchEvent，然后由此类实现onTouchEvent
+     * false 向下分发，只有子view onTouchEvent 返回true时候，才会调用此类的onTouchEvent
+     */
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        Log.d("hh", "CustomViewGroup onInterceptTouchEvent");
+        return super.onInterceptTouchEvent(ev);
+    }
+
+    /**
+     * 如果子类处理了，则此方法不会调用
+     *
+     * @param event
+     * @return true 只会调用此类 dispatchTouchEvent方法一次
+     */
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.d("hh", "CustomViewGroup onTouchEvent");
+        return false;
     }
 }

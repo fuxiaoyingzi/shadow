@@ -11,6 +11,7 @@ import android.os.Build;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 /**
@@ -199,8 +200,26 @@ public class CustomView2 extends View {
        /* canvas.save();//保存当前状态
         //各种操作。。。。。
         canvas.restore();//回滚到保存的状态*/
-
-
     }
 
+    /**
+     * @param event
+     * @return true 不处理onTouchEvent，直接返回false 调用父类的onTouchEvent，
+     * 返回super.dispatchTouchEvent(event),根据情况判断调用此类的onTouchEvent
+     */
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        Log.d("hh", "customview2 dispatchTouchEvent");
+        return super.dispatchTouchEvent(event);
+    }
+
+    /**
+     * @param event
+     * @return false 表示此类不处理onTouchEvent ，提交给父类onTouchEvent执行
+     */
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.d("hh", "customview2 onTouchEvent");
+        return super.onTouchEvent(event);
+    }
 }
