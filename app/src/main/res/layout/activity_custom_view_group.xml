@@ -36,7 +36,13 @@
         <com.example.administrator.shadowapplication.widget.CustomView2
             android:id="@+id/customSun"
             android:layout_width="300dp"
-            android:layout_height="300dp" />
+            android:layout_height="200dp" />
     </com.example.administrator.shadowapplication.widget.CustomViewGroup>
+
+    <com.example.administrator.shadowapplication.widget.CustomAnimView
+        android:id="@+id/customAnimView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

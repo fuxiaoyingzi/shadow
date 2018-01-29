@@ -24,6 +24,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "default"
     }
 
     buildTypes {
@@ -40,13 +41,13 @@ android {
             signingConfig signingConfigs.config
         }
     }
-//productFlavors打包渠道就在这儿配置咯 同时在AndroidManifest里面加上，渠道标识
+/*//productFlavors打包渠道就在这儿配置咯 同时在AndroidManifest里面加上，渠道标识
     productFlavors {
         Xiaomi {}
     }
     productFlavors.all { flavor ->
         flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
-    }
+    }*/
 
     dataBinding {
         enabled = true
