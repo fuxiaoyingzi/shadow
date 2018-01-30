@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.shadowapplication.activity.CustomColorMatrixActivity">
+
+    <com.example.administrator.shadowapplication.widget.CustomViewColor
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/md_pink_50"
+        android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.example.administrator.shadowapplication.widget.CustomSportCircle
+        android:id="@+id/sportCircle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <com.example.administrator.shadowapplication.widget.CustomCanvasHandleView
+        android:id="@+id/canvasHandle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

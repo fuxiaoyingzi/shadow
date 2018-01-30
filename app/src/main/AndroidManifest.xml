@@ -73,7 +73,10 @@
             android:exported="true" />
         <activity
             android:name=".activity.CustomViewGroupActivity"
-            android:exported="true"/>
+            android:exported="true" />
+        <activity
+            android:name=".activity.CustomColorMatrixActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
