@@ -8,9 +8,15 @@
     tools:context="com.example.administrator.shadowapplication.activity.CustomWatchActivity">
     <com.example.administrator.shadowapplication.widget.CustomWatchView
         android:layout_gravity="center"
-        android:layout_margin="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         android:id="@+id/customWatch"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="300dp" />
+    <com.example.administrator.shadowapplication.widget.CustomRulerView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
 
 </LinearLayout>
