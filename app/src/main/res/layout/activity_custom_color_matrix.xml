@@ -7,17 +7,20 @@
     tools:context="com.example.administrator.shadowapplication.activity.CustomColorMatrixActivity">
 
     <com.example.administrator.shadowapplication.widget.CustomViewColor
+        android:visibility="gone"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@color/md_pink_50"
         android:gravity="center" />
 
     <ImageView
+        android:visibility="gone"
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <com.example.administrator.shadowapplication.widget.CustomSportCircle
+        android:visibility="gone"
         android:id="@+id/sportCircle"
         android:layout_width="match_parent"
         android:layout_height="100dp" />

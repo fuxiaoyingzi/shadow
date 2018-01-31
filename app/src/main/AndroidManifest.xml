@@ -77,6 +77,9 @@
         <activity
             android:name=".activity.CustomColorMatrixActivity"
             android:exported="true" />
+        <activity android:name=".activity.CustomWatchActivity"
+            android:exported="true"
+            />
     </application>
 
 </manifest>
