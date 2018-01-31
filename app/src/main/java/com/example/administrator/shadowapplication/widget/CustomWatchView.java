@@ -19,7 +19,7 @@ import java.util.TimerTask;
  * <pre>
  *     author : Administrator
  *     time   : 2018/1/31
- *     desc   :
+ *     desc   :自定义时钟
  * </pre>
  */
 public class CustomWatchView extends View implements Runnable {

@@ -16,11 +16,9 @@ import android.view.View;
  * <pre>
  *     author : Administrator
  *     time   : 2018/1/31
- *     desc   :
+ *     desc   :自定义直尺
  * </pre>
  */
-
-
 public class CustomRulerView extends View {
     private Paint paint;
 
