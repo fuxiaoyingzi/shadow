@@ -5,7 +5,6 @@ android {
     configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
     }
-
     // 	签名配置 属性1keyAlias：key的别名；属性2keyPassword:Key密码;
     // 属性3storeFile:签名用的文件;属性4storePassword:签名用的文件的密码;
     // 属性5storeType:签名用的文件类型;属性6v1SigningEnabled:是否开启JAR signature scheme v1签名;
@@ -19,9 +18,8 @@ android {
             storePassword PASSWORD
         }
     }
-
-    compileSdkVersion 25 //必须设置，编译的sdk版本
-    buildToolsVersion '26.0.2' //必须设置,build tools的版本
+    compileSdkVersion 27 //必须设置，编译的sdk版本
+    buildToolsVersion '27.0.0' //必须设置,build tools的版本
     defaultConfig { //默认配置，所有flavors共享
         applicationId "com.example.administrator.shadowapplication"
         minSdkVersion 16
@@ -33,7 +31,6 @@ android {
 
         flavorDimensions "versionCode" //指定flavor尺寸的名称
     }
-
     buildTypes { //项目类型(debug、release)
         release {
             minifyEnabled true //用来控制是否运行混淆
@@ -50,19 +47,31 @@ android {
             signingConfig signingConfigs.config
         }
     }
-    lintOptions{
+    lintOptions {
         disable 'ResourceType' // 忽略自定义id
         disable 'MissingTranslation' // 忽略未翻译的字符串
         abortOnError false
     }
 //productFlavors打包渠道就在这儿配置咯 同时在AndroidManifest里面加上，渠道标识,因为我们没有加统计，所以我们不用设置多渠道标识
     //所谓多渠道打包，就是构成不同的apk名字，发布的不同的平台上，根据此名称可以做出相应的统计操作
-   /* productFlavors {
-        Xiaomi {}
-    }
-*/
+    /* productFlavors {
+         Xiaomi {}
+     }
+ */
     dataBinding {
         enabled = true
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                def fileName = outputFile.name.replace(".apk", "_${defaultConfig.versionName}_prod.apk")
+                def fileName = "shadow_${defaultConfig.versionName}_${variant.buildType.name}.apk"
+                //自己拼接apk的名字
+                output.outputFile = new File(outputFile.parent, fileName.toLowerCase())
+            }
+        }
     }
 
 }
@@ -103,4 +112,6 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.9.1'
     compile 'com.squareup:android-times-square:1.6.5@aar'
     compile project(':javalib')
+    //eventBus
+    compile 'org.greenrobot:eventbus:3.1.1'
 }

@@ -80,7 +80,28 @@
         <activity
             android:name=".activity.CustomWatchActivity"
             android:exported="true" />
-        <activity android:name=".activity.CustomTwoCacheActivity" android:exported="true"/>
+        <activity
+            android:name=".activity.CustomTwoCacheActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CustomShaderTextViewActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".ipc.IPCService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".ipc.IPCServiceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MemoryActivity"
+            android:configChanges="orientation|keyboard"
+            android:exported="true"
+            android:screenOrientation="behind" />
+        <activity android:name=".eventbus.EventBusTestActivity" android:exported="true"/>
     </application>
 
 </manifest>

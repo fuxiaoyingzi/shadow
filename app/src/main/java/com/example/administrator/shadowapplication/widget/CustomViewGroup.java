@@ -2,15 +2,13 @@ package com.example.administrator.shadowapplication.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.administrator.shadowapplication.R;
+import android.widget.Scroller;
 
 /**
  * <pre>
@@ -22,6 +20,9 @@ import com.example.administrator.shadowapplication.R;
 
 
 public class CustomViewGroup extends ViewGroup {
+    private Context mContext;
+    private int mLastInterceptX, mLastInterceptY;
+
     public CustomViewGroup(Context context) {
         this(context, null);
     }
@@ -43,9 +44,10 @@ public class CustomViewGroup extends ViewGroup {
     }
 
     public void initView(Context context, AttributeSet attrs) {
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CustomViewGroup);
+        mContext = context;
+       /* TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CustomViewGroup);
         //....获取自定义属性
-        a.recycle();
+        a.recycle();*/
 
     }
 
@@ -128,11 +130,40 @@ public class CustomViewGroup extends ViewGroup {
      * @param ev
      * @return true 拦截 不向下分发，所以子view就不会调用 dispatchTouchEvent，然后由此类实现onTouchEvent
      * false 向下分发，只有子view onTouchEvent 返回true时候，才会调用此类的onTouchEvent
+     *
      */
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.d("hh", "CustomViewGroup onInterceptTouchEvent");
-        return super.onInterceptTouchEvent(ev);
+        Scroller scroller = new Scroller(mContext);
+        //解决滑动冲突：外层是左右水平滑动，内层view是上下垂直滑动
+        //解决方法：根据滑动的距离，判断是水平滑动还是垂直滑动，如果是水平滑动，则父类拦截此事件，子类view就不会响应
+        boolean intercepted = false;
+        int x = (int) ev.getX();
+        int y = (int) ev.getY();
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                intercepted = false;
+                if (!scroller.isFinished()) {
+                    scroller.abortAnimation();
+                    intercepted = true;
+                }
+                break;
+            case MotionEvent.ACTION_MOVE:
+                int deltaX = x - mLastInterceptX;
+                int deltaY = y - mLastInterceptY;
+                if (Math.abs(deltaX) > Math.abs(deltaY)) { //滑动的水平距离大于垂直距离，意味着相应外部的滑动
+                    intercepted = true;
+                } else {
+                    intercepted = false;
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                intercepted = false;
+                break;
+        }
+
+        return intercepted;
     }
 
     /**
