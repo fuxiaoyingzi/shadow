@@ -4,8 +4,11 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,15 +25,16 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class OkHttpActivity extends AppCompatActivity {
-    private Button sendRequest;
+    private Button sendRequest,testRequest;
     private TextView httpContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ok_http);
-        sendRequest = (Button) findViewById(R.id.sendRequest);
-        httpContent = (TextView) findViewById(R.id.httpContent);
+        sendRequest = findViewById(R.id.sendRequest);
+        testRequest = findViewById(R.id.testRequest);
+        httpContent =  findViewById(R.id.httpContent);
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
@@ -56,6 +60,13 @@ public class OkHttpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendRequest("https://www.baidu.com/");
+            }
+        });
+
+        testRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                testOkHttpUtil();
             }
         });
     }
@@ -92,7 +103,7 @@ public class OkHttpActivity extends AppCompatActivity {
                                     if (TextUtils.isEmpty(text)) {
                                         httpContent.setText("hello shadow");
                                     } else {
-                                        httpContent.setText(text);
+                                        httpContent.setText("OKHttp enqueue回调："+text);
                                     }
                                 }
                             });
@@ -102,6 +113,56 @@ public class OkHttpActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        }).start();
+    }
+
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 0:
+                    Bundle bundle = msg.getData();
+                    if (bundle != null){
+                        httpContent.setText( "httpUtil: "+bundle.getString("responseStr"));
+                    }else {
+                        httpContent.setText("bundle == null");
+                    }
+                    break;
+
+            }
+        }
+    };
+    public void testOkHttpUtil(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Call call = HttpUtil.testHttp();
+                try {
+                    if (call != null){
+                        Response response = call.execute();
+                        if (response != null){
+
+                            Message message  = Message.obtain();
+                            message.what = 0;
+                            Bundle bundle = new Bundle();
+                            if (response.body() != null){
+                                bundle.putString("responseStr",response.body().string());
+                            }else {
+                                bundle.putString("responseStr","response.body() == null");
+                            }
+                            message.setData(bundle);
+                            handler.sendMessage(message);
+                        }else {
+                            Log.d("hh","response == null");
+                        }
+                    }else {
+                        Log.d("hh","call == null");
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }).start();
     }

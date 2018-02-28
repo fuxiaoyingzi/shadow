@@ -83,4 +83,16 @@ public class CustomAnimView extends View implements Runnable {
             }
         }
     }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+    }
+
+
 }

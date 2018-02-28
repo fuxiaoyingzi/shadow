@@ -18,8 +18,8 @@ android {
             storePassword PASSWORD
         }
     }
-    compileSdkVersion 27 //必须设置，编译的sdk版本
-    buildToolsVersion '27.0.0' //必须设置,build tools的版本
+    compileSdkVersion 27 //必须设置，编译的sdk版本,一般设置最新的sdk版本号
+    buildToolsVersion '27.0.3' //必须设置,build tools的版本
     defaultConfig { //默认配置，所有flavors共享
         applicationId "com.example.administrator.shadowapplication"
         minSdkVersion 16
@@ -62,14 +62,26 @@ android {
         enabled = true
     }
 
-    applicationVariants.all { variant ->
+   /* applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
 //                def fileName = outputFile.name.replace(".apk", "_${defaultConfig.versionName}_prod.apk")
                 def fileName = "shadow_${defaultConfig.versionName}_${variant.buildType.name}.apk"
                 //自己拼接apk的名字
-                output.outputFile = new File(outputFile.parent, fileName.toLowerCase())
+                output.outputFile = new File();
+                //= new File(outputFile.parent, fileName.toLowerCase())
+            }
+        }
+    }
+*/
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                def fileName = outputFile.name.replace(".apk", "_${defaultConfig.versionName}_prod.apk")
+                def fileName = "shadow_${defaultConfig.versionName}_${variant.buildType.name}.apk"
+                output.outputFileName = fileName.toLowerCase()
             }
         }
     }
@@ -77,7 +89,7 @@ android {
 }
 
 ext {
-    supportVersion = "25.4.0"
+    supportVersion = "27.0.2"
 }
 
 dependencies {
@@ -93,8 +105,8 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'io.reactivex.rxjava2:rxjava:2.0.7'
-    compile 'com.squareup.okhttp3:okhttp:3.9.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.1'
     compile 'com.github.bumptech.glide:glide:4.3.0'
     compile 'jp.wasabeef:glide-transformations:3.0.1'
     compile 'com.google.code.gson:gson:2.8.1'

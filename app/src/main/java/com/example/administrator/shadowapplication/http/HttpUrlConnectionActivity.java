@@ -39,9 +39,9 @@ public class HttpUrlConnectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_http_url_connection);
-        sendRequest = (Button) findViewById(R.id.sendRequest);
-        httpContent = (TextView) findViewById(R.id.httpContent);
-        okRequest = (Button) findViewById(R.id.okRequest);
+        sendRequest =  findViewById(R.id.sendRequest);
+        httpContent =  findViewById(R.id.httpContent);
+        okRequest = findViewById(R.id.okRequest);
         sendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

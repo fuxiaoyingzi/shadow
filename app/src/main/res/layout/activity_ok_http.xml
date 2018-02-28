@@ -15,6 +15,12 @@
         android:layout_height="50dp"
         android:text="send"
         android:textSize="18sp" />
+    <Button
+        android:id="@+id/testRequest"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="test"
+        android:textSize="18sp" />
 
     <ScrollView
         android:layout_width="match_parent"

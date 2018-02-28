@@ -1,5 +1,8 @@
 package com.example.administrator.shadowapplication.fragment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
@@ -74,4 +77,16 @@ public class MaterialDesignFragment extends Fragment{
             }
         });
     }
+
+    @Override
+    public void onDestroyView() {//和onViewCreate配套的
+        super.onDestroyView();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+
 }

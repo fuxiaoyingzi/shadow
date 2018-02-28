@@ -1,12 +1,16 @@
 package com.example.administrator.shadowapplication.eventbus;
 
+import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.shadowapplication.R;
+import com.example.administrator.shadowapplication.activity.CustomViewGroupActivity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -36,6 +40,10 @@ public class EventBusTestActivity extends AppCompatActivity {
                 }).start();
             }
         });
+
+        Intent intent = new Intent(this, CustomViewGroupActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     @Override
@@ -51,5 +59,36 @@ public class EventBusTestActivity extends AppCompatActivity {
     public void handleMessage(MessageEvent event){
         //订阅事件，获取相应的数据
         nameValue.setText(event.getName()+"---"+event.getAge());
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        outState.putString("saveInstance","hello 付小影子，我是恢复数据");
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        nameValue.setText(savedInstanceState.getString("saveInstance"));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("hh","onStart()");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("hh","onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("hh","onPause()");
     }
 }
