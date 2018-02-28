@@ -62,7 +62,7 @@ android {
         enabled = true
     }
 
-   /* applicationVariants.all { variant ->
+    /* applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
