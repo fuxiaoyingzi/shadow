@@ -117,8 +117,16 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity android:name=".aidl.AidlBindServiceActivity" android:exported="true"/>
-        <service android:name=".aidl.BookManagerService" android:process=":book"/>
+        <activity
+            android:name=".aidl.AidlBindServiceActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".aidl.BookManagerService"
+            android:process=":book" />
+
+        <activity android:name=".anim.ViewAnimationActivity" />
+        <activity android:name=".anim.ValueAnimatorActivity" android:exported="true"/>
     </application>
 
 </manifest>

@@ -126,4 +126,31 @@ dependencies {
     compile project(':javalib')
     //eventBus
     compile 'org.greenrobot:eventbus:3.1.1'
+
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    // alternatively, just ViewModel
+    implementation "android.arch.lifecycle:viewmodel:1.1.0"
+    // alternatively, just LiveData
+    implementation "android.arch.lifecycle:livedata:1.1.0"
+
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
+
+    // Room (use 1.1.0-alpha2 for latest alpha)
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+
+    // Paging
+    implementation "android.arch.paging:runtime:1.0.0-alpha5"
+    // RxJava support for Room (use 1.1.0-alpha1 for latest alpha)
+    implementation "android.arch.persistence.room:rxjava2:1.0.0"
+
+    // ReactiveStreams support for LiveData
+    implementation "android.arch.lifecycle:reactivestreams:1.1.0"
+    // Guava support for Room
+    implementation "android.arch.persistence.room:guava:1.1.0-alpha2"
+    // Lifecycles only (no ViewModel or LiveData)
+    implementation "android.arch.lifecycle:runtime:1.1.0"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
+
 }
