@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.example.administrator.shadowapplication.crash_log.CrashHandle;
+import com.example.administrator.shadowapplication.crash_log.OtherProcessCrashListener;
 import com.example.administrator.shadowapplication.dagger.AppComponent;
 import com.example.administrator.shadowapplication.dagger.DaggerAppComponent;
 
@@ -44,5 +46,9 @@ public class MyApp extends Application implements HasActivityInjector {
 
     public void initBaiduMap() {
         SDKInitializer.initialize(this);
+    }
+
+    public void initCrash(){
+        CrashHandle.getCrashHandleInstance().init(this,new OtherProcessCrashListener());
     }
 }
