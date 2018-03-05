@@ -126,7 +126,10 @@
             android:process=":book" />
 
         <activity android:name=".anim.ViewAnimationActivity" />
-        <activity android:name=".anim.ValueAnimatorActivity" android:exported="true"/>
+        <activity
+            android:name=".anim.ValueAnimatorActivity"
+            android:exported="true" />
+        <activity android:name=".db.SqliteTestActivity" android:exported="true"/>
     </application>
 
 </manifest>
