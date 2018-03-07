@@ -2,6 +2,9 @@ package com.example.administrator.shadowapplication.base;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.example.administrator.shadowapplication.crash_log.CrashHandle;
@@ -21,10 +24,8 @@ import dagger.android.HasActivityInjector;
 
 public class MyApp extends Application implements HasActivityInjector {
 
-    private static MyApp myApp;
-    public static MyApp getInstance(){
-        return myApp;
-    }
+    private static MyApp sContext;
+    private boolean isDebug = false;
 
 
 
@@ -34,9 +35,19 @@ public class MyApp extends Application implements HasActivityInjector {
     @Override
     public void onCreate() {
         super.onCreate();
+        sContext = this;
         AppComponent component = DaggerAppComponent.builder().build();
         component.inject(this);
         initBaiduMap();
+        initCrash();
+    }
+
+    public static MyApp getInstance() {
+        return sContext;
+    }
+
+    public Context getContext(){
+        return getApplicationContext();
     }
 
     @Override
@@ -48,7 +59,17 @@ public class MyApp extends Application implements HasActivityInjector {
         SDKInitializer.initialize(this);
     }
 
-    public void initCrash(){
-        CrashHandle.getCrashHandleInstance().init(this,new OtherProcessCrashListener());
+    public void initCrash() {
+        CrashHandle.getCrashHandleInstance().init(this, new OtherProcessCrashListener());
+        try {
+            ApplicationInfo applicationInfo = getPackageManager().getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
+            isDebug = applicationInfo.metaData.getBoolean("DEBUG_MODE", false);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean isDebugModel() {
+        return isDebug;
     }
 }

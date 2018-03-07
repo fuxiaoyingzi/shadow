@@ -24,5 +24,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="查询" />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="内置toast" />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_custom_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义toast" />
+
 
 </LinearLayout>
