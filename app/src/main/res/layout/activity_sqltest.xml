@@ -4,12 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/md_pink_50"
     tools:context="com.example.administrator.shadowapplication.db.SqliteTestActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:text="沉浸式状态栏"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
 
     <ImageView
         android:id="@+id/iv_sql"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
+        android:layout_gravity="center"
         android:src="@drawable/ic_launchers" />
 
     <Button
