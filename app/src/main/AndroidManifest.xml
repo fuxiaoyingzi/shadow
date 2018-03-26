@@ -56,7 +56,9 @@
         <activity android:name=".sport.activity.TestCompatActivity" />
         <activity android:name=".activity.CustomViewActivity" />
         <activity android:name=".activity.ViewpagerGrallerActivity" />
-        <activity android:name=".activity.NotificationActivity" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:exported="true" />
         <activity android:name=".activity.TestContentProvideActivity" />
         <activity
             android:name=".activity.TestWebActivity"
@@ -141,7 +143,10 @@
         <activity
             android:name=".db.SqliteTestActivity"
             android:exported="true" />
-        <activity android:name=".http.RetrofitActivity" android:exported="true"/>
+        <activity
+            android:name=".http.RetrofitActivity"
+            android:exported="true" />
+        <activity android:name=".material_design.FooterBehaviorActivity" android:exported="true"/>
     </application>
 
 </manifest>

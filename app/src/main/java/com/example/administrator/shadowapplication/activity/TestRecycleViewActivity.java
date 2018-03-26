@@ -6,6 +6,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
 import com.example.administrator.shadowapplication.R;
@@ -29,7 +30,9 @@ public class TestRecycleViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycleview_touch_test);
-        recyclerView = (RecyclerView) findViewById(R.id.listView);
+        recyclerView = findViewById(R.id.listView);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(TestRecycleViewActivity.this,DividerItemDecoration.VERTICAL));
         itemList = new ArrayList();
 
 

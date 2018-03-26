@@ -29,4 +29,6 @@
     <string name="map_marker" translatable="false">清除marker</string>
     <string name="map_search" translatable="false">附近搜索</string>
     <string name="map_change" translatable="false">地图切换</string>
+
+    <string name="footer_scrolling_view_behavior" translatable="false">com.example.administrator.shadowapplication.material_design.FooterBehavior</string>
 </resources>

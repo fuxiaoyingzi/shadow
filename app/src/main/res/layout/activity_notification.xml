@@ -28,6 +28,28 @@
         android:text="发送标准通知"
         app:layout_constraintTop_toBottomOf="@+id/buttonPane2" />
 
+    <Button
+        android:id="@+id/buttonPane4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送普通通知"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPane3" />
+
+
+    <Button
+        android:id="@+id/buttonPane5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送折叠通知"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPane4" />
+
+    <Button
+        android:id="@+id/buttonPane6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送悬挂通知"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPane5" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

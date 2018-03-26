@@ -8,10 +8,10 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RemoteViews;
@@ -21,38 +21,54 @@ import com.example.administrator.shadowapplication.R;
 import java.text.DateFormat;
 import java.util.Date;
 
+import butterknife.OnClick;
+
 /**
  * 测试通知
  */
 public class NotificationActivity extends AppCompatActivity {
 
-    Button buttonPanel;
+    Button buttonPanel,buttonPane4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
         buttonPanel = (Button) findViewById(R.id.buttonPanel);
-        buttonPanel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        buttonPane4 = findViewById(R.id.buttonPane4);
+        buttonPane4.setOnClickListener(view -> {
+            Notification.Builder builder = new Notification.Builder(this);
+            Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.baidu.com"));
+            PendingIntent pendingIntent  = PendingIntent.getActivity(this,0,intent,0);
+            builder.setContentIntent(pendingIntent);
+            builder.setSmallIcon(R.drawable.like);
+            builder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.hello));
+            builder.setAutoCancel(true);
+            builder.setContentTitle("普通通知");
+            builder.setContentText("hello shadow");
+            Notification notification = builder.build();
+            RemoteViews remoteViews = new RemoteViews(getPackageName(),R.layout.layout_notification_fold);
+            notification.bigContentView =  remoteViews;
+            NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            notificationManager.notify(1,notification);
+        });
+        buttonPanel.setOnClickListener(v -> {
+            NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(NotificationActivity.this);
-                builder.setSmallIcon(R.drawable.ic_stars_black_24dp);
-                builder.setContentTitle("hello shadow");
-                builder.setContentText("this is notification test！！happy every day 。。。dear shadow ，you are so goodness");
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(NotificationActivity.this);
+            builder.setSmallIcon(R.drawable.ic_stars_black_24dp);
+            builder.setContentTitle("hello shadow");
+            builder.setContentText("this is notification test！！happy every day 。。。dear shadow ，you are so goodness");
 
-                Intent intent = new Intent(NotificationActivity.this, MainActivity.class);
-                TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(NotificationActivity.this);
-                taskStackBuilder.addParentStack(MainActivity.class);
-                taskStackBuilder.addNextIntent(intent);
-                PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+            Intent intent = new Intent(NotificationActivity.this, MainActivity.class);
+            TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(NotificationActivity.this);
+            taskStackBuilder.addParentStack(MainActivity.class);
+            taskStackBuilder.addNextIntent(intent);
+            PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-                builder.setContentIntent(pendingIntent);
-                Notification notification = builder.build();
-                notificationManager.notify(1, notification);
-            }
+            builder.setContentIntent(pendingIntent);
+            Notification notification = builder.build();
+            notificationManager.notify(1, notification);
         });
 
     }
@@ -210,6 +226,18 @@ public class NotificationActivity extends AppCompatActivity {
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.notify(0, builder.build());
         // END_INCLUDE(send_notification)
+    }
+
+
+
+    @OnClick(R.id.buttonPane5)
+    void btnPaneClick2() {
+
+    }
+
+    @OnClick(R.id.buttonPane6)
+    void btnPaneClick3() {
+
     }
 
 
