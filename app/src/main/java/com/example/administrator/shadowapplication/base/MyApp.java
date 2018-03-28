@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.support.v7.app.AppCompatDelegate;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.example.administrator.shadowapplication.crash_log.CrashHandle;

@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NightTheme" parent="Theme.AppCompat.DayNight">
+
+    </style>
+
     <style name="custom_status" parent="AppTheme" />
 
     <style name="AppTheme.Base" parent="AppTheme">

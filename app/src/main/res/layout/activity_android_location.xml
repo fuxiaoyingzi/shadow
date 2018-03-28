@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="model"
+            type="com.example.administrator.shadowapplication.map.databinding.LocationModel"/>
+
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.administrator.shadowapplication.map.AndroidLocationActivity">
+        <TextView
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="@{model.lat}"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <TextView
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:text="@{model.lng}"
+            android:layout_height="50dp" />
+        <TextView
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:text="@{model.stringAdd}"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:text="hello shadow"
+            android:layout_height="50dp" />
+
+
+    </LinearLayout>
+</layout>
+

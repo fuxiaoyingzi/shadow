@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_history"
+            android:icon="@drawable/like"
             android:title="recycle的侧滑和拖拽" />
         <item
             android:id="@+id/nav_manage"
+            android:icon="@drawable/like"
             android:title="Tools" />
     </group>
+    <item android:title="其它">
+        <menu>
+            <item
+                android:id="@+id/other1"
+                android:icon="@drawable/like"
+                android:title="其它1" />
+            <item
+                android:id="@+id/other2"
+                android:icon="@drawable/like"
+                android:title="其它2" />
+        </menu>
+    </item>
 
 </menu>

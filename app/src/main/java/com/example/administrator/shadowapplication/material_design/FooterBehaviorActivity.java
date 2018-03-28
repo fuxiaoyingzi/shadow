@@ -17,6 +17,10 @@ import com.example.administrator.shadowapplication.adapter.TestRecycleAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  {@link FooterBehaviorAppbar}
+ */
+
 public class FooterBehaviorActivity extends AppCompatActivity {
     private TestRecycleAdapter adapter;
     private String[] stringArray;
