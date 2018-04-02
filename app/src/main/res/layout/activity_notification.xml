@@ -47,7 +47,7 @@
         android:id="@+id/buttonPane6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="发送悬挂通知"
+        android:text="发送语音通知"
         app:layout_constraintTop_toBottomOf="@+id/buttonPane5" />
 
     <TextView

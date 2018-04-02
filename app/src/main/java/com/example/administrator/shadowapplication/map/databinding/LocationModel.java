@@ -23,9 +23,6 @@ public class LocationModel extends BaseObservable{
         mStringAdd = stringAdd;
     }
 
-    public LocationModel() {
-    }
-
     @Bindable
     public String getLat() {
         return "纬度："+lat;

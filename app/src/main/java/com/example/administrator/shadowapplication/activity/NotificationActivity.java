@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.RemoteViews;
 
 import com.example.administrator.shadowapplication.R;
+import com.example.administrator.shadowapplication.kotlin.KotlinActivity;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -28,29 +30,29 @@ import butterknife.OnClick;
  */
 public class NotificationActivity extends AppCompatActivity {
 
-    Button buttonPanel,buttonPane4;
+    Button buttonPanel, buttonPane4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
-        buttonPanel = (Button) findViewById(R.id.buttonPanel);
+        buttonPanel = findViewById(R.id.buttonPanel);
         buttonPane4 = findViewById(R.id.buttonPane4);
         buttonPane4.setOnClickListener(view -> {
             Notification.Builder builder = new Notification.Builder(this);
-            Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.baidu.com"));
-            PendingIntent pendingIntent  = PendingIntent.getActivity(this,0,intent,0);
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baidu.com"));
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
             builder.setContentIntent(pendingIntent);
             builder.setSmallIcon(R.drawable.like);
-            builder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.hello));
+            builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.hello));
             builder.setAutoCancel(true);
             builder.setContentTitle("普通通知");
             builder.setContentText("hello shadow");
             Notification notification = builder.build();
-            RemoteViews remoteViews = new RemoteViews(getPackageName(),R.layout.layout_notification_fold);
-            notification.bigContentView =  remoteViews;
+            RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.layout_notification_fold);
+            notification.bigContentView = remoteViews;
             NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-            notificationManager.notify(1,notification);
+            notificationManager.notify(1, notification);
         });
         buttonPanel.setOnClickListener(v -> {
             NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -69,6 +71,31 @@ public class NotificationActivity extends AppCompatActivity {
             builder.setContentIntent(pendingIntent);
             Notification notification = builder.build();
             notificationManager.notify(1, notification);
+        });
+
+        findViewById(R.id.buttonPane6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NotificationActivity.this, KotlinActivity.class);
+                PendingIntent pendingIntent = PendingIntent.getActivity(NotificationActivity.this, 0, intent, 0);
+                NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                Notification notification = new NotificationCompat.Builder(NotificationActivity.this)
+                        .setContentTitle("标题")
+                        //.setContentText("hello shadow，this is 内容")
+                        .setSmallIcon(R.drawable.like)
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.like))
+                        .setContentIntent(pendingIntent)
+                        .setAutoCancel(true)
+                        //.setSound(Uri.fromFile()) 设置通知音乐
+                        .setVibrate(new long[]{0,1000,5000,1000}) //震动 下标为1表示震动的时长，下标为2表示静止的时长，以此类推
+                        .setLights(Color.YELLOW,3000,1000)//led灯
+                        //.setDefaults(Notification.DEFAULT_ALL)
+                        .setStyle(new NotificationCompat.BigTextStyle().bigText("哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"))
+                        .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .build();
+                manager.notify(1, notification);
+
+            }
         });
 
     }
@@ -227,7 +254,6 @@ public class NotificationActivity extends AppCompatActivity {
         notificationManager.notify(0, builder.build());
         // END_INCLUDE(send_notification)
     }
-
 
 
     @OnClick(R.id.buttonPane5)

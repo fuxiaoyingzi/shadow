@@ -25,6 +25,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * GPS，精度高，速度慢，耗电对，而且可能因为天气原因或者障碍物而无法获取卫星信息，另外设备可能没有GPS模块（比如说一些平板）
+ * 通过网络获取定位信息，精度低，网络通畅时速度快，耗电少，不依赖GPS模块。
+ */
 public class AndroidLocationActivity extends AppCompatActivity {
 
     private ActivityAndroidLocationBinding mLocationBinding;
@@ -35,7 +39,7 @@ public class AndroidLocationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mLocationBinding = DataBindingUtil.setContentView(this, R.layout.activity_android_location);
+        mLocationBinding = DataBindingUtil.setContentView(AndroidLocationActivity.this, R.layout.activity_android_location);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
@@ -67,6 +71,7 @@ public class AndroidLocationActivity extends AppCompatActivity {
     }
 
     LocationListener requestLocationUpdates = new LocationListener() {
+        //当坐标改变时触发此函数
         @Override
         public void onLocationChanged(Location location) {
             //得到纬度
@@ -94,19 +99,28 @@ public class AndroidLocationActivity extends AppCompatActivity {
             mLocationBinding.setModel(locationModel);
         }
 
+        // Provider的在可用、暂时不可用和无服务三个状态直接切换时触发此函数
         @Override
         public void onStatusChanged(String s, int i, Bundle bundle) {
             LogUtil.d("hh", "LocationListener onStatusChanged()");
         }
 
+        // //  Provider被enable时触发此函数，比如GPS被打开
         @Override
         public void onProviderEnabled(String s) {
             LogUtil.d("hh", "LocationListener onProviderEnabled()");
         }
 
+        // Provider被disable时触发此函数，比如GPS被关闭
         @Override
         public void onProviderDisabled(String s) {
             LogUtil.d("hh", "LocationListener onProviderDisabled()");
         }
     };
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        locationManager.removeUpdates(requestLocationUpdates);
+    }
 }

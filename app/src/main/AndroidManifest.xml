@@ -153,7 +153,28 @@
         <activity
             android:name=".material_design.MaterialMainActivity"
             android:exported="true" />
-        <activity android:name=".map.AndroidLocationActivity" android:exported="true"/>
+        <activity
+            android:name=".map.AndroidLocationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".kotlin.KotlinActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.shadow.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".media.MediaActivity"
+            android:exported="true" />
+        <activity android:name=".media.MusicActivity" />
+        <activity android:name=".media.VideoActivity"></activity>
     </application>
 
 </manifest>
