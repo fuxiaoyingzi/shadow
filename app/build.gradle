@@ -146,5 +146,9 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile "org.jetbrains.anko:anko:0.10.4"
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+
+
 }
 

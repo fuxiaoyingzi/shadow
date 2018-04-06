@@ -80,4 +80,7 @@
     <color name="md_red_A400">#ff2d6f</color>
     <color name="md_red_A700">#e00032</color>
     <color name="road_red">#fa744b</color>
+
+    <color name="sample_primary">#0093FF</color>
+    <color name="sample_accent">#006BBA</color>
 </resources>
