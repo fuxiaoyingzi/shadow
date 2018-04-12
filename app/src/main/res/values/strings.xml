@@ -57,6 +57,7 @@
         <item>DEC</item>
     </string-array>
 
+    //自定義日期
     <string name="label_normal">Fitted for screen (common use)</string>
     <string name="label_small">Fitted for small layout parameters</string>
     <string name="label_medium">Tile size specified</string>
@@ -78,4 +79,9 @@
     <string name="title_activity_basic_modes">Calendar with Dynamic Modes</string>
     <string name="title_activity_multiple_view">Multiple Basic Calendars</string>
     <string name="title_activity_multiple_size">Many-Sized Calendars</string>
+
+
+    //gallery
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
