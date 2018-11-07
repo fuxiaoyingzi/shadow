@@ -34,6 +34,7 @@ import com.example.administrator.shadowapplication.material_design.MaterialMainA
 import com.example.administrator.shadowapplication.media.MediaActivity
 import com.example.administrator.shadowapplication.recycle.RecycleStaggeredActivity
 import com.example.administrator.shadowapplication.scrollview.TestScrollviewActivity
+import com.example.administrator.shadowapplication.service_demo.activity.ServiceActivity
 import com.example.administrator.shadowapplication.setting.SettingActivity
 import com.example.administrator.shadowapplication.thread_test.AsyncTaskActivity
 import com.example.administrator.shadowapplication.timer.CustomTimer1Activity
@@ -217,6 +218,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, HotRestoreActivity::class.java))
             }
 
+            R.id.tvService -> {
+                startActivity(Intent(this, ServiceActivity::class.java))
+            }
+
         }
     }
 
@@ -268,5 +273,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         tvDownPage.setOnClickListener(this)
         tvDownImage.setOnClickListener(this)
         tvHotRestore.setOnClickListener(this)
+        tvService.setOnClickListener(this)
     }
 }

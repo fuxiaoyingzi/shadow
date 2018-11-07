@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".service_demo.activity.ServiceActivity">
+
+    <TextView
+        android:id="@+id/tvStartService"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_map_btn"
+        android:gravity="center"
+        android:text="startService"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvBindService"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_map_btn"
+        android:gravity="center"
+        android:text="binderService"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvStopService"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_map_btn"
+        android:gravity="center"
+        android:text="stopService
+"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvUnBindService"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_map_btn"
+        android:gravity="center"
+        android:text="unBinderService"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvIntentService"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_map_btn"
+        android:gravity="center"
+        android:text="IntentService"
+        android:textSize="20sp" />
+
+</LinearLayout>

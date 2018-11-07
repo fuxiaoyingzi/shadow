@@ -443,10 +443,7 @@
         <activity android:name=".Gallery.ViewPagerChangeDataActivity" />
         <activity android:name=".Gallery.GoodsDetailActivity" />
         <activity android:name=".Gallery.TestViewPagerChangeDataActivity" />
-        <activity
-            android:name=".hx.HxDemoActivity"
-            android:exported="true" />
-        <activity android:name=".hx.ChatActivity" />
+
         <activity
             android:name=".android_http.DownWebPageActivity"
             android:exported="true" />
@@ -455,7 +452,13 @@
             android:exported="true" />
         <activity android:name=".hot_fix.HotRestoreActivity" />
         <activity android:name=".hot_fix.TestClassLoaderActivity" />
-        <activity android:name=".hot_fix.andfix.AndFixActivity"></activity>
+        <activity android:name=".hot_fix.andfix.AndFixActivity" />
+        <activity android:name=".service_demo.activity.ServiceActivity" />
+
+        <service android:name=".service_demo.service.BinderServiceClass" />
+        <service android:name=".service_demo.service.StartServiceClass" />
+        <service android:name=".service_demo.service.IntentServiceClass" />
+
     </application>
 
 </manifest>

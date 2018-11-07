@@ -38,18 +38,21 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="gallery展示图片" />
+
         <TextView
             android:id="@+id/viewPagerChangeData"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
             android:text="viewpager动态改变数据" />
+
         <TextView
             android:id="@+id/goodsDetail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
             android:text="商品详情" />
+
         <TextView
             android:id="@+id/viewPagerChangeData2"
             android:layout_width="match_parent"
@@ -302,12 +305,14 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="环信客服" />
+
         <TextView
             android:id="@+id/tvDownPage"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
             android:text="下载网页" />
+
         <TextView
             android:id="@+id/tvDownImage"
             android:layout_width="match_parent"
@@ -321,6 +326,13 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="热修复系列" />
+
+        <TextView
+            android:id="@+id/tvService"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="服务" />
 
 
     </LinearLayout>
