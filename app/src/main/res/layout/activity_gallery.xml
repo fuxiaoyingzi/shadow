@@ -6,16 +6,24 @@
     android:orientation="vertical"
     tools:context="com.example.administrator.shadowapplication.Gallery.GalleryActivity">
 
-    <ImageView
-        android:id="@+id/ivGallery"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
     <Gallery
+        android:visibility="gone"
         android:id="@+id/gallery"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"></Gallery>
+        android:layout_height="45dp" />
+    <TextView
+        android:id="@+id/updateViewPager"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:text="更新viewpager数据"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

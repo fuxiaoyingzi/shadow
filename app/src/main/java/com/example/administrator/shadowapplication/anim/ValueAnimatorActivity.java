@@ -6,8 +6,8 @@ import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.IntEvaluator;
 import android.animation.ObjectAnimator;
-import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,13 +15,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import com.example.administrator.shadowapplication.R;
+import com.example.administrator.shadowapplication.activity.MainActivity;
+import com.example.administrator.shadowapplication.crash_log.ToastUtil;
 
 public class ValueAnimatorActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView ivLauncherIcon;
-    private Button move,scale,rotate,alpha,valueAnima;
+    private Button move,scale,rotate,alpha,valueAnima,animationUtil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,9 @@ public class ValueAnimatorActivity extends AppCompatActivity implements View.OnC
         scale.setOnClickListener(this);
         rotate.setOnClickListener(this);
         alpha.setOnClickListener(this);
+        animationUtil = findViewById(R.id.util);
+        animationUtil.setOnClickListener(this);
+        findViewById(R.id.uti2).setOnClickListener(this);
         findViewById(R.id.btn_valueAnimator).setOnClickListener(this);
     }
 
@@ -117,6 +121,24 @@ public class ValueAnimatorActivity extends AppCompatActivity implements View.OnC
                     }
                 });
                 valueAnimator1.setDuration(500).start();
+                break;
+                case R.id.util:
+                    ValueAnimatorUtil.translationSlideUp(ivLauncherIcon, false, 500, new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            ToastUtil.showMsg("上移动画结束了");
+                        }
+                    });
+                    break;
+            case R.id.uti2:
+                ValueAnimatorUtil.translationSlideDown(ivLauncherIcon, false, 500, new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        ToastUtil.showMsg("下移动画结束了");
+                    }
+                });
                 break;
         }
 

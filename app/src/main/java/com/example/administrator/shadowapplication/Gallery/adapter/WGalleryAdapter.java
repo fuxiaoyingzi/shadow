@@ -48,6 +48,6 @@ public class WGalleryAdapter extends BaseAdapter implements IWGalleryAdapter {
 
     @Override
     public int getChangeAlphaViewId() {
-        return R.id.border;
+        return 0;
     }
 }

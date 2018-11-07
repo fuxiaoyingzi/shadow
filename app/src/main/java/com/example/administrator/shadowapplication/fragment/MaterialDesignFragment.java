@@ -38,6 +38,7 @@ public class MaterialDesignFragment extends Fragment{
         materialDesignFragment = new MaterialDesignFragment();
         materialDesignFragment.setArguments(bundle);
         return materialDesignFragment;
+
     }
 
     @Override

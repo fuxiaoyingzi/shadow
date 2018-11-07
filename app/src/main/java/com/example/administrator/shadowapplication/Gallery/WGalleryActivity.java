@@ -28,11 +28,11 @@ public class WGalleryActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn1:
-                startActivity(new Intent(this, BaseWGalleryActivity.class));
+                startActivity(new Intent(this, WithWGalleryAdapterActivity.class));
                 break;
 
             case R.id.btn2:
-                startActivity(new Intent(this, BaseWGalleryActivity.class));
+                startActivity(new Intent(this, SimpleWGalleryActivity.class));
                 break;
 
             default:

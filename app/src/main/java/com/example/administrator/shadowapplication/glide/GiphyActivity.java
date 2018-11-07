@@ -38,8 +38,8 @@ public class GiphyActivity extends AppCompatActivity implements Api.Monitor {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giphy);
 
-        final ImageView giphyLogoView = (ImageView) findViewById(R.id.giphy_logo_view);
-        roundImageView = (ImageView) findViewById(R.id.roundImageView);
+        final ImageView giphyLogoView =  findViewById(R.id.giphy_logo_view);
+        roundImageView =  findViewById(R.id.roundImageView);
 
         GlideApp.with(this)
                 .load("https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2394573821.webp")

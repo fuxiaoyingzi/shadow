@@ -11,6 +11,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewPropertyAnimator;
 
+import com.example.administrator.shadowapplication.crash_log.ToastUtil;
+
 /**
  * Author : shadow
  * Desc :定义view监听coordinatorLayout里面的滑动状态，做出相应的操作
@@ -22,6 +24,7 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
 
     /**
      * 必须添加构造函数
+     *
      * @param context
      * @param attrs
      */
@@ -53,7 +56,7 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
     @Override
     public void onNestedPreScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child, @NonNull View target, int dx, int dy, @NonNull int[] consumed, int type) {
         super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type);
-        if (dy > 0 && directionChanger < 0 || dy < 0 && directionChanger > 0) {
+       /* if (dy > 0 && directionChanger < 0 || dy < 0 && directionChanger > 0) {
             child.animate().cancel();
             directionChanger = 0;
         }
@@ -62,6 +65,25 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
         if (directionChanger > child.getHeight() && child.getVisibility() == View.VISIBLE) {
             hide(child);
         } else {
+            show(child);
+        }*/
+
+    }
+
+    @Override
+    public void onNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child, @NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) {
+        if (dyConsumed > 0 && dyUnconsumed == 0 && child.isShown()) {
+            // ToastUtil.showMsg("上滑中。。。");
+            hide(child);
+        }
+        if (dyConsumed == 0 && dyUnconsumed > 0) {
+            ToastUtil.showMsg("到边界了还在上滑。。。");
+        }
+        if (dyConsumed < 0 && dyUnconsumed == 0) {
+            //ToastUtil.showMsg("下滑中。。。");
+        }
+        if (dyConsumed == 0 && dyUnconsumed < 0 && !child.isShown()) {
+            //ToastUtil.showMsg("到边界了，还在下滑。。。");
             show(child);
         }
     }

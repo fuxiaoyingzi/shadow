@@ -1,5 +1,8 @@
 package com.example.administrator.shadowapplication.fragment;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewPropertyAnimator;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.example.administrator.shadowapplication.R;
@@ -49,6 +54,22 @@ public class TestFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_layout, container, false);
         textView = (TextView) view.findViewById(R.id.tv_fragment);
+        textView.setAnimation(AnimationUtils.loadAnimation(getActivity(),R.anim.anim_in));
+        textView.getAnimation().start();
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(textView,"alpha",100);
+        objectAnimator.setDuration(10000);
+        objectAnimator.start();
+        textView.animate().alphaBy(0.2f).setDuration(200).alpha(1).start();
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.play(objectAnimator).with(objectAnimator).after(objectAnimator);
+        animatorSet.playTogether(animatorSet);
+
+        PropertyValuesHolder mPropertyValueHolder1 = PropertyValuesHolder.ofFloat("scaleX",1.0f,1.5f);
+        PropertyValuesHolder mPropertyValueHolder2 = PropertyValuesHolder.ofFloat("alpha",0.1f,1.0f);
+        ObjectAnimator animator = ObjectAnimator.ofPropertyValuesHolder(textView,mPropertyValueHolder1,mPropertyValueHolder2);
+        animator.setDuration(2000);
+        animator.start();
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

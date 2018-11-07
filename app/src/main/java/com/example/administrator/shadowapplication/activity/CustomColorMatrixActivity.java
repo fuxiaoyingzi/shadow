@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
@@ -19,6 +21,7 @@ import java.util.TimerTask;
 public class CustomColorMatrixActivity extends AppCompatActivity {
 
     private CustomSportCircle sportCircle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

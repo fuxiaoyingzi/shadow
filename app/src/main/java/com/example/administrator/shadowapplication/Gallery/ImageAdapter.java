@@ -1,41 +1,65 @@
 package com.example.administrator.shadowapplication.Gallery;
 
 import android.content.Context;
-import android.content.res.TypedArray;
+import android.content.res.Resources;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.AnimationSet;
+import android.view.animation.ScaleAnimation;
 import android.widget.BaseAdapter;
-import android.widget.Gallery;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.example.administrator.shadowapplication.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Author : shadow
  * Desc :
  * Date :2018/4/6/006
  */
-
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
-    private int mGalleryItemBackground;
-    private int[] myImageIds = {R.drawable.like, R.drawable.ic_my_selector, R.drawable.like, R.drawable.ic_my_selector, R.drawable.like,};
     private int selectItem;
+  /*  private Integer mImagesId[] = {
+            R.drawable.pic0, R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable.pic4,
+            R.drawable.pic5, R.drawable.pic6, R.drawable.pic7, R.drawable.pic8, R.drawable.pic9,
+            R.drawable.pic0, R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable.pic4,
+            R.drawable.pic5, R.drawable.pic6, R.drawable.pic7, R.drawable.pic8, R.drawable.pic9,
+            R.drawable.pic0, R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable.pic4,
+            R.drawable.pic5, R.drawable.pic6, R.drawable.pic7, R.drawable.pic8, R.drawable.pic9
+    };
+*/
+    private List<GalleryListBean> mGalleryListBeans;
 
     public ImageAdapter(Context c) {
         mContext = c;
-       /* TypedArray a = mContext.obtainStyledAttributes(R.styleable.Gallery); *//* 使用在res/values/attrs.xml中的定义 的Gallery属性. *//*
-//        mGalleryItemBackground = a.getResourceId(R.styleable.Gallery_android_galleryItemBackground, 0); //*//*取得Gallery属性的Index
-        a.recycle();*//* 让对象的styleable属性能够反复使用 */
+        mGalleryListBeans = new ArrayList<>();
     }
+
+
+
+    public void setGalleryListBeans(List<GalleryListBean> galleryListBeans,boolean needClean) {
+        if (needClean){
+            this.mGalleryListBeans.clear();
+        }
+        this.mGalleryListBeans.addAll( galleryListBeans);
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
-        return Integer.MAX_VALUE;//最大值能使图片无限滑动
+        return mGalleryListBeans.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return position;
+        return mGalleryListBeans.get(position).getImageUrl();
     }
 
     @Override
@@ -44,28 +68,52 @@ public class ImageAdapter extends BaseAdapter {
     }
 
     public void setSelectItem(int selectItem) {
-        this.selectItem = selectItem;
+        if (this.selectItem != selectItem) {
+            this.selectItem = selectItem;
+            notifyDataSetChanged();
+        }
     }
-
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView = new ImageView(mContext);
-        imageView.setImageResource(myImageIds[position%myImageIds.length]);//实现循环滑动
-        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        if(selectItem==position){
-            //选中时的动画
-//            Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.my_scale_action);    //实现动画效果
-//            imageView.startAnimation(animation);  //选中时，这时设置的比较大
-            imageView.setLayoutParams(new Gallery.LayoutParams(320,240));
+        ViewHolder viewHolder = null;
+        if (convertView == null) {
+            viewHolder = new ViewHolder();
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.adapter_sample, parent, false);
+            viewHolder.mImg = convertView.findViewById(R.id.iv);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
         }
-        else{
-            //未选中时的动画
-//            Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.my_scale_action);    //实现动画效果
-//            imageView.startAnimation(animation);
-            imageView.setLayoutParams(new Gallery.LayoutParams(160,120));//未选中
+
+        if (selectItem == position) {
+
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) viewHolder.mImg.getLayoutParams();
+            params.width = dp2px(47);
+            params.height = dp2px(26);
+            params.leftMargin = dp2px(10);
+            params.rightMargin = dp2px(10);
+            viewHolder.mImg.setLayoutParams(params);
+            AnimationSet animationSet = new AnimationSet(true);
+            AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
+            alphaAnimation.setDuration(300);
+            ScaleAnimation scaleAnimation = new ScaleAnimation(0.1f, 1f, 0.1f, 1f);
+            scaleAnimation.setDuration(300);
+            animationSet.addAnimation(alphaAnimation);
+            animationSet.addAnimation(scaleAnimation);
+            viewHolder.mImg.startAnimation(animationSet);
         }
-        return imageView;
+        viewHolder.mImg.setImageResource(mGalleryListBeans.get(position).getImageUrl());
+        return convertView;
+    }
+
+    private int dp2px(float dp) {
+        Resources r = mContext.getResources();
+        float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics());
+        return (int) px;
+    }
+
+    private class ViewHolder {
+        ImageView mImg;
     }
 }

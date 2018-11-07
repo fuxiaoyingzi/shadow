@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.shadowapplication.MainTabActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/valueAnimator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="属性动画" />
+
+        <TextView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="testScrollView" />
+
+        <TextView
+            android:id="@+id/album"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="album相册" />
+
+        <TextView
+            android:id="@+id/gallery"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="gallery展示图片" />
+        <TextView
+            android:id="@+id/viewPagerChangeData"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="viewpager动态改变数据" />
+        <TextView
+            android:id="@+id/goodsDetail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="商品详情" />
+        <TextView
+            android:id="@+id/viewPagerChangeData2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="viewpager动态改变数据2" />
+
+        <TextView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="日历" />
+
+        <TextView
+            android:id="@+id/media"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="拍照" />
+
+        <TextView
+            android:id="@+id/androidLocation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="location定位" />
+
+        <TextView
+            android:id="@+id/material"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="材料设计" />
+
+        <TextView
+            android:id="@+id/footerBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="footerBehavior" />
+
+        <TextView
+            android:id="@+id/retrofit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Retrofit" />
+
+        <TextView
+            android:id="@+id/sqliteTest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="SqliteTest" />
+
+        <TextView
+            android:id="@+id/aidlBindService"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="AidlBindService" />
+
+        <TextView
+            android:id="@+id/broadcastReceive"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="BroadcastReceive" />
+
+        <TextView
+            android:id="@+id/eventBusTest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="EventBusTest" />
+
+        <TextView
+            android:id="@+id/iPCService"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="IPCService" />
+
+        <TextView
+            android:id="@+id/customShaderText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="自定义阴影文字" />
+
+        <TextView
+            android:id="@+id/glide"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="glide" />
+
+        <TextView
+            android:id="@+id/httpUrlConnection"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="HttpUrlConnection" />
+
+        <TextView
+            android:id="@+id/newCustomView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="NewCustomView" />
+
+        <TextView
+            android:id="@+id/customViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="CustomViewGroup" />
+
+        <TextView
+            android:id="@+id/customColorMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="CustomColorMatrix" />
+
+        <TextView
+            android:id="@+id/customWatch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="自定义手表" />
+
+        <TextView
+            android:id="@+id/notification"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="自定义通知" />
+
+        <TextView
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="运动人生" />
+
+        <TextView
+            android:id="@+id/testWeb"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="TestWeb" />
+
+        <TextView
+            android:id="@+id/asyncTask"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="AsyncTask" />
+
+        <TextView
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="SettingPreference" />
+
+
+        <TextView
+            android:id="@+id/dataBinding"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="dataBinding" />
+
+        <TextView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="MapActivity" />
+
+        <TextView
+            android:id="@+id/material2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Material" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dateMain"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="DateMain" />
+
+        <TextView
+            android:id="@+id/viewpagerGallery"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="ViewpagerGalley" />
+
+        <TextView
+            android:id="@+id/multitypeActivity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="MultitypeActivity" />
+
+        <TextView
+            android:id="@+id/popupWindowActivity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="PopupWindowActivity" />
+
+        <TextView
+            android:id="@+id/tvAmap"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="AmapActivity 高德地图" />
+
+        <TextView
+            android:id="@+id/tvTimerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="全局倒计时" />
+
+        <TextView
+            android:id="@+id/tvRecycleStaggered"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="瀑布流" />
+
+        <TextView
+            android:id="@+id/tvHxDemo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="环信客服" />
+        <TextView
+            android:id="@+id/tvDownPage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="下载网页" />
+        <TextView
+            android:id="@+id/tvDownImage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="下载图片" />
+
+        <TextView
+            android:id="@+id/tvHotRestore"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="热修复系列" />
+
+
+    </LinearLayout>
+
+</ScrollView>

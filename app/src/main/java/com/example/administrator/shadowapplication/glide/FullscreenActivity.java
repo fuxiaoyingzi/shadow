@@ -40,7 +40,7 @@ public class FullscreenActivity extends Activity {
     String resultJson = getIntent().getStringExtra(EXTRA_RESULT_JSON);
     final Api.GifResult result = new Gson().fromJson(resultJson, Api.GifResult.class);
 
-    ImageView gifView = (ImageView) findViewById(R.id.fullscreen_gif);
+    ImageView gifView =  findViewById(R.id.fullscreen_gif);
 
     gifView.setOnClickListener(new View.OnClickListener() {
       @Override

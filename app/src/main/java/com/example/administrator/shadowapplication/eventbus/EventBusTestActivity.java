@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.activity.CustomViewGroupActivity;
+import com.example.administrator.shadowapplication.timer.CustomTimer2Activity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -24,8 +25,8 @@ public class EventBusTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_bus_test);
         EventBus.getDefault().register(this);
-        nameValue = (TextView) findViewById(R.id.nameValue);
-        sendEvent = (Button) findViewById(R.id.sendEvent);
+        nameValue = findViewById(R.id.nameValue);
+        sendEvent = findViewById(R.id.sendEvent);
         sendEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

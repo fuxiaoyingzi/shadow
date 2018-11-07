@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:text="hello shadow"
+        android:gravity="center"
+        android:id="@+id/tvTitle"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@color/common_blue"
+        android:layout_width="match_parent"
+        android:layout_height="46dp" />
+
+
+    <com.example.administrator.shadowapplication.Gallery.GoodsViewPager
+        android:id="@+id/pager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </com.example.administrator.shadowapplication.Gallery.GoodsViewPager>
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <Button
+        android:id="@+id/statusBtn"
+        android:layout_alignParentBottom="true"
+        android:onClick="btn_click"
+        android:text="更换数据源"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+

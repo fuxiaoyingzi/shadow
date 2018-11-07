@@ -11,6 +11,7 @@ import com.example.administrator.shadowapplication.crash_log.CrashHandle;
 import com.example.administrator.shadowapplication.crash_log.OtherProcessCrashListener;
 import com.example.administrator.shadowapplication.dagger.AppComponent;
 import com.example.administrator.shadowapplication.dagger.DaggerAppComponent;
+import com.example.administrator.shadowapplication.hot_fix.andfix.FixPackageManager;
 
 import javax.inject.Inject;
 
@@ -28,9 +29,9 @@ public class MyApp extends Application implements HasActivityInjector {
     private boolean isDebug = false;
 
 
-
     @Inject
     DispatchingAndroidInjector<Activity> dispatchingAndroidInjector;
+
 
     @Override
     public void onCreate() {
@@ -40,13 +41,19 @@ public class MyApp extends Application implements HasActivityInjector {
         component.inject(this);
         initBaiduMap();
         initCrash();
+        initPatch();
     }
+
+    private void initPatch() {
+        FixPackageManager.getInstance().initPatch(this);
+    }
+
 
     public static MyApp getInstance() {
         return sContext;
     }
 
-    public Context getContext(){
+    public Context getContext() {
         return getApplicationContext();
     }
 
@@ -72,4 +79,6 @@ public class MyApp extends Application implements HasActivityInjector {
     public boolean isDebugModel() {
         return isDebug;
     }
+
+
 }

@@ -18,7 +18,7 @@ import java.security.MessageDigest;
 
 public class GlideCircleTransform extends BitmapTransformation {
     public GlideCircleTransform(Context context){
-        super(context);
+        super();
     }
     /**
      *  重写 生成圆角图片

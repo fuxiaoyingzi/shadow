@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-//http://blog.csdn.net/liumeng123321/article/details/64443157 DSL解析gradle
 
 android {
     configurations.all {
@@ -32,6 +31,10 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         flavorDimensions "versionCode" //指定flavor尺寸的名称
+        //设置支持的SO库架构
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"
+        }
     }
     buildTypes { //项目类型(debug、release)
         release {
@@ -68,19 +71,12 @@ android {
         generateStubs = true
     }
 
-    /* applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            def outputFile = output.outputFile
-            if (outputFile != null && outputFile.name.endsWith('.apk')) {
-//                def fileName = outputFile.name.replace(".apk", "_${defaultConfig.versionName}_prod.apk")
-                def fileName = "shadow_${defaultConfig.versionName}_${variant.buildType.name}.apk"
-                //自己拼接apk的名字
-                output.outputFile = new File();
-                //= new File(outputFile.parent, fileName.toLowerCase())
-            }
-        }
+    dexOptions {
+        javaMaxHeapSize "4g"
+//        //加快编译速度
+        incremental true
     }
-*/
+
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def outputFile = output.outputFile
@@ -105,13 +101,12 @@ ext {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    /* androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
-    })
+    })*/
     compile "com.android.support:appcompat-v7:$supportVersion"
     compile "com.android.support:design:$supportVersion"
     compile "com.android.support:support-vector-drawable:$supportVersion"
-    compile "com.android.support:support-v4:$supportVersion"
     compile "com.android.support:support-vector-drawable:$supportVersion"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.squareup.okhttp3:okhttp:3.9.1'
@@ -132,7 +127,6 @@ dependencies {
     //http
     compile 'com.squareup.okhttp3:okhttp:3.9.1'
     compile 'com.squareup:android-times-square:1.6.5@aar'
-    compile project(':javalib')
     //eventBus
     compile 'org.greenrobot:eventbus:3.1.1'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
@@ -145,10 +139,23 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile "org.jetbrains.anko:anko:0.10.4"
+    compile 'org.jetbrains.anko:anko:0.10.4'
     compile 'com.google.zxing:core:3.3.0'
     compile 'com.prolificinteractive:material-calendarview:1.4.3'
 
+    //相册选择
+    implementation 'com.yanzhenjie:album:2.1.1'
+    //多类型 multitype
+    implementation 'me.drakeet.multitype:multitype:3.4.4'
+    //高德地图
 
+    //3D地图so及jar
+    compile 'com.amap.api:3dmap:latest.integration'
+    //定位功能
+    compile 'com.amap.api:location:latest.integration'
+    //搜索功能
+    compile 'com.amap.api:search:latest.integration'
+
+    //阿里 热修复框架 andFix
+    compile 'com.alipay.euler:andfix:0.5.0@aar'
 }
-

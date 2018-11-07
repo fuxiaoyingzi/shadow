@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Transformation;
+import android.widget.FrameLayout;
 import android.widget.SpinnerAdapter;
 
 import com.example.administrator.shadowapplication.R;
@@ -86,11 +87,16 @@ public class WGallery  extends EcoGallery {
                     } else if (mScalePivot == SCALE_PIVOT_BOTTOM) {
                         pivotY = childHeight - child.getPaddingBottom();
                     }
-                    float scale = 1 + (mSelectedScale - 1) * offsetScale;
+                  /*  float scale = 1 + (mSelectedScale - 1) * offsetScale;
                     child.setPivotX(childWidth / 2.f);
                     child.setPivotY(pivotY);
                     child.setScaleX(scale);
-                    child.setScaleY(scale);
+                    child.setScaleY(scale);*/
+                     float scale = 1 + (mSelectedScale - 1) * offsetScale;
+                    child.setPivotX(childWidth / 4.7f);
+                    child.setPivotY(pivotY);
+                    child.setScaleX(2.35f);
+                    child.setScaleY(0.65f);
                 }
                 if (mUnselectedAlpha != 1.f) {
                     float alpha = (1.f - mUnselectedAlpha) * offsetScale + mUnselectedAlpha;

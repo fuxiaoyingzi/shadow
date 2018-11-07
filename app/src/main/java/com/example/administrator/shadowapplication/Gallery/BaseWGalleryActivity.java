@@ -136,7 +136,8 @@ public class BaseWGalleryActivity extends AppCompatActivity
 
         @Override
         public Fragment getItem(int position) {
-            return GalleryFragment.getInstance(position);
+            //return GalleryFragment.getInstance(position);
+            return null;
         }
 
         @Override
