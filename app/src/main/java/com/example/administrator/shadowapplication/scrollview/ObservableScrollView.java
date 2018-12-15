@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
 import android.widget.ScrollView;
 
 /**
@@ -62,6 +61,9 @@ public class ObservableScrollView extends ScrollView {
         // 即就是，为零则不会发生弹性，不为零（>0,负数未测试）则会滑动到其值的位置
         return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX,
                 scrollRangeY, 0, 0, isTouchEvent);
+
+
+
     }
 
 }

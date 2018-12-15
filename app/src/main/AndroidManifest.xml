@@ -443,7 +443,6 @@
         <activity android:name=".Gallery.ViewPagerChangeDataActivity" />
         <activity android:name=".Gallery.GoodsDetailActivity" />
         <activity android:name=".Gallery.TestViewPagerChangeDataActivity" />
-
         <activity
             android:name=".android_http.DownWebPageActivity"
             android:exported="true" />
@@ -459,6 +458,7 @@
         <service android:name=".service_demo.service.StartServiceClass" />
         <service android:name=".service_demo.service.IntentServiceClass" />
 
+        <activity android:name=".notification.NewNotificationActivity"></activity>
     </application>
 
 </manifest>

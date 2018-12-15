@@ -55,6 +55,17 @@ public class IntentServiceClass extends IntentService {
         }
     }
 
+    /**
+     * 调用Context.startService方式启动Service时，如果Android面临内存匮乏，可能会销毁当前运行的Service，
+     * 待内存充足时可以重建Service。而Service被Android系统强制销毁并再次重建的行为依赖于Service的onStartCommand()方法的返回值。
+     *
+     * @param intent
+     * @param flags
+     * @param startId
+     * @return
+     * START_NOT_STICKY
+     * 如果返回START_NOT_STICKY，表示当Service运行的进程被Android系统强制杀掉之后，不会重新创建该Service。
+     */
     @Override
     public int onStartCommand(@Nullable Intent intent, int flags, int startId) {
         LogUtil.d("hh","IntentServiceClass onStartCommand");

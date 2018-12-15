@@ -193,6 +193,9 @@
             android:gravity="center"
             android:text="自定义通知" />
 
+
+
+
         <TextView
             android:id="@+id/main"
             android:layout_width="match_parent"
@@ -333,6 +336,13 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="服务" />
+
+        <TextView
+            android:id="@+id/tvNotification"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="通知" />
 
 
     </LinearLayout>

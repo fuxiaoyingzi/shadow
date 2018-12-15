@@ -15,11 +15,11 @@ public class CustomWatchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_watch);
-        watchView = (CustomWatchView) findViewById(R.id.customWatch);
+       /* watchView = (CustomWatchView) findViewById(R.id.customWatch);
 
 
 
-        new Thread(watchView).start();
+        new Thread(watchView).start();*/
 
     }
 }

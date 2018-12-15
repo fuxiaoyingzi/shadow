@@ -32,6 +32,7 @@ import com.example.administrator.shadowapplication.map.MapActivity
 import com.example.administrator.shadowapplication.material_design.FooterBehaviorActivity
 import com.example.administrator.shadowapplication.material_design.MaterialMainActivity
 import com.example.administrator.shadowapplication.media.MediaActivity
+import com.example.administrator.shadowapplication.notification.NewNotificationActivity
 import com.example.administrator.shadowapplication.recycle.RecycleStaggeredActivity
 import com.example.administrator.shadowapplication.scrollview.TestScrollviewActivity
 import com.example.administrator.shadowapplication.service_demo.activity.ServiceActivity
@@ -221,6 +222,9 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
             R.id.tvService -> {
                 startActivity(Intent(this, ServiceActivity::class.java))
             }
+            R.id.tvNotification -> {
+                startActivity(Intent(this, NewNotificationActivity::class.java))
+            }
 
         }
     }
@@ -274,5 +278,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         tvDownImage.setOnClickListener(this)
         tvHotRestore.setOnClickListener(this)
         tvService.setOnClickListener(this)
+        tvNotification.setOnClickListener(this)
     }
 }
