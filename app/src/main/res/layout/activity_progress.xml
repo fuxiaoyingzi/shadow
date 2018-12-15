@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".progress.ProgressActivity">
+
+    <TextView
+        android:id="@+id/tvWhite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="白色保活"
+        android:textColor="@color/road_red"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvBlack"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="黑色保活"
+        android:textColor="@color/road_red"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvGray"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="灰色保活"
+        android:textColor="@color/road_red"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvNormal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="普通进程"
+        android:textColor="@color/road_red"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

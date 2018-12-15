@@ -33,6 +33,7 @@ import com.example.administrator.shadowapplication.material_design.FooterBehavio
 import com.example.administrator.shadowapplication.material_design.MaterialMainActivity
 import com.example.administrator.shadowapplication.media.MediaActivity
 import com.example.administrator.shadowapplication.notification.NewNotificationActivity
+import com.example.administrator.shadowapplication.progress.ProgressActivity
 import com.example.administrator.shadowapplication.recycle.RecycleStaggeredActivity
 import com.example.administrator.shadowapplication.scrollview.TestScrollviewActivity
 import com.example.administrator.shadowapplication.service_demo.activity.ServiceActivity
@@ -226,6 +227,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, NewNotificationActivity::class.java))
             }
 
+            R.id.tvProgress -> {
+                startActivity(Intent(this, ProgressActivity::class.java))
+            }
+
         }
     }
 
@@ -279,5 +284,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         tvHotRestore.setOnClickListener(this)
         tvService.setOnClickListener(this)
         tvNotification.setOnClickListener(this)
+        tvProgress.setOnClickListener(this)
     }
 }

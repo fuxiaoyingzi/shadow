@@ -458,7 +458,48 @@
         <service android:name=".service_demo.service.StartServiceClass" />
         <service android:name=".service_demo.service.IntentServiceClass" />
 
-        <activity android:name=".notification.NewNotificationActivity"></activity>
+        <activity android:name=".notification.NewNotificationActivity" />
+        <activity android:name=".progress.ProgressActivity"></activity>
+
+        <receiver
+            android:name=".progress.WakeReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.wake.gray" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".progress.WhiteService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":white" />
+        <service
+            android:name=".progress.GrayService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":gray" />
+        <service
+            android:name=".progress.GrayService$GrayInnerService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":gray" />
+        <service
+            android:name=".progress.BackgroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":bg" />
+
+        <service
+            android:name=".progress.WakeNotifyService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".progress.WakeGrayInnerService"
+            android:enabled="true"
+            android:exported="false" />
+
     </application>
 
 </manifest>
