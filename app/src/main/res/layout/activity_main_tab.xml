@@ -349,6 +349,20 @@
             android:gravity="center"
             android:text="进程保活" />
 
+        <TextView
+            android:id="@+id/scrollBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="scrollBehavior控制隐藏显示" />
+
+        <TextView
+            android:id="@+id/scrollBehavior1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="scrollBehavior联动" />
+
     </LinearLayout>
 
 </ScrollView>

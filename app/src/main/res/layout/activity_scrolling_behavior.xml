@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".material_design.ScrollingBehaviorActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        android:layout_height="250dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar_layout"
+            app:contentScrim="#00ffffff"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:layout_height="match_parent">
+
+            <ImageView
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/profile_bg_0" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n
+致橡树\n
+作者：舒婷\n
+我如果爱你——\n
+绝不像攀援的凌霄花，\n
+借你的高枝炫耀自己；\n
+我如果爱你——\n
+绝不学痴情的鸟儿，\n
+为绿荫重复单调的歌曲；\n
+也不止像泉源，\n
+常年送来清凉的慰藉；\n
+也不止像险峰，\n
+增加你的高度，衬托你的威仪。\n
+甚至日光，\n
+甚至春雨。\n
+\n
+不，这些都还不够！\n
+我必须是你近旁的一株木棉，\n
+作为树的形象和你站在一起。\n
+根，紧握在地下；\n
+叶，相触在云里。\n
+每一阵风过，\n
+我们都互相致意，\n
+但没有人，\n
+听懂我们的言语。\n
+你有你的铜枝铁干，\n
+像刀，像剑，也像戟；\n
+我有我红硕的花朵，\n
+像沉重的叹息，\n
+又像英勇的火炬。\n
+\n
+我们分担寒潮、风雷、霹雳；\n
+我们共享雾霭、流岚、虹霓。\n
+仿佛永远分离，\n
+却又终身相依。\n
+这才是伟大的爱情，\n
+坚贞就在这里：\n
+爱——\n
+不仅爱你伟岸的身躯，\n
+也爱你坚持的位置，\n
+足下的土地。\n
+" />
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff0000"
+        android:gravity="center"
+        android:text="Hello World"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_behavior="@string/behavior_sample_title" />
+
+
+</android.support.design.widget.CoordinatorLayout>

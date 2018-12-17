@@ -1,4 +1,4 @@
-package com.example.administrator.shadowapplication.material_design;
+package com.example.administrator.shadowapplication.material_design.behavior;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

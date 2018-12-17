@@ -9,13 +9,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.administrator.shadowapplication.R;
-import com.example.administrator.shadowapplication.activity.TestRecycleViewActivity;
 import com.example.administrator.shadowapplication.adapter.TestRecycleAdapter;
 import com.example.administrator.shadowapplication.crash_log.ToastUtil;
+import com.example.administrator.shadowapplication.material_design.behavior.FooterBehaviorAppbar;
 import com.example.administrator.shadowapplication.scrollview.BehaviorScrollview;
 
 import java.util.ArrayList;

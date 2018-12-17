@@ -31,6 +31,8 @@ import com.example.administrator.shadowapplication.map.AndroidLocationActivity
 import com.example.administrator.shadowapplication.map.MapActivity
 import com.example.administrator.shadowapplication.material_design.FooterBehaviorActivity
 import com.example.administrator.shadowapplication.material_design.MaterialMainActivity
+import com.example.administrator.shadowapplication.material_design.ScrollingBehaviorActivity
+import com.example.administrator.shadowapplication.material_design.ScrollingBehaviorActivity1
 import com.example.administrator.shadowapplication.media.MediaActivity
 import com.example.administrator.shadowapplication.notification.NewNotificationActivity
 import com.example.administrator.shadowapplication.progress.ProgressActivity
@@ -231,6 +233,14 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, ProgressActivity::class.java))
             }
 
+            R.id.scrollBehavior -> {
+                startActivity(Intent(this, ScrollingBehaviorActivity::class.java))
+            }
+
+            R.id.scrollBehavior1 -> {
+                startActivity(Intent(this, ScrollingBehaviorActivity1::class.java))
+            }
+
         }
     }
 
@@ -285,5 +295,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         tvService.setOnClickListener(this)
         tvNotification.setOnClickListener(this)
         tvProgress.setOnClickListener(this)
+        scrollBehavior.setOnClickListener(this)
+        scrollBehavior1.setOnClickListener(this)
     }
 }

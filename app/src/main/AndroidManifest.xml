@@ -459,7 +459,7 @@
         <service android:name=".service_demo.service.IntentServiceClass" />
 
         <activity android:name=".notification.NewNotificationActivity" />
-        <activity android:name=".progress.ProgressActivity"></activity>
+        <activity android:name=".progress.ProgressActivity" />
 
         <receiver
             android:name=".progress.WakeReceiver"
@@ -490,7 +490,6 @@
             android:enabled="true"
             android:exported="false"
             android:process=":bg" />
-
         <service
             android:name=".progress.WakeNotifyService"
             android:enabled="true"
@@ -500,6 +499,10 @@
             android:enabled="true"
             android:exported="false" />
 
+        <activity
+            android:name=".material_design.ScrollingBehaviorActivity"
+            android:label="@string/title_activity_scrolling_behavior" />
+        <activity android:name=".material_design.ScrollingBehaviorActivity1"></activity>
     </application>
 
 </manifest>
