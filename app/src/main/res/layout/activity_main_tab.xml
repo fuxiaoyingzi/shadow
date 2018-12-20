@@ -363,6 +363,20 @@
             android:gravity="center"
             android:text="scrollBehavior联动" />
 
+        <TextView
+            android:id="@+id/customDialog"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="自定义对话框" />
+
+        <TextView
+            android:id="@+id/showPopup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="PopupWindows" />
+
     </LinearLayout>
 
 </ScrollView>

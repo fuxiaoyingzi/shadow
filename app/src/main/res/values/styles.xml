@@ -39,10 +39,15 @@
     </style>
 
 
-
-    <style name="CustomDayTextAppearance"
-        parent="TextAppearance.AppCompat.Medium">
+    <style name="CustomDayTextAppearance" parent="TextAppearance.AppCompat.Medium">
         <item name="android:textColor">@color/mcv_text_date_light</item>
     </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 
 </resources>

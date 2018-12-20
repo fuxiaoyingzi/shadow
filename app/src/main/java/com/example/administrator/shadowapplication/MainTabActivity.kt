@@ -19,6 +19,7 @@ import com.example.administrator.shadowapplication.databing.UserActivity
 import com.example.administrator.shadowapplication.date.CalendarActivity
 import com.example.administrator.shadowapplication.date.DateMainActivity
 import com.example.administrator.shadowapplication.db.SqliteTestActivity
+import com.example.administrator.shadowapplication.dialog.CustomDialog
 import com.example.administrator.shadowapplication.eventbus.EventBusTestActivity
 import com.example.administrator.shadowapplication.glide.GiphyActivity
 import com.example.administrator.shadowapplication.hot_fix.HotRestoreActivity
@@ -35,6 +36,7 @@ import com.example.administrator.shadowapplication.material_design.ScrollingBeha
 import com.example.administrator.shadowapplication.material_design.ScrollingBehaviorActivity1
 import com.example.administrator.shadowapplication.media.MediaActivity
 import com.example.administrator.shadowapplication.notification.NewNotificationActivity
+import com.example.administrator.shadowapplication.popup_windows.PopupActivity
 import com.example.administrator.shadowapplication.progress.ProgressActivity
 import com.example.administrator.shadowapplication.recycle.RecycleStaggeredActivity
 import com.example.administrator.shadowapplication.scrollview.TestScrollviewActivity
@@ -241,6 +243,15 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, ScrollingBehaviorActivity1::class.java))
             }
 
+            R.id.customDialog -> {
+                CustomDialog(this, "hello world").show()
+            }
+
+            R.id.showPopup -> {
+                startActivity(Intent(this, PopupActivity::class.java))
+
+            }
+
         }
     }
 
@@ -297,5 +308,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         tvProgress.setOnClickListener(this)
         scrollBehavior.setOnClickListener(this)
         scrollBehavior1.setOnClickListener(this)
+        customDialog.setOnClickListener(this)
+        showPopup.setOnClickListener(this)
     }
 }
