@@ -15,7 +15,7 @@ android {
         config {
             keyAlias 'shadow'
             keyPassword PASSWORD
-            storeFile file('D:/apk/apk.jks')
+            storeFile file('C:/keystore/shadow.jks')
             storePassword PASSWORD
         }
     }
@@ -56,6 +56,8 @@ android {
         disable 'ResourceType' // 忽略自定义id
         disable 'MissingTranslation' // 忽略未翻译的字符串
         abortOnError false
+        disable 'GoogleAppIndexingWarning'
+        baseline file("lint-baseline.xml")
     }
 //productFlavors打包渠道就在这儿配置咯 同时在AndroidManifest里面加上，渠道标识,因为我们没有加统计，所以我们不用设置多渠道标识
     //所谓多渠道打包，就是构成不同的apk名字，发布的不同的平台上，根据此名称可以做出相应的统计操作
@@ -71,11 +73,11 @@ android {
         generateStubs = true
     }
 
-    dexOptions {
-        javaMaxHeapSize "4g"
-//        //加快编译速度
-        incremental true
-    }
+//    dexOptions {
+//        javaMaxHeapSize "4g"
+////        //加快编译速度
+//        incremental true
+//    }
 
     applicationVariants.all { variant ->
         variant.outputs.each { output ->

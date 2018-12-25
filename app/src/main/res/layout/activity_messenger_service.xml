@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.shadowapplication.service_demo.MessengerServiceActivity">
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    tools:context="com.example.administrator.shadowapplication.ipc.messenger.MessengerServiceActivity">
+    <Button
+        android:id="@+id/bindService"
+        android:layout_width="wrap_content"
+        android:text = "bindService"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

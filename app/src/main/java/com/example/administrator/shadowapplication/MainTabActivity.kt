@@ -27,6 +27,7 @@ import com.example.administrator.shadowapplication.http.HttpUrlConnectionActivit
 import com.example.administrator.shadowapplication.http.RetrofitActivity
 
 import com.example.administrator.shadowapplication.ipc.IPCServiceActivity
+import com.example.administrator.shadowapplication.ipc.messenger.MessengerServiceActivity
 import com.example.administrator.shadowapplication.map.AMapActivity
 import com.example.administrator.shadowapplication.map.AndroidLocationActivity
 import com.example.administrator.shadowapplication.map.MapActivity
@@ -252,6 +253,11 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
 
             }
 
+            R.id.messageBindService -> {
+                startActivity(Intent(this, MessengerServiceActivity::class.java))
+
+            }
+
         }
     }
 
@@ -310,5 +316,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         scrollBehavior1.setOnClickListener(this)
         customDialog.setOnClickListener(this)
         showPopup.setOnClickListener(this)
+        messageBindService.setOnClickListener(this)
     }
 }

@@ -60,23 +60,18 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="5f73cf92fa3f6da1a8e5c8fc0c925157" />
-
         <service android:name="com.amap.api.location.APSService" />
 
-        <activity android:name=".activity.MainActivity">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
+        <activity android:name=".activity.MainActivity"></activity>
         <activity android:name=".activity.MaterialDesignActivity" />
         <activity android:name=".activity.TestRecycleViewActivity" />
         <activity android:name=".activity.WindowServiceActivity" />
-        <activity android:name=".service_demo.MessengerServiceActivity" />
+        <activity android:name=".ipc.messenger.MessengerServiceActivity" />
+
+        <service
+            android:name=".ipc.messenger.MessengerService"
+            android:process=":messenger" />
+
         <activity android:name=".sport.activity.SportActivity" />
         <activity android:name=".sport.activity.CountDownActivity" />
         <activity android:name=".sport.activity.TestCompatActivity" />

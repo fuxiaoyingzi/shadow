@@ -1,13 +1,18 @@
-package com.example.administrator.shadowapplication.service_demo;
+package com.example.administrator.shadowapplication.ipc.messenger;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
+import android.os.RemoteException;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.widget.Toast;
+
+import com.example.administrator.shadowapplication.crash_log.ToastUtil;
 
 /**
  * Created by Administrator on 2017/7/28.
@@ -33,7 +38,21 @@ public class MessengerService extends Service {
             //服务就是在 Handler 的 handleMessage() 方法中接收传入的 Message，并根据 what 成员决定下一步操作。
             switch (msg.what) {
                 case MSG_SAY_HELLO:
-                    Toast.makeText(getApplicationContext(), "hello!", Toast.LENGTH_SHORT).show();
+                    if (msg.getData() != null){
+                        String clientSend = msg.getData().getString("hh");
+                        Log.d("hh",clientSend);
+                        ToastUtil.showMsg(clientSend);
+                    }
+                    Messenger clientMessenger = msg.replyTo;
+                    Message clientMessage = Message.obtain(null,1);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("hh","hello client，hello world！！！");
+                    clientMessage.setData(bundle);
+                    try {
+                        clientMessenger.send(clientMessage);
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 default:
                     super.handleMessage(msg);

@@ -117,6 +117,13 @@
             android:text="AidlBindService" />
 
         <TextView
+            android:id="@+id/messageBindService"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Messenger 进程间通信" />
+
+        <TextView
             android:id="@+id/broadcastReceive"
             android:layout_width="match_parent"
             android:layout_height="50dp"
