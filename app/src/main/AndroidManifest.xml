@@ -60,9 +60,10 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="5f73cf92fa3f6da1a8e5c8fc0c925157" />
+
         <service android:name="com.amap.api.location.APSService" />
 
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.MaterialDesignActivity" />
         <activity android:name=".activity.TestRecycleViewActivity" />
         <activity android:name=".activity.WindowServiceActivity" />
@@ -498,7 +499,9 @@
             android:name=".material_design.ScrollingBehaviorActivity"
             android:label="@string/title_activity_scrolling_behavior" />
         <activity android:name=".material_design.ScrollingBehaviorActivity1" />
-        <activity android:name=".popup_windows.PopupActivity"></activity>
+        <activity android:name=".popup_windows.PopupActivity" />
+        <activity android:name=".ipc.share_file.FileShareActivity1" />
+        <activity android:name=".ipc.share_file.FileShareActivity2" android:process=":shareFile"/>
     </application>
 
 </manifest>
