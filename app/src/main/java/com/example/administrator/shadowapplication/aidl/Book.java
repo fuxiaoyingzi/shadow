@@ -78,4 +78,9 @@ public class Book  implements Parcelable{
         dest.writeString(bookName);
         dest.writeFloat(bookPrice);
     }
+
+    @Override
+    public String toString() {
+        return bookId+"====="+bookName;
+    }
 }

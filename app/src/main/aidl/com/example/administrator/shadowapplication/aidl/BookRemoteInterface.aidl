@@ -3,6 +3,7 @@ package com.example.administrator.shadowapplication.aidl;
 
 // Declare any non-default types here with import statements
 import com.example.administrator.shadowapplication.aidl.Book;
+import com.example.administrator.shadowapplication.IOnNewBookArrivedListener;
 
 interface BookRemoteInterface {
     /**
@@ -12,5 +13,7 @@ interface BookRemoteInterface {
     void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,double aDouble, String aString);
     List<Book> getBookList();
     void addBook(in Book book);
+    void registerListener(IOnNewBookArrivedListener listener);
+    void unregisterListener(IOnNewBookArrivedListener listener);
 
 }
