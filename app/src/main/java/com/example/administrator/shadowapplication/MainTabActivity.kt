@@ -36,6 +36,7 @@ import com.example.administrator.shadowapplication.material_design.MaterialMainA
 import com.example.administrator.shadowapplication.material_design.ScrollingBehaviorActivity
 import com.example.administrator.shadowapplication.material_design.ScrollingBehaviorActivity1
 import com.example.administrator.shadowapplication.media.MediaActivity
+import com.example.administrator.shadowapplication.nine_gridlayout.NineGridlayoutActivity
 import com.example.administrator.shadowapplication.notification.NewNotificationActivity
 import com.example.administrator.shadowapplication.popup_windows.PopupActivity
 import com.example.administrator.shadowapplication.progress.ProgressActivity
@@ -257,6 +258,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, MessengerServiceActivity::class.java))
 
             }
+            R.id.nineGridlayout -> {
+                startActivity(Intent(this, NineGridlayoutActivity::class.java))
+
+            }
 
         }
     }
@@ -317,5 +322,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         customDialog.setOnClickListener(this)
         showPopup.setOnClickListener(this)
         messageBindService.setOnClickListener(this)
+        nineGridlayout.setOnClickListener(this)
     }
 }

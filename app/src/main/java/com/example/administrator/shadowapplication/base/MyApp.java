@@ -80,5 +80,9 @@ public class MyApp extends Application implements HasActivityInjector {
         return isDebug;
     }
 
+    public int getScannWidth(){
+           return getResources().getDisplayMetrics().widthPixels;
+    }
+
 
 }

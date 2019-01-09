@@ -501,7 +501,10 @@
         <activity android:name=".material_design.ScrollingBehaviorActivity1" />
         <activity android:name=".popup_windows.PopupActivity" />
         <activity android:name=".ipc.share_file.FileShareActivity1" />
-        <activity android:name=".ipc.share_file.FileShareActivity2" android:process=":shareFile"/>
+        <activity
+            android:name=".ipc.share_file.FileShareActivity2"
+            android:process=":shareFile" />
+        <activity android:name=".nine_gridlayout.NineGridlayoutActivity"></activity>
     </application>
 
 </manifest>

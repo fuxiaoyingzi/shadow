@@ -384,6 +384,13 @@
             android:gravity="center"
             android:text="PopupWindows" />
 
+        <TextView
+            android:id="@+id/nineGridlayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="九宫格" />
+
     </LinearLayout>
 
 </ScrollView>
