@@ -160,7 +160,7 @@
             android:name=".aidl.BookManagerService"
             android:process=":book" />
 
-        <activity android:name=".anim.ViewAnimationActivity" />
+
         <activity
             android:name=".anim.ValueAnimatorActivity"
             android:exported="true" />
@@ -504,7 +504,8 @@
         <activity
             android:name=".ipc.share_file.FileShareActivity2"
             android:process=":shareFile" />
-        <activity android:name=".nine_gridlayout.NineGridlayoutActivity"></activity>
+        <activity android:name=".nine_gridlayout.NineGridlayoutActivity" />
+        <activity android:name=".activity.GetViewHeightActivity"></activity>
     </application>
 
 </manifest>

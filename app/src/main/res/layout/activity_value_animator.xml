@@ -1,60 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.administrator.shadowapplication.anim.ValueAnimatorActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/iv_launcher_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launchers" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.administrator.shadowapplication.anim.ValueAnimatorActivity">
 
-    <Button
-        android:id="@+id/btn_move"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="移动"
-        android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/btn_scale"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="缩放"
-        android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/iv_launcher_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launchers" />
 
-    <Button
-        android:id="@+id/btn_rotate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="旋转"
-        android:textSize="20dp" />
+        <TextView
+            android:id="@+id/tvValueAnim"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/road_red"
+            android:gravity="center"
+            android:text="测试" />
 
-    <Button
-        android:id="@+id/btn_alpha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="透明度"
-        android:textSize="20dp" />
+        <com.example.administrator.shadowapplication.anim.PointView
+            android:id="@+id/pointView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp" />
 
-    <Button
-        android:id="@+id/btn_valueAnimator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="valueAnimator"
-        android:textSize="20dp" />
-    <Button
-        android:id="@+id/util"
-        android:text="up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/uti2"
-        android:text="down"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="移动"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="缩放"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="旋转"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="透明度"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_valueAnimator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="valueAnimator"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/util"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="up" />
+
+        <Button
+            android:id="@+id/uti2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="down" />
+
+        <Button
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="char自定义计算规则" />
+
+        <Button
+            android:id="@+id/pointValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义实体类计算规则" />
+
+    </LinearLayout>
+
+</ScrollView>
