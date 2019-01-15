@@ -11,385 +11,358 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/valueAnimator"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="属性动画" />
+        <LinearLayout style="@style/main_tab_layout">
 
-        <TextView
-            android:id="@+id/scrollView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="testScrollView" />
+            <TextView
+                android:id="@+id/valueAnimator"
+                style="@style/main_tab_item"
+                android:text="属性动画" />
 
-        <TextView
-            android:id="@+id/album"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="album相册" />
+            <TextView
+                android:id="@+id/pathAnimator"
+                style="@style/main_tab_item"
+                android:text="path动画" />
 
-        <TextView
-            android:id="@+id/gallery"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="gallery展示图片" />
+            <TextView
+                android:id="@+id/scrollView"
+                style="@style/main_tab_item"
+                android:text="testScrollView" />
 
-        <TextView
-            android:id="@+id/viewPagerChangeData"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="viewpager动态改变数据" />
-
-        <TextView
-            android:id="@+id/goodsDetail"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="商品详情" />
-
-        <TextView
-            android:id="@+id/viewPagerChangeData2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="viewpager动态改变数据2" />
-
-        <TextView
-            android:id="@+id/calendar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="日历" />
-
-        <TextView
-            android:id="@+id/media"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="拍照" />
-
-        <TextView
-            android:id="@+id/androidLocation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="location定位" />
-
-        <TextView
-            android:id="@+id/material"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="材料设计" />
-
-        <TextView
-            android:id="@+id/footerBehavior"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="footerBehavior" />
-
-        <TextView
-            android:id="@+id/retrofit"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="Retrofit" />
-
-        <TextView
-            android:id="@+id/sqliteTest"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="SqliteTest" />
-
-        <TextView
-            android:id="@+id/aidlBindService"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="AidlBindService" />
-
-        <TextView
-            android:id="@+id/messageBindService"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="Messenger 进程间通信" />
-
-        <TextView
-            android:id="@+id/broadcastReceive"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="BroadcastReceive" />
-
-        <TextView
-            android:id="@+id/eventBusTest"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="EventBusTest" />
-
-        <TextView
-            android:id="@+id/iPCService"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="IPCService" />
-
-        <TextView
-            android:id="@+id/customShaderText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="自定义阴影文字" />
-
-        <TextView
-            android:id="@+id/glide"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="glide" />
-
-        <TextView
-            android:id="@+id/httpUrlConnection"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="HttpUrlConnection" />
-
-        <TextView
-            android:id="@+id/newCustomView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="NewCustomView" />
-
-        <TextView
-            android:id="@+id/customViewGroup"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="CustomViewGroup" />
-
-        <TextView
-            android:id="@+id/customColorMatrix"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="CustomColorMatrix" />
-
-        <TextView
-            android:id="@+id/customWatch"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="自定义手表" />
-
-        <TextView
-            android:id="@+id/notification"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="自定义通知" />
+            <TextView
+                android:id="@+id/album"
+                style="@style/main_tab_item"
+                android:text="album相册" />
+        </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/main"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="运动人生" />
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
 
-        <TextView
-            android:id="@+id/testWeb"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="TestWeb" />
+            <TextView
+                android:id="@+id/gallery"
+                style="@style/main_tab_item"
+                android:text="gallery" />
 
-        <TextView
-            android:id="@+id/asyncTask"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="AsyncTask" />
+            <TextView
+                android:id="@+id/viewPagerChangeData"
+                style="@style/main_tab_item"
+                android:text="viewpager动态改变数据" />
 
-        <TextView
-            android:id="@+id/setting"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="SettingPreference" />
+            <TextView
+                android:id="@+id/goodsDetail"
+                style="@style/main_tab_item"
+                android:text="商品详情" />
+
+            <TextView
+                android:id="@+id/viewPagerChangeData2"
+                style="@style/main_tab_item"
+                android:text="viewpager动态改变数据2" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_tab_layout">
+
+            <TextView
+                android:id="@+id/calendar"
+                style="@style/main_tab_item"
+                android:text="日历" />
+
+            <TextView
+                android:id="@+id/media"
+                style="@style/main_tab_item"
+                android:text="拍照" />
+
+            <TextView
+                android:id="@+id/androidLocation"
+                style="@style/main_tab_item"
+                android:text="location定位" />
+
+            <TextView
+                android:id="@+id/material"
+                style="@style/main_tab_item"
+                android:text="材料设计" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
+
+            <TextView
+                android:id="@+id/footerBehavior"
+                style="@style/main_tab_item"
+                android:text="footerBehavior" />
+
+            <TextView
+                android:id="@+id/retrofit"
+                style="@style/main_tab_item"
+                android:text="Retrofit" />
+
+            <TextView
+                android:id="@+id/sqliteTest"
+                style="@style/main_tab_item"
+                android:text="SqliteTest" />
+
+            <TextView
+                android:id="@+id/aidlBindService"
+                style="@style/main_tab_item"
+                android:text="AidlBindService" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_tab_layout">
+
+            <TextView
+                android:id="@+id/messageBindService"
+                style="@style/main_tab_item"
+                android:text="Messenger 进程间通信" />
+
+            <TextView
+                android:id="@+id/broadcastReceive"
+                style="@style/main_tab_item"
+                android:text="BroadcastReceive" />
+
+            <TextView
+                android:id="@+id/eventBusTest"
+                style="@style/main_tab_item"
+                android:text="EventBusTest" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
+
+            <TextView
+                android:id="@+id/iPCService"
+                style="@style/main_tab_item"
+                android:text="IPCService" />
+
+            <TextView
+                android:id="@+id/customShaderText"
+                style="@style/main_tab_item"
+                android:text="自定义阴影文字" />
+
+            <TextView
+                android:id="@+id/glide"
+                style="@style/main_tab_item"
+                android:text="glide" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_tab_layout">
+
+            <TextView
+                android:id="@+id/httpUrlConnection"
+                style="@style/main_tab_item"
+                android:text="HttpUrlConnection" />
+
+            <TextView
+                android:id="@+id/newCustomView"
+                style="@style/main_tab_item"
+                android:text="NewCustomView" />
+
+            <TextView
+                android:id="@+id/customViewGroup"
+                style="@style/main_tab_item"
+                android:text="CustomViewGroup" />
 
 
-        <TextView
-            android:id="@+id/dataBinding"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="dataBinding" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/map"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="MapActivity" />
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
 
-        <TextView
-            android:id="@+id/material2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="Material" />
+            <TextView
+                android:id="@+id/customColorMatrix"
+                style="@style/main_tab_item"
+                android:text="CustomColorMatrix" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="TextView" />
+            <TextView
+                android:id="@+id/customWatch"
+                style="@style/main_tab_item"
+                android:text="自定义手表" />
 
-        <TextView
-            android:id="@+id/dateMain"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="DateMain" />
+            <TextView
+                android:id="@+id/notification"
+                style="@style/main_tab_item"
+                android:text="自定义通知" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/viewpagerGallery"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="ViewpagerGalley" />
+        <LinearLayout style="@style/main_tab_layout">
 
-        <TextView
-            android:id="@+id/multitypeActivity"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="MultitypeActivity" />
+            <TextView
+                android:id="@+id/main"
+                style="@style/main_tab_item"
+                android:text="运动人生" />
 
-        <TextView
-            android:id="@+id/popupWindowActivity"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="PopupWindowActivity" />
+            <TextView
+                android:id="@+id/testWeb"
+                style="@style/main_tab_item"
+                android:text="TestWeb" />
 
-        <TextView
-            android:id="@+id/tvAmap"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="AmapActivity 高德地图" />
+            <TextView
+                android:id="@+id/asyncTask"
+                style="@style/main_tab_item"
+                android:text="AsyncTask" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvTimerLayout"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="全局倒计时" />
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
 
-        <TextView
-            android:id="@+id/tvRecycleStaggered"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="瀑布流" />
+            <TextView
+                android:id="@+id/setting"
+                style="@style/main_tab_item"
+                android:text="SettingPreference" />
 
-        <TextView
-            android:id="@+id/tvHxDemo"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="环信客服" />
 
-        <TextView
-            android:id="@+id/tvDownPage"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="下载网页" />
+            <TextView
+                android:id="@+id/dataBinding"
+                style="@style/main_tab_item"
+                android:text="dataBinding" />
 
-        <TextView
-            android:id="@+id/tvDownImage"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="下载图片" />
+            <TextView
+                android:id="@+id/map"
+                style="@style/main_tab_item"
+                android:text="MapActivity" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvHotRestore"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="热修复系列" />
+        <LinearLayout style="@style/main_tab_layout">
 
-        <TextView
-            android:id="@+id/tvService"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="服务" />
+            <TextView
+                android:id="@+id/material2"
+                style="@style/main_tab_item"
+                android:text="Material" />
 
-        <TextView
-            android:id="@+id/tvNotification"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="通知" />
+            <TextView
+                android:id="@+id/textView"
+                style="@style/main_tab_item"
+                android:text="TextView" />
 
-        <TextView
-            android:id="@+id/tvProgress"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="进程保活" />
+            <TextView
+                android:id="@+id/dateMain"
+                style="@style/main_tab_item"
+                android:text="DateMain" />
 
-        <TextView
-            android:id="@+id/scrollBehavior"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="scrollBehavior控制隐藏显示" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/scrollBehavior1"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="scrollBehavior联动" />
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
 
-        <TextView
-            android:id="@+id/customDialog"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="自定义对话框" />
+            <TextView
+                android:id="@+id/viewpagerGallery"
+                style="@style/main_tab_item"
+                android:text="ViewpagerGalley" />
 
-        <TextView
-            android:id="@+id/showPopup"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="PopupWindows" />
+            <TextView
+                android:id="@+id/multitypeActivity"
+                style="@style/main_tab_item"
+                android:text="MultitypeActivity" />
 
-        <TextView
-            android:id="@+id/nineGridlayout"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="九宫格" />
+            <TextView
+                android:id="@+id/popupWindowActivity"
+                style="@style/main_tab_item"
+                android:text="PopupWindowActivity" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_tab_layout">
+
+            <TextView
+                android:id="@+id/tvAmap"
+                style="@style/main_tab_item"
+                android:text="AmapActivity 高德地图" />
+
+            <TextView
+                android:id="@+id/tvTimerLayout"
+                style="@style/main_tab_item"
+                android:text="全局倒计时" />
+
+            <TextView
+                android:id="@+id/tvRecycleStaggered"
+                style="@style/main_tab_item"
+                android:text="瀑布流" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
+
+            <TextView
+                android:id="@+id/tvHxDemo"
+                style="@style/main_tab_item"
+                android:text="环信客服" />
+
+            <TextView
+                android:id="@+id/tvDownPage"
+                style="@style/main_tab_item"
+                android:text="下载网页" />
+
+            <TextView
+                android:id="@+id/tvDownImage"
+                style="@style/main_tab_item"
+                android:text="下载图片" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/main_tab_layout">
+
+            <TextView
+                android:id="@+id/tvHotRestore"
+                style="@style/main_tab_item"
+                android:text="热修复系列" />
+
+            <TextView
+                android:id="@+id/tvService"
+                style="@style/main_tab_item"
+                android:text="服务" />
+
+            <TextView
+                android:id="@+id/tvNotification"
+                style="@style/main_tab_item"
+                android:text="通知" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
+
+            <TextView
+                android:id="@+id/tvProgress"
+                style="@style/main_tab_item"
+                android:text="进程保活" />
+
+            <TextView
+                android:id="@+id/scrollBehavior"
+                style="@style/main_tab_item"
+                android:text="scrollBehavior控制隐藏显示" />
+
+            <TextView
+                android:id="@+id/scrollBehavior1"
+                style="@style/main_tab_item"
+                android:text="scrollBehavior联动" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/main_tab_item">
+
+            <TextView
+                android:id="@+id/customDialog"
+                style="@style/main_tab_item"
+                android:text="自定义对话框" />
+
+            <TextView
+                android:id="@+id/showPopup"
+                style="@style/main_tab_item"
+                android:text="PopupWindows" />
+
+            <TextView
+                android:id="@+id/nineGridlayout"
+                style="@style/main_tab_item"
+                android:text="九宫格" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
