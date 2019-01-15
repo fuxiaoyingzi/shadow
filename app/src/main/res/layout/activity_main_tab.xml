@@ -28,10 +28,7 @@
                 style="@style/main_tab_item"
                 android:text="testScrollView" />
 
-            <TextView
-                android:id="@+id/album"
-                style="@style/main_tab_item"
-                android:text="album相册" />
+
         </LinearLayout>
 
 
@@ -54,10 +51,7 @@
                 style="@style/main_tab_item"
                 android:text="商品详情" />
 
-            <TextView
-                android:id="@+id/viewPagerChangeData2"
-                style="@style/main_tab_item"
-                android:text="viewpager动态改变数据2" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/main_tab_layout">
@@ -77,10 +71,6 @@
                 style="@style/main_tab_item"
                 android:text="location定位" />
 
-            <TextView
-                android:id="@+id/material"
-                style="@style/main_tab_item"
-                android:text="材料设计" />
 
         </LinearLayout>
 
@@ -103,10 +93,6 @@
                 style="@style/main_tab_item"
                 android:text="SqliteTest" />
 
-            <TextView
-                android:id="@+id/aidlBindService"
-                style="@style/main_tab_item"
-                android:text="AidlBindService" />
 
         </LinearLayout>
 
@@ -345,7 +331,7 @@
         </LinearLayout>
 
 
-        <LinearLayout style="@style/main_tab_item">
+        <LinearLayout style="@style/main_tab_layout">
 
             <TextView
                 android:id="@+id/customDialog"
@@ -361,6 +347,39 @@
                 android:id="@+id/nineGridlayout"
                 style="@style/main_tab_item"
                 android:text="九宫格" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
+
+            <TextView
+                android:id="@+id/viewPagerChangeData2"
+                style="@style/main_tab_item"
+                android:text="viewpager动态改变数据2" />
+
+            <TextView
+                android:id="@+id/album"
+                style="@style/main_tab_item"
+                android:text="album相册" />
+
+            <TextView
+                android:id="@+id/material"
+                style="@style/main_tab_item"
+                android:text="材料设计" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_tab_layout">
+
+            <TextView
+                android:id="@+id/aidlBindService"
+                style="@style/main_tab_item"
+                android:text="AidlBindService" />
+
+            <TextView
+                android:id="@+id/lottieAc"
+                style="@style/main_tab_item"
+                android:text="动画框架Lottie" />
         </LinearLayout>
 
 

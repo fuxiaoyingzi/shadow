@@ -160,4 +160,7 @@ dependencies {
 
     //阿里 热修复框架 andFix
     compile 'com.alipay.euler:andfix:0.5.0@aar'
+
+    // 动画加载框架
+    compile 'com.airbnb.android:lottie:2.2.0'
 }

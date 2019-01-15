@@ -13,6 +13,7 @@ import com.example.administrator.shadowapplication.aidl.AidlBindServiceActivity
 import com.example.administrator.shadowapplication.album.AlbumActivity
 import com.example.administrator.shadowapplication.android_http.DownImageActivity
 import com.example.administrator.shadowapplication.android_http.DownWebPageActivity
+import com.example.administrator.shadowapplication.anim.LottieActivity
 import com.example.administrator.shadowapplication.anim.PathActivity
 import com.example.administrator.shadowapplication.anim.ValueAnimatorActivity
 import com.example.administrator.shadowapplication.broadcast_receive.BroadcastReceiveActivity
@@ -59,6 +60,9 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
 
             R.id.pathAnimator -> {
                 startActivity(Intent(this, PathActivity::class.java))
+            }
+            R.id.lottieAc -> {
+                startActivity(Intent(this, LottieActivity::class.java))
             }
 
             R.id.scrollView -> {
@@ -276,6 +280,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main_tab)
         valueAnimator.setOnClickListener(this)
         pathAnimator.setOnClickListener(this)
+        lottieAc.setOnClickListener(this)
         scrollView.setOnClickListener(this)
         album.setOnClickListener(this)
         gallery.setOnClickListener(this)

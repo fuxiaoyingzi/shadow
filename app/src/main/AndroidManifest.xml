@@ -505,7 +505,8 @@
             android:process=":shareFile" />
         <activity android:name=".nine_gridlayout.NineGridlayoutActivity" />
         <activity android:name=".activity.GetViewHeightActivity" />
-        <activity android:name=".anim.PathActivity"></activity>
+        <activity android:name=".anim.PathActivity" />
+        <activity android:name=".anim.LottieActivity"></activity>
     </application>
 
 </manifest>
