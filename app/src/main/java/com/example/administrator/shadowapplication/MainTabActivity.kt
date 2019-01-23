@@ -2,6 +2,7 @@ package com.example.administrator.shadowapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.example.administrator.shadowapplication.Gallery.GalleryActivity
@@ -11,6 +12,7 @@ import com.example.administrator.shadowapplication.Gallery.ViewPagerChangeDataAc
 import com.example.administrator.shadowapplication.activity.*
 import com.example.administrator.shadowapplication.aidl.AidlBindServiceActivity
 import com.example.administrator.shadowapplication.album.AlbumActivity
+import com.example.administrator.shadowapplication.android_drawable.AndroidDrawableActivity
 import com.example.administrator.shadowapplication.android_http.DownImageActivity
 import com.example.administrator.shadowapplication.android_http.DownWebPageActivity
 import com.example.administrator.shadowapplication.anim.LottieActivity
@@ -252,6 +254,8 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
 
             R.id.scrollBehavior1 -> {
                 startActivity(Intent(this, ScrollingBehaviorActivity1::class.java))
+                val handler = Handler()
+                handler.looper
             }
 
             R.id.customDialog -> {
@@ -269,6 +273,11 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.nineGridlayout -> {
                 startActivity(Intent(this, NineGridlayoutActivity::class.java))
+
+            }
+
+            R.id.androidDraw -> {
+                startActivity(Intent(this, AndroidDrawableActivity::class.java))
 
             }
 
@@ -334,5 +343,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         showPopup.setOnClickListener(this)
         messageBindService.setOnClickListener(this)
         nineGridlayout.setOnClickListener(this)
+        androidDraw.setOnClickListener(this)
     }
 }

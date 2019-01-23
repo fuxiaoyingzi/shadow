@@ -13,10 +13,9 @@ public class TestCacheThreadPool {
     public static void main(String[] argument){
         //通过调用Executors类的静态newCachedThreadPool()方法可以获得缓存的线程池。
         ExecutorService executor = Executors.newCachedThreadPool();
-
         ThreadPoolExecutor pool = (ThreadPoolExecutor) executor;
 
-
+        Executors.newFixedThreadPool()
         //Stats before tasks execution
         System.out.println("Core threads: " + pool.getCorePoolSize());
         System.out.println("Largest executions: " + pool.getLargestPoolSize());

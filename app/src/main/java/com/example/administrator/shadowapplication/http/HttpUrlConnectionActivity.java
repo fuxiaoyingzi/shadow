@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.shadowapplication.R;
+import com.example.administrator.shadowapplication.java.TestCacheThreadPool;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -55,6 +56,8 @@ public class HttpUrlConnectionActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.anim_in, R.anim.anim_out);
             }
         });
+
+        TestCacheThreadPool
 
 
     }

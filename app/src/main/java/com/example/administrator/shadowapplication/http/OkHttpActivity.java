@@ -28,6 +28,12 @@ public class OkHttpActivity extends AppCompatActivity {
     private Button sendRequest,testRequest;
     private TextView httpContent;
 
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

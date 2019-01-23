@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.shadowapplication.R;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -34,6 +35,7 @@ public class DialogsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialogs);
         ButterKnife.bind(this);
+
     }
 
     @OnClick(R.id.button_normal_dialog)
@@ -56,6 +58,7 @@ public class DialogsActivity extends AppCompatActivity {
                     .setMessage("Test Dialog")
                     .setPositiveButton(android.R.string.ok, null)
                     .create();
+
         }
     }
 

@@ -22,5 +22,8 @@ class LottieActivity : AppCompatActivity() {
                 lottieView.playAnimation()
             }
         }*/
+        val drawable = resources.getDrawable(R.drawable.ic_launchers)
+        drawable.intrinsicHeight
+        drawable.intrinsicWidth
     }
 }

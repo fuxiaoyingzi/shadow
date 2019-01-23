@@ -506,7 +506,19 @@
         <activity android:name=".nine_gridlayout.NineGridlayoutActivity" />
         <activity android:name=".activity.GetViewHeightActivity" />
         <activity android:name=".anim.PathActivity" />
-        <activity android:name=".anim.LottieActivity"></activity>
+        <activity android:name=".anim.LottieActivity" />
+        <activity android:name=".android_drawable.AndroidDrawableActivity" />
+        <activity android:name=".handle_msg.ThreadLocalActivity" />
+        <activity
+            android:name=".handle_msg.AsyncTaskActivity"
+            android:exported="true" />
+        <activity
+            android:name=".handle_msg.IntentServiceActivity"
+            android:exported="true" />
+
+        <service android:name=".handle_msg.LocalIntentService" />
+
+        <activity android:name=".handle_msg.ThreadPoolActivity"></activity>
     </application>
 
 </manifest>

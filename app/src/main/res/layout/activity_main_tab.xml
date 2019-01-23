@@ -380,6 +380,11 @@
                 android:id="@+id/lottieAc"
                 style="@style/main_tab_item"
                 android:text="动画框架Lottie" />
+
+            <TextView
+                android:id="@+id/androidDraw"
+                style="@style/main_tab_item"
+                android:text="Android drawable" />
         </LinearLayout>
 
 
