@@ -42,6 +42,7 @@ import com.example.administrator.shadowapplication.material_design.ScrollingBeha
 import com.example.administrator.shadowapplication.media.MediaActivity
 import com.example.administrator.shadowapplication.nine_gridlayout.NineGridlayoutActivity
 import com.example.administrator.shadowapplication.notification.NewNotificationActivity
+import com.example.administrator.shadowapplication.open_gl.OpenGlActivity
 import com.example.administrator.shadowapplication.popup_windows.PopupActivity
 import com.example.administrator.shadowapplication.progress.ProgressActivity
 import com.example.administrator.shadowapplication.recycle.RecycleStaggeredActivity
@@ -281,6 +282,14 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
 
             }
 
+            R.id.shadowShapeActivity -> {
+                startActivity(Intent(this, ShadowShapeActivity::class.java))
+            }
+
+            R.id.openGl -> {
+                startActivity(Intent(this, OpenGlActivity::class.java))
+            }
+
         }
     }
 
@@ -344,5 +353,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         messageBindService.setOnClickListener(this)
         nineGridlayout.setOnClickListener(this)
         androidDraw.setOnClickListener(this)
+        shadowShapeActivity.setOnClickListener(this)
+        openGl.setOnClickListener(this)
     }
 }

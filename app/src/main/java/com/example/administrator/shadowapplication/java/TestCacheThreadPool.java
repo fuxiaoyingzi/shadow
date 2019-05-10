@@ -15,7 +15,7 @@ public class TestCacheThreadPool {
         ExecutorService executor = Executors.newCachedThreadPool();
         ThreadPoolExecutor pool = (ThreadPoolExecutor) executor;
 
-        Executors.newFixedThreadPool()
+        Executors.newFixedThreadPool(1);
         //Stats before tasks execution
         System.out.println("Core threads: " + pool.getCorePoolSize());
         System.out.println("Largest executions: " + pool.getLargestPoolSize());
