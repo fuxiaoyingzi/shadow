@@ -15,6 +15,7 @@ import com.example.administrator.shadowapplication.hot_fix.andfix.FixPackageMana
 
 import javax.inject.Inject;
 
+import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
@@ -42,6 +43,15 @@ public class MyApp extends Application implements HasActivityInjector {
         initBaiduMap();
         initCrash();
         initPatch();
+        initJpush();
+    }
+
+    /**
+     * 初始化极光
+     */
+    private void initJpush() {
+        JAnalyticsInterface.init(this);
+        JAnalyticsInterface.setDebugMode(true);
     }
 
     private void initPatch() {
@@ -80,8 +90,8 @@ public class MyApp extends Application implements HasActivityInjector {
         return isDebug;
     }
 
-    public int getScannWidth(){
-           return getResources().getDisplayMetrics().widthPixels;
+    public int getScannWidth() {
+        return getResources().getDisplayMetrics().widthPixels;
     }
 
 

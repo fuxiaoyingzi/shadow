@@ -400,6 +400,12 @@
                 android:text="OPEN GL" />
 
 
+            <TextView
+                android:id="@+id/jPushCount"
+                style="@style/main_tab_item"
+                android:text="极光统计" />
+
+
         </LinearLayout>
 
 

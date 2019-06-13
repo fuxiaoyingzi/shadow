@@ -388,4 +388,14 @@
 
 
     <string name="behavior_sample_title">com.example.administrator.shadowapplication.material_design.behavior.SampleTitleBehavior</string>
+
+
+    <!--极光 统计-->
+
+    <string name="login_event">登录事件</string>
+    <string name="register_event">注册事件</string>
+    <string name="purchase_event">购买事件</string>
+    <string name="browse_event">浏览事件</string>
+    <string name="calculate_event">计算事件</string>
+    <string name="count_event">计数事件</string>
 </resources>

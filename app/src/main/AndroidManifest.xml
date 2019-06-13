@@ -57,6 +57,11 @@
             android:name="com.amap.api.v2.apikey"
             android:value="5f73cf92fa3f6da1a8e5c8fc0c925157" />
 
+        <!--友盟 配置-->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
         <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".activity.MainActivity" />
@@ -514,6 +519,32 @@
         <service android:name=".handle_msg.LocalIntentService" />
 
         <activity android:name=".handle_msg.ThreadPoolActivity" />
+
+
+        <!-- For test only 测试的主程序-->
+        <activity
+            android:name=".jpush.JpushMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+
+        </activity>
+        <activity
+            android:name=".jpush.SetActivity"
+            android:label="@string/app_name"></activity>
+        <activity android:name=".jpush.ReplaceActivity"></activity>
+        <activity android:name=".jpush.ShowHideActivity"></activity>
+        <activity android:name=".jpush.AnalyticsMainActivity" />
+        <activity android:name=".jpush.AccountExampleActivity" />
+
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="03353da660f21abedfe0d4bf" /> <!--  </>值来自开发者平台取得的AppKey-->
+
     </application>
 
 </manifest>

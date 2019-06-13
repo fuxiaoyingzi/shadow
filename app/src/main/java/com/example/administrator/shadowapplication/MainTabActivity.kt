@@ -32,6 +32,7 @@ import com.example.administrator.shadowapplication.http.RetrofitActivity
 
 import com.example.administrator.shadowapplication.ipc.IPCServiceActivity
 import com.example.administrator.shadowapplication.ipc.messenger.MessengerServiceActivity
+import com.example.administrator.shadowapplication.jpush.JpushMainActivity
 import com.example.administrator.shadowapplication.map.AMapActivity
 import com.example.administrator.shadowapplication.map.AndroidLocationActivity
 import com.example.administrator.shadowapplication.map.MapActivity
@@ -289,6 +290,9 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
             R.id.openGl -> {
                 startActivity(Intent(this, OpenGlActivity::class.java))
             }
+            R.id.jPushCount -> {
+                startActivity(Intent(this, JpushMainActivity::class.java))
+            }
 
         }
     }
@@ -355,5 +359,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         androidDraw.setOnClickListener(this)
         shadowShapeActivity.setOnClickListener(this)
         openGl.setOnClickListener(this)
+        jPushCount.setOnClickListener(this)
     }
 }

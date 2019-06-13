@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_event" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_event" />
+
+    <Button
+        android:id="@+id/button_purchase"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase_event"/>
+
+    <Button
+        android:id="@+id/button_browse"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/browse_event" />
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_event" />
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/count_event"/>
+</LinearLayout>

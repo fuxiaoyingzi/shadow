@@ -31,10 +31,16 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         flavorDimensions "versionCode" //指定flavor尺寸的名称
+
         //设置支持的SO库架构
         ndk {
             abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"
         }
+
+        manifestPlaceholders = [
+                JPUSH_APPKEY : "03353da660f21abedfe0d4bf", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
     }
     buildTypes { //项目类型(debug、release)
         release {
@@ -52,6 +58,8 @@ android {
             signingConfig signingConfigs.config
         }
     }
+
+    //lint 检查
     lintOptions {
         disable 'ResourceType' // 忽略自定义id
         disable 'MissingTranslation' // 忽略未翻译的字符串
@@ -65,13 +73,25 @@ android {
          Xiaomi {}
      }
  */
+
+    productFlavors{
+        xiaomi{}
+        yahu360{}
+        wandoujia{}
+        baidu{}
+        oppo{}
+    }
+    productFlavors.all(){
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE:name]
+    }
+
     dataBinding {
         enabled = true
     }
 
-    kapt {
+    /*kapt {
         generateStubs = true
-    }
+    }*/
 
 //    dexOptions {
 //        javaMaxHeapSize "4g"
@@ -79,18 +99,20 @@ android {
 //        incremental true
 //    }
 
+    //apk 名称
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
 //                def fileName = outputFile.name.replace(".apk", "_${defaultConfig.versionName}_prod.apk")
-                def fileName = "shadow_${defaultConfig.versionName}_${variant.buildType.name}.apk"
+                def fileName = "shadow_${defaultConfig.versionName}_${variant.buildType.name}_${variant.productFlavors[0].name}.apk"
                 output.outputFileName = fileName.toLowerCase()
             }
         }
     }
 
 
+    //Java 版本号
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -118,7 +140,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.1'
     //dagger
     implementation 'com.google.dagger:dagger:2.11'
-    implementation 'com.google.dagger:dagger-android:2.11'
+    implementation 'com.google.dagger:dagger-android:2.15'
     implementation 'com.google.dagger:dagger-android-support:2.11'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
@@ -140,7 +162,7 @@ dependencies {
     //butter knife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.31"
     implementation 'org.jetbrains.anko:anko:0.10.4'
     implementation 'com.google.zxing:core:3.3.0'
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
@@ -163,4 +185,8 @@ dependencies {
 
     // 动画加载框架
     implementation 'com.airbnb.android:lottie:2.2.0'
+
+    //极光统计
+    compile 'cn.jiguang.sdk:janalytics:2.0.0' // 此处以JAnalytics 2.0.0 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.2.7' // 此处以JCore 1.2.6 版本为例。
 }

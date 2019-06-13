@@ -6,4 +6,11 @@
     <string name="age">age</string>
     <string name="desc">desc</string>
     <string name="change_data">data change</string>
+
+    <string name="login_event">Login_event</string>
+    <string name="register_event">Register_event</string>
+    <string name="purchase_event">Purchase_event</string>
+    <string name="browse_event">Browse_event</string>
+    <string name="calculate_event">Calculate_event</string>
+    <string name="count_event">Count_event</string>
 </resources>

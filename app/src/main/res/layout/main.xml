@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dip">
+
+        <TextView
+            android:id="@+id/tv_regId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip" />
+
+        <TextView
+            android:id="@+id/tv_appkey"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip" />
+
+        <TextView
+            android:id="@+id/tv_package"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip" />
+
+        <TextView
+            android:id="@+id/tv_imei"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip" />
+
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip" />
+
+        <TextView
+            android:id="@+id/tv_flavor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip" />
+
+        <Button
+            android:id="@+id/analytics_example"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:text="统计示例(viewpage)" />
+
+        <Button
+            android:id="@+id/analytics_example_showhide"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:text="统计示例(show/hide)" />
+
+        <Button
+            android:id="@+id/analytics_example_replace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:text="统计示例(replace)" />
+
+        <Button
+            android:id="@+id/analytics_example_account"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:text="统计示例(账号)" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="高级功能"
+        android:visibility="gone" />
+</RelativeLayout>
