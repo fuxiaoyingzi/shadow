@@ -5,11 +5,11 @@ import android.content.Context;
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.jiguang.analytics.android.api.Event;
 import cn.jiguang.analytics.android.api.BrowseEvent;
 import cn.jiguang.analytics.android.api.CalculateEvent;
 import cn.jiguang.analytics.android.api.CountEvent;
 import cn.jiguang.analytics.android.api.Currency;
+import cn.jiguang.analytics.android.api.Event;
 import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 import cn.jiguang.analytics.android.api.LoginEvent;
 import cn.jiguang.analytics.android.api.PurchaseEvent;
@@ -231,20 +231,50 @@ public class JEventUtils {
      * @param context
      */
     public static void onCalculateEvent(Context context) {
-        CalculateEvent calculateEvent = new CalculateEvent("test_eventID"+eventIdIndex, 1);
+        CalculateEvent calculateEvent = new CalculateEvent("test_eventID" + eventIdIndex, 1);
         //添加自己的Extra 信息
         //方法1：增加一个hashMap<String,String>
-        Map<String, String> extraMap = new HashMap<String, String>();
+        Map<String, String> extraMap = new HashMap<>();
         extraMap.put("key_calculate_event_extra1", "value_extra1");
         calculateEvent.addExtMap(extraMap);
 
-        Map<String, String> extraMap2 = new HashMap<String, String>();
+        Map<String, String> extraMap2 = new HashMap<>();
         extraMap2.put("key_calculate_event_extra2", "value_extra2");
+        extraMap2.put("key_calculate_event_extra13", "value_extra13");
+        extraMap2.put("key_calculate_event_extra14", "value_extra14");
+        extraMap2.put("key_calculate_event_extra15", "value_extra15");
+        extraMap2.put("key_calculate_event_extra16", "value_extra16");
+        extraMap2.put("key_calculate_event_extra17", "value_extra17");
+        extraMap2.put("key_calculate_event_extra1", "value_extra18");
         calculateEvent.addExtMap(extraMap2);
 
         //方法2：增加单个值
-        calculateEvent.addKeyValue("key_calculate_event_extra3", "value_extra3")
-                .addKeyValue("key_calculate_event_extra4", "value_extra4");
+        calculateEvent
+                .addKeyValue("key_calculate_event_extra3", "value_extra3")
+                .addKeyValue("key_calculate_event_extra4", "value_extra4")
+                .addKeyValue("key_calculate_event_extra9", "value_extra9")
+                .addKeyValue("key_calculate_event_extra10", "value_extra10")
+                .addKeyValue("key_calculate_event_extra11", "value_extra11")
+                .addKeyValue("key_calculate_event_extra12", "value_extra12");
+        JAnalyticsInterface.onEvent(context, calculateEvent);
+        eventIdIndex++;
+    }
+
+    public static void onCalculateEvent2(Context context) {
+        CalculateEvent calculateEvent = new CalculateEvent("test_eventID2", 1);
+        //添加自己的Extra 信息
+        //方法1：增加一个hashMap<String,String>
+        Map<String, String> extraMap = new HashMap<String, String>();
+        extraMap.put("key_calculate_event_extra5", "value_extra5");
+        calculateEvent.addExtMap(extraMap);
+
+        Map<String, String> extraMap2 = new HashMap<String, String>();
+        extraMap2.put("key_calculate_event_extra6", "value_extra6");
+        calculateEvent.addExtMap(extraMap2);
+
+        //方法2：增加单个值
+        calculateEvent.addKeyValue("key_calculate_event_extra7", "value_extra7")
+                .addKeyValue("key_calculate_event_extra8", "value_extra8");
         JAnalyticsInterface.onEvent(context, calculateEvent);
         eventIdIndex++;
     }
@@ -276,10 +306,10 @@ public class JEventUtils {
      * @param context
      */
     public static void onCountEvent(Context context) {
-        CountEvent countEvent = new CountEvent("test_countEventID"+eventIdIndex);
+        CountEvent countEvent = new CountEvent("test_countEventID1");
         //添加自己的Extra 信息
         //方法1：增加一个hashMap<String,String>
-        Map<String, String> extraMap = new HashMap<String, String>();
+        /*Map<String, String> extraMap = new HashMap<String, String>();
         extraMap.put("key_count_event_extra1", "value_extra1");
         countEvent.addExtMap(extraMap);
 
@@ -289,7 +319,7 @@ public class JEventUtils {
 
         //方法2：增加单个值
         countEvent.addKeyValue("key_count_event_extra3", "value_extra3")
-                .addKeyValue("key_count_event_extra4", "value_extra4");
+                .addKeyValue("key_count_event_extra4", "value_extra4");*/
 
         JAnalyticsInterface.onEvent(context, countEvent);
         eventIdIndex++;
@@ -299,8 +329,8 @@ public class JEventUtils {
      * 计数事件
      *
      * @param context
-     * @param eventId   事件ID
-     * @param extra     附加信息
+     * @param eventId 事件ID
+     * @param extra   附加信息
      */
     public static void onCountEvent(Context context, String eventId, Map<String, String> extra) {
         Event countEvent = new CountEvent()

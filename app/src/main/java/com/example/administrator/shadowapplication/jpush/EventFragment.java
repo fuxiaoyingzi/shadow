@@ -45,7 +45,7 @@ public class EventFragment extends BaseFragment implements View.OnClickListener{
 				break;
 			case R.id.button_purchase:
 				// 应用市场中游戏的下载情况：游戏类型，下载次数，价格
-				JEventUtils.onPurchaseEvent(getActivity());
+				JEventUtils.onCalculateEvent2(getActivity());
 				Toast.makeText(getActivity().getApplicationContext(), "button_purchase",Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.button_calculate:
