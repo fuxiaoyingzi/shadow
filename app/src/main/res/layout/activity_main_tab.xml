@@ -387,7 +387,9 @@
                 android:text="Android drawable" />
         </LinearLayout>
 
-        <LinearLayout style="@style/main_tab_layout">
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
 
             <TextView
                 android:id="@+id/shadowShapeActivity"
@@ -404,6 +406,16 @@
                 android:id="@+id/jPushCount"
                 style="@style/main_tab_item"
                 android:text="极光统计" />
+
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_tab_layout">
+
+            <TextView
+                android:id="@+id/layoutAnimation"
+                style="@style/main_tab_item"
+                android:text="布局动画" />
 
 
         </LinearLayout>

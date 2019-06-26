@@ -17,6 +17,7 @@ import com.example.administrator.shadowapplication.android_http.DownImageActivit
 import com.example.administrator.shadowapplication.android_http.DownWebPageActivity
 import com.example.administrator.shadowapplication.anim.LottieActivity
 import com.example.administrator.shadowapplication.anim.PathActivity
+import com.example.administrator.shadowapplication.anim.TweenAnimationActivity
 import com.example.administrator.shadowapplication.anim.ValueAnimatorActivity
 import com.example.administrator.shadowapplication.broadcast_receive.BroadcastReceiveActivity
 import com.example.administrator.shadowapplication.databing.UserActivity
@@ -294,6 +295,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, JpushMainActivity::class.java))
             }
 
+            R.id.layoutAnimation -> {
+                startActivity(Intent(this, TweenAnimationActivity::class.java))
+            }
+
         }
     }
 
@@ -357,6 +362,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         messageBindService.setOnClickListener(this)
         nineGridlayout.setOnClickListener(this)
         androidDraw.setOnClickListener(this)
+        layoutAnimation.setOnClickListener(this)
         shadowShapeActivity.setOnClickListener(this)
         openGl.setOnClickListener(this)
         jPushCount.setOnClickListener(this)
