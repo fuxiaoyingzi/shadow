@@ -44,7 +44,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Dark">
-        <activity android:name=".anim.TweenAnimationActivity"></activity>
+        <activity android:name=".Drawable.AndroidDrawableActivity"></activity>
+        <activity android:name=".anim.TweenAnimationActivity" />
         <activity android:name=".open_gl.OpenGlActivity" />
         <activity android:name=".activity.ShadowShapeActivity" />
 
@@ -521,7 +522,7 @@
         <activity
             android:name=".jpush.JpushMainActivity"
             android:label="@string/app_name"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask" />
         <activity
             android:name=".jpush.SetActivity"
             android:label="@string/app_name" />

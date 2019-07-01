@@ -299,6 +299,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, TweenAnimationActivity::class.java))
             }
 
+            R.id.androidDrawable -> {
+                startActivity(Intent(this, com.example.administrator.shadowapplication.Drawable.AndroidDrawableActivity::class.java))
+            }
+
         }
     }
 
@@ -366,5 +370,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         shadowShapeActivity.setOnClickListener(this)
         openGl.setOnClickListener(this)
         jPushCount.setOnClickListener(this)
+        androidDrawable.setOnClickListener(this)
     }
 }

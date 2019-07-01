@@ -417,6 +417,11 @@
                 style="@style/main_tab_item"
                 android:text="布局动画" />
 
+            <TextView
+                android:id="@+id/androidDrawable"
+                style="@style/main_tab_item"
+                android:text="androidDrawable" />
+
 
         </LinearLayout>
 

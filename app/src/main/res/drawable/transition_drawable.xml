@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_launchers" />
+    <item android:drawable="@drawable/ic_my_selector" />
+
+</transition>

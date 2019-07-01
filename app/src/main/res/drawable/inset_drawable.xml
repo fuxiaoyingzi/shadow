@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_my_selector"
+    android:inset="10dp">
+
+    <!--
+    android:drawable
+    drawable 资源，可引用现有的的 Drawable
+
+    android:insetTop、android:insetRight、android:insetBottom、android:insetLeft
+    内容距离各个边框的距离
+    -->
+
+</inset>

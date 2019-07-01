@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--LayerDrawable 是管理 Drawable 列表的 Drawable。列表中的每个 item 按照列表的顺序绘制，列表中的最后 item 绘于顶部。-->
+    <!--
+    android:drawable
+    drawable 资源，可引用现有的的 Drawable
+
+    android:id
+    item 的 id，使用"@+id/name"的形式表示。可通过 View.findViewById() 或者 Activity.findViewById() 方法查找到这个 Drawable
+
+    android:top、android:right、android:bottom、android:left
+    Drawable 相对于 View 在各个方向的偏移量
+
+    android:gravity
+    尺寸小于容器尺寸时在容器中的摆放位置
+    -->
+
+    <!--内部定义一个 Drawable-->
+    <item
+        android:left="2dp"
+        android:top="4dp">
+        <shape>
+            <solid android:color="@android:color/darker_gray" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+    <!--指定现有的 Drawable-->
+    <item
+        android:bottom="4dp"
+        android:drawable="@drawable/ic_launchers"
+        android:right="2dp"></item>
+
+</layer-list>

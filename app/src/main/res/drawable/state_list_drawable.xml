@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:autoMirrored="true" android:dither="true" android:enterFadeDuration="200" android:exitFadeDuration="200" android:visible="true">
+    <!--获取焦点状态-->
+    <item android:drawable="@drawable/ic_my_selector" android:state_focused="true" />
+
+    <!--按下状态-->
+    <item android:drawable="@drawable/ic_my_selector" android:state_pressed="true" />
+
+    <!--默认状态-->
+    <item android:drawable="@drawable/collection" />
+
+
+    <!--
+       android:constantSize
+      由于 StateListDrawable 会根据不同的状态来显示不同的 Drawable，而每个 Drawable 的大小不一定相同，因此当 constantSize 属性的值为 true 时表示固定大小（值为所有 Drawable 固有大小的最大值），值为 false 时则大小为当前状态下对应的 Drawable 的大小。默认值为 false。
+
+      android:variablePadding
+      表示 StateListDrawable 的 padding 值是否随状态的改变而改变，默认为 false。
+
+      android:dither
+      是否开启抖动效果，默认为 true，建议开启。
+
+      android:autoMirrored
+      某些西亚国家文字是从右至左的，设置此值表示当系统为 RTL (right-to-left) 布局的时候，是否对图片进行镜像翻转。
+
+      android:enterFadeDuration 和 android:exitFadeDuration
+      状态改变时的淡入淡出效果的持续时间
+
+      <item>
+      每个 item 表示一个 Drawable
+  -->
+</selector>
+
