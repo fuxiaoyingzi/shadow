@@ -189,4 +189,7 @@ dependencies {
     //极光统计
     implementation 'cn.jiguang.sdk:janalytics:2.0.0' // 此处以JAnalytics 2.0.0 版本为例。
     implementation 'cn.jiguang.sdk:jcore:1.2.7' // 此处以JCore 1.2.6 版本为例。
+
+    //今日头条 布局适配
+    implementation 'me.jessyan:autosize:1.1.2'
 }

@@ -303,6 +303,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, com.example.administrator.shadowapplication.Drawable.AndroidDrawableActivity::class.java))
             }
 
+            R.id.mAutoSize -> {
+                startActivity(Intent(this, AutoSizeActivity::class.java))
+            }
+
         }
     }
 
@@ -371,5 +375,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         openGl.setOnClickListener(this)
         jPushCount.setOnClickListener(this)
         androidDrawable.setOnClickListener(this)
+        mAutoSize.setOnClickListener(this)
     }
 }

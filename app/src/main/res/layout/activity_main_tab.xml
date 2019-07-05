@@ -422,6 +422,11 @@
                 style="@style/main_tab_item"
                 android:text="androidDrawable" />
 
+            <TextView
+                android:id="@+id/mAutoSize"
+                style="@style/main_tab_item"
+                android:text="AUTO SIZE" />
+
 
         </LinearLayout>
 
