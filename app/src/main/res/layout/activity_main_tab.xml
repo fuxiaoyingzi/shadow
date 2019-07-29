@@ -11,6 +11,17 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+        <LinearLayout
+            style="@style/main_tab_layout"
+            android:background="@color/road_red">
+
+            <TextView
+                android:id="@+id/tinkerUpdate"
+                style="@style/main_tab_item"
+                android:text="videoPlayer" />
+
+        </LinearLayout>
+
         <LinearLayout style="@style/main_tab_layout">
 
             <TextView

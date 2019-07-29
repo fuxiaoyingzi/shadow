@@ -307,6 +307,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, AutoSizeActivity::class.java))
             }
 
+            R.id.tinkerUpdate -> {
+                startActivity(Intent(this, MediaPlayerActivity::class.java))
+            }
+
         }
     }
 
@@ -376,5 +380,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         jPushCount.setOnClickListener(this)
         androidDrawable.setOnClickListener(this)
         mAutoSize.setOnClickListener(this)
+        tinkerUpdate.setOnClickListener(this)
     }
 }

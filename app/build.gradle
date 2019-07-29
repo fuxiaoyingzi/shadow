@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply from: 'tinkerpatch.gradle'
 
 android {
     configurations.all {
@@ -26,7 +27,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -41,6 +42,10 @@ android {
                 JPUSH_APPKEY : "03353da660f21abedfe0d4bf", //JPush上注册的包名对应的appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
+
+        //添加了javaCompileOptions
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
     }
     buildTypes { //项目类型(debug、release)
         release {
@@ -192,4 +197,10 @@ dependencies {
 
     //今日头条 布局适配
     implementation 'me.jessyan:autosize:1.1.2'
+
+
+    // 热修复 若使用annotation需要单独引用,对于tinker的其他库都无需再引用
+    provided("com.tinkerpatch.tinker:tinker-android-anno:1.9.13.3")
+    implementation("com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.13.3")
+
 }

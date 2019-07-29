@@ -8,13 +8,19 @@ buildscript {
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url "https://raw.githubusercontent.com/HyphenateInc/Hyphenate-SDK-Android/master/repository" }
+        maven {
+            url "https://raw.githubusercontent.com/HyphenateInc/Hyphenate-SDK-Android/master/repository"
+        }
         google()
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // TinkerPatch 插件
+        classpath "com.tinkerpatch.sdk:tinkerpatch-gradle-plugin:1.2.13.3"
+
+
     }
 }
 
