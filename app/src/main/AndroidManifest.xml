@@ -77,8 +77,23 @@
         <activity android:name=".activity.WindowServiceActivity" />
         <activity android:name=".ipc.messenger.MessengerServiceActivity" />
 
+        <activity android:name=".process_communication.content_provider.ContentProviderActivity" />
+
+        <provider
+            android:name=".process_communication.content_provider.BookContentProvider"
+            android:authorities="com.android.shadow.book.provider"
+            android:process=":provider" />
+
         <service
             android:name=".ipc.messenger.MessengerService"
+            android:process=":messenger" />
+
+        <activity
+            android:name=".process_communication.SecondProcessActivity"
+            android:process=":second" />
+
+        <service
+            android:name=".process_communication.MessageService"
             android:process=":messenger" />
 
         <activity android:name=".sport.activity.SportActivity" />
@@ -86,6 +101,7 @@
         <activity android:name=".sport.activity.TestCompatActivity" />
         <activity android:name=".activity.CustomViewActivity" />
         <activity android:name=".activity.ViewpagerGrallerActivity" />
+        <activity android:name=".process_communication.ProcessCommunicationActivity" />
         <activity
             android:name=".activity.NotificationActivity"
             android:exported="true" />

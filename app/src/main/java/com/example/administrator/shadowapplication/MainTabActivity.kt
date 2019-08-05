@@ -46,6 +46,7 @@ import com.example.administrator.shadowapplication.nine_gridlayout.NineGridlayou
 import com.example.administrator.shadowapplication.notification.NewNotificationActivity
 import com.example.administrator.shadowapplication.open_gl.OpenGlActivity
 import com.example.administrator.shadowapplication.popup_windows.PopupActivity
+import com.example.administrator.shadowapplication.process_communication.ProcessCommunicationActivity
 import com.example.administrator.shadowapplication.progress.ProgressActivity
 import com.example.administrator.shadowapplication.recycle.RecycleStaggeredActivity
 import com.example.administrator.shadowapplication.scrollview.TestScrollviewActivity
@@ -310,6 +311,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
             R.id.tinkerUpdate -> {
                 startActivity(Intent(this, MediaPlayerActivity::class.java))
             }
+            R.id.processCommunication -> {
+                startActivity(Intent(this, ProcessCommunicationActivity::class.java))
+            }
+
 
         }
     }
@@ -381,5 +386,6 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         androidDrawable.setOnClickListener(this)
         mAutoSize.setOnClickListener(this)
         tinkerUpdate.setOnClickListener(this)
+        processCommunication.setOnClickListener(this)
     }
 }

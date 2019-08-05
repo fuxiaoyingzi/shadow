@@ -20,6 +20,11 @@
                 style="@style/main_tab_item"
                 android:text="videoPlayer" />
 
+            <TextView
+                android:id="@+id/processCommunication"
+                style="@style/main_tab_item"
+                android:text="进程通信ipc" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/main_tab_layout">
