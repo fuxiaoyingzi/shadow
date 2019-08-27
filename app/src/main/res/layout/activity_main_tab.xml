@@ -5,11 +5,19 @@
     android:layout_height="match_parent"
     tools:context="com.example.administrator.shadowapplication.MainTabActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="打开UETool开关" />
 
         <LinearLayout
             style="@style/main_tab_layout"
@@ -47,7 +55,6 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             style="@style/main_tab_layout"
             android:background="@color/road_red">
@@ -69,6 +76,7 @@
 
 
         </LinearLayout>
+
 
         <LinearLayout style="@style/main_tab_layout">
 
@@ -306,7 +314,6 @@
                 android:text="下载图片" />
         </LinearLayout>
 
-
         <LinearLayout style="@style/main_tab_layout">
 
             <TextView
@@ -364,6 +371,7 @@
                 style="@style/main_tab_item"
                 android:text="九宫格" />
         </LinearLayout>
+
 
         <LinearLayout
             style="@style/main_tab_layout"
@@ -445,6 +453,8 @@
 
 
         </LinearLayout>
+
+
 
 
     </LinearLayout>

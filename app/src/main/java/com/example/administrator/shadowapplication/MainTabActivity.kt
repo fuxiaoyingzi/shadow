@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.CompoundButton
 import com.example.administrator.shadowapplication.Gallery.GalleryActivity
 import com.example.administrator.shadowapplication.Gallery.GoodsDetailActivity
 import com.example.administrator.shadowapplication.Gallery.TestViewPagerChangeDataActivity
@@ -55,6 +56,7 @@ import com.example.administrator.shadowapplication.setting.SettingActivity
 import com.example.administrator.shadowapplication.thread_test.AsyncTaskActivity
 import com.example.administrator.shadowapplication.timer.CustomTimer1Activity
 import kotlinx.android.synthetic.main.activity_main_tab.*
+import me.ele.uetool.UETool
 
 class MainTabActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
@@ -322,6 +324,18 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_tab)
+        control.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                if (!UETool.showUETMenu()) {
+                    control.isChecked = false
+                }
+            } else {
+                UETool.dismissUETMenu()
+            }
+        }
+        control.isChecked = true
+
+
         valueAnimator.setOnClickListener(this)
         pathAnimator.setOnClickListener(this)
         lottieAc.setOnClickListener(this)

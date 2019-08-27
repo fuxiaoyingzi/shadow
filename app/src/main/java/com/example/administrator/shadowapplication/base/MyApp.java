@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.util.Log;
 
 import com.baidu.mapapi.SDKInitializer;
@@ -14,6 +15,8 @@ import com.example.administrator.shadowapplication.crash_log.OtherProcessCrashLi
 import com.example.administrator.shadowapplication.dagger.AppComponent;
 import com.example.administrator.shadowapplication.dagger.DaggerAppComponent;
 import com.example.administrator.shadowapplication.hot_fix.andfix.FixPackageManager;
+import com.example.administrator.shadowapplication.widget.ue_tool.CustomAttribution;
+import com.example.administrator.shadowapplication.widget.ue_tool.FilterOutView;
 import com.tencent.tinker.entry.ApplicationLike;
 import com.tencent.tinker.lib.listener.DefaultPatchListener;
 import com.tencent.tinker.lib.patch.UpgradePatch;
@@ -36,6 +39,7 @@ import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
+import me.ele.uetool.UETool;
 
 /**
  * Created by Administrator on 2017/11/2.
@@ -62,6 +66,64 @@ public class MyApp extends Application implements HasActivityInjector {
         initPatch();
         initJpush();
         initTinkerPatch();
+        initUeTool();
+    }
+
+    /**
+     * 初始化UETool
+     */
+    private void initUeTool() {
+        //过滤掉你不需要选中的 View
+        UETool.putFilterClass(FilterOutView.class);
+        //自定义实现你的 View 的属性
+        UETool.putAttrsProviderClass(CustomAttribution.class);
+
+        registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+
+            private int visibleActivityCount;
+            private int uetoolDismissY = -1;
+
+            @Override
+            public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+
+            }
+
+            @Override
+            public void onActivityStarted(Activity activity) {
+                visibleActivityCount++;
+                if (visibleActivityCount == 1 && uetoolDismissY >= 0) {
+                    UETool.showUETMenu(uetoolDismissY);
+                }
+            }
+
+            @Override
+            public void onActivityResumed(Activity activity) {
+
+            }
+
+            @Override
+            public void onActivityPaused(Activity activity) {
+
+            }
+
+            @Override
+            public void onActivityStopped(Activity activity) {
+                visibleActivityCount--;
+                if (visibleActivityCount == 0) {
+                    uetoolDismissY = UETool.dismissUETMenu();
+                }
+            }
+
+            @Override
+            public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+
+            }
+
+            @Override
+            public void onActivityDestroyed(Activity activity) {
+
+            }
+        });
     }
 
     /**
@@ -113,9 +175,8 @@ public class MyApp extends Application implements HasActivityInjector {
     }
 
 
-
-
     private ApplicationLike tinkerApplicationLike;
+
     /**
      * 我们需要确保至少对主进程跟patch进程初始化 TinkerPatch
      */

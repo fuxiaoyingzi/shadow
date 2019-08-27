@@ -203,4 +203,9 @@ dependencies {
     provided("com.tinkerpatch.tinker:tinker-android-anno:1.9.13.3")
     implementation("com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.13.3")
 
+
+    //UEtool
+    debugImplementation 'me.ele:uetool:1.2.3'
+    releaseImplementation 'me.ele:uetool-no-op:1.2.3'
+
 }
