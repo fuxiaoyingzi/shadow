@@ -44,8 +44,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Dark">
-        <activity android:name=".ConstraintActivity2"></activity>
-        <activity android:name=".ConstraintActivity" />
+        <activity android:name=".constraint.ConstraintActivity3"></activity>
+        <activity android:name=".constraint.ConstraintActivity2" />
+        <activity android:name=".constraint.ConstraintActivity" />
         <activity android:name=".dispatch.DispatchTouchEventActivity" />
         <activity android:name=".activity.MediaPlayerActivity" />
         <activity android:name=".activity.AutoSizeActivity" />

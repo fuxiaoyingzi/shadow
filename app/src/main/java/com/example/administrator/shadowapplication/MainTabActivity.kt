@@ -22,6 +22,7 @@ import com.example.administrator.shadowapplication.anim.PathActivity
 import com.example.administrator.shadowapplication.anim.TweenAnimationActivity
 import com.example.administrator.shadowapplication.anim.ValueAnimatorActivity
 import com.example.administrator.shadowapplication.broadcast_receive.BroadcastReceiveActivity
+import com.example.administrator.shadowapplication.constraint.ConstraintActivity
 import com.example.administrator.shadowapplication.databing.UserActivity
 import com.example.administrator.shadowapplication.date.CalendarActivity
 import com.example.administrator.shadowapplication.date.DateMainActivity
@@ -341,7 +342,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 UETool.dismissUETMenu()
             }
         }
-        control.isChecked = true
+        control.isChecked = false
 
 
         valueAnimator.setOnClickListener(this)

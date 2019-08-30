@@ -1,7 +1,8 @@
-package com.example.administrator.shadowapplication
+package com.example.administrator.shadowapplication.constraint
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.administrator.shadowapplication.R
 
 class ConstraintActivity2 : AppCompatActivity() {
 
