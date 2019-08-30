@@ -1,11 +1,12 @@
 package com.example.administrator.shadowapplication
 
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.CompoundButton
 import com.example.administrator.shadowapplication.Gallery.GalleryActivity
 import com.example.administrator.shadowapplication.Gallery.GoodsDetailActivity
 import com.example.administrator.shadowapplication.Gallery.TestViewPagerChangeDataActivity
@@ -26,12 +27,12 @@ import com.example.administrator.shadowapplication.date.CalendarActivity
 import com.example.administrator.shadowapplication.date.DateMainActivity
 import com.example.administrator.shadowapplication.db.SqliteTestActivity
 import com.example.administrator.shadowapplication.dialog.CustomDialog
+import com.example.administrator.shadowapplication.dispatch.DispatchTouchEventActivity
 import com.example.administrator.shadowapplication.eventbus.EventBusTestActivity
 import com.example.administrator.shadowapplication.glide.GiphyActivity
 import com.example.administrator.shadowapplication.hot_fix.HotRestoreActivity
 import com.example.administrator.shadowapplication.http.HttpUrlConnectionActivity
 import com.example.administrator.shadowapplication.http.RetrofitActivity
-
 import com.example.administrator.shadowapplication.ipc.IPCServiceActivity
 import com.example.administrator.shadowapplication.ipc.messenger.MessengerServiceActivity
 import com.example.administrator.shadowapplication.jpush.JpushMainActivity
@@ -316,6 +317,13 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
             R.id.processCommunication -> {
                 startActivity(Intent(this, ProcessCommunicationActivity::class.java))
             }
+            R.id.dispatch -> {
+                startActivity(Intent(this, DispatchTouchEventActivity::class.java))
+            }
+
+            R.id.constraintLayout -> {
+                startActivity(Intent(this, ConstraintActivity::class.java))
+            }
 
 
         }
@@ -401,5 +409,26 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         mAutoSize.setOnClickListener(this)
         tinkerUpdate.setOnClickListener(this)
         processCommunication.setOnClickListener(this)
+        dispatch.setOnClickListener(this)
+        constraintLayout.setOnClickListener(this)
+
+    }
+
+    //APP字体大小不随系统字体大小而改变
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        //非默认值
+        if (newConfig.fontScale  !=   1.0f) {
+            resources
+        }
+        super.onConfigurationChanged(newConfig)
+    }
+
+
+    override fun getResources(): Resources {
+        val res = super.getResources()
+        val config = Configuration()
+        config.setToDefaults()
+        res.updateConfiguration(config, res.displayMetrics)
+        return res
     }
 }

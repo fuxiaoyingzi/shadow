@@ -19,9 +19,24 @@
             android:padding="5dp"
             android:text="打开UETool开关" />
 
+        <LinearLayout style="@style/main_tab_layout">
+
+            <TextView
+                android:id="@+id/constraintLayout"
+                style="@style/main_tab_item"
+                android:text="约束布局" />
+
+
+        </LinearLayout>
+
         <LinearLayout
             style="@style/main_tab_layout"
             android:background="@color/road_red">
+
+            <TextView
+                android:id="@+id/dispatch"
+                style="@style/main_tab_item"
+                android:text="事件分发" />
 
             <TextView
                 android:id="@+id/tinkerUpdate"
@@ -77,7 +92,6 @@
 
         </LinearLayout>
 
-
         <LinearLayout style="@style/main_tab_layout">
 
             <TextView
@@ -97,6 +111,7 @@
 
 
         </LinearLayout>
+
 
         <LinearLayout
             style="@style/main_tab_layout"
@@ -332,7 +347,6 @@
                 android:text="通知" />
         </LinearLayout>
 
-
         <LinearLayout
             style="@style/main_tab_layout"
             android:background="@color/road_red">
@@ -392,6 +406,7 @@
                 style="@style/main_tab_item"
                 android:text="材料设计" />
         </LinearLayout>
+
 
         <LinearLayout style="@style/main_tab_layout">
 
@@ -453,8 +468,6 @@
 
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>

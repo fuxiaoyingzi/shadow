@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dispatch.DispatchTouchEventActivity">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mMap"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <com.example.administrator.shadowapplication.dispatch.TransScrollView
+        android:id="@+id/mScrollView"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.example.administrator.shadowapplication.dispatch.TransparentView
+                android:id="@+id/mTransparent"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#ff00ff00" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:background="#ff0000"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </com.example.administrator.shadowapplication.dispatch.TransScrollView>
+
+</FrameLayout>

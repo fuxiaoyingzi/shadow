@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemView"
+    tools:context=".ConstraintActivity">
+
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="100dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launchers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="哈哈哈哈哈哈哈哈哈哈或或或"
+        android:textColor="#ff00ff"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/photo"
+        app:layout_constraintRight_toLeftOf="@+id/rightPhone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="113dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/albumColorPrimary"
+        android:text="jjjjj"
+        android:includeFontPadding="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@+id/photo" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="3.5"
+        app:layout_constraintBottom_toBottomOf="@+id/rating"
+        app:layout_constraintLeft_toRightOf="@+id/rating"
+        app:layout_constraintTop_toTopOf="@+id/rating" />
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="#ffee7800"
+        android:text="one"
+        app:layout_constraintBottom_toTopOf="@+id/bottomText"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintRight_toLeftOf="@+id/two"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+    <TextView
+        android:id="@+id/two"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="#ffee0000"
+        android:text="two"
+        android:includeFontPadding="false"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/bottomText"
+        app:layout_constraintLeft_toRightOf="@+id/one"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+    <TextView
+        android:id="@+id/bottomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bbbbbbb"
+        android:textColor="#ff0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/photo"
+        app:layout_constraintLeft_toLeftOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/rightPhone"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/collection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+</android.support.constraint.ConstraintLayout>
