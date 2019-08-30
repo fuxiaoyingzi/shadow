@@ -2,9 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     tools:context=".constraint.ConstraintActivity">
 
 
@@ -40,8 +40,8 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:background="@color/albumColorPrimary"
-        android:text="jjjjj"
         android:includeFontPadding="false"
+        android:text="jjjjj"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="4:1"
@@ -65,25 +65,25 @@
         android:background="#ffee7800"
         android:text="one"
         app:layout_constraintBottom_toTopOf="@+id/bottomText"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintLeft_toLeftOf="@+id/title"
         app:layout_constraintRight_toLeftOf="@+id/two"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@+id/rating" />
+        app:layout_constraintTop_toBottomOf="@+id/rating"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/two"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:background="#ffee0000"
-        android:text="two"
         android:includeFontPadding="false"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintHorizontal_weight="1"
+        android:text="two"
         app:layout_constraintBottom_toTopOf="@+id/bottomText"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintLeft_toRightOf="@+id/one"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rating" />
+        app:layout_constraintTop_toBottomOf="@+id/rating"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/bottomText"

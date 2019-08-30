@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import com.example.administrator.shadowapplication.R
 import kotlinx.android.synthetic.main.activity_constraint.*
 
+
 /**
  * 约束 布局
  */
@@ -20,6 +21,10 @@ class ConstraintActivity : AppCompatActivity() {
 
         rating.setOnClickListener {
             startActivity(Intent(this@ConstraintActivity, ConstraintActivity3::class.java))
+        }
+
+        rightPhone.setOnClickListener {
+            startActivity(Intent(this@ConstraintActivity, ConstraintActivity4::class.java))
         }
 
 
