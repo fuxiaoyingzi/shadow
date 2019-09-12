@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.open_gl
 
 import android.opengl.GLSurfaceView
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 
 class OpenGlActivity : AppCompatActivity() {

@@ -5,16 +5,12 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteCallbackList;
 import android.os.RemoteException;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.example.administrator.shadowapplication.IOnNewBookArrivedListener;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
-
-import okio.ForwardingTimeout;
 
 /**
  * <pre>

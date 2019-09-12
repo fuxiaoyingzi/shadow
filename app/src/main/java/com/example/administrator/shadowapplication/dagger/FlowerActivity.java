@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.dagger;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.widget.TextView;
 
 import com.example.administrator.shadowapplication.R;

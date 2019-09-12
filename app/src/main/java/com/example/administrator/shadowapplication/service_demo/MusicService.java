@@ -2,14 +2,10 @@ package com.example.administrator.shadowapplication.service_demo;
 
 import android.app.Service;
 import android.content.Intent;
-import android.os.Handler;
 import android.os.IBinder;
-import android.os.Message;
-import android.os.Messenger;
-import android.support.annotation.IntDef;
-import android.support.annotation.Nullable;
-import android.view.MenuItem;
-import android.widget.Toast;
+
+import androidx.annotation.IntDef;
+import androidx.annotation.Nullable;
 
 /**
  * Created by Administrator on 2017/6/29.

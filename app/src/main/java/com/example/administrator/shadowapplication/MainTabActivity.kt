@@ -5,7 +5,7 @@ import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import com.example.administrator.shadowapplication.Gallery.GalleryActivity
 import com.example.administrator.shadowapplication.Gallery.GoodsDetailActivity

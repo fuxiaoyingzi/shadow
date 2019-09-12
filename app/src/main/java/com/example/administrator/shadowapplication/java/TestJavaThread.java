@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.java;
 
 import android.os.Build;
-import android.support.annotation.RequiresApi;
+import androidx.annotation.RequiresApi;
 
 import java.util.concurrent.ThreadLocalRandom;
 

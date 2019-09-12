@@ -3,22 +3,13 @@ package com.example.administrator.shadowapplication.activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.provider.ContactsContract;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.administrator.shadowapplication.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 测试内容提供者 读取联系人信息

@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.http;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.crash_log.LogUtil;

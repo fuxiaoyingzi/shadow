@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.process_communication.conten
 
 import android.content.ContentValues
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import com.example.administrator.shadowapplication.R
 import kotlinx.android.synthetic.main.activity_content_provider.*

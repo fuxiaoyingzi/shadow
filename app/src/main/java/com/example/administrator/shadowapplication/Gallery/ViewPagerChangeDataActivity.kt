@@ -3,12 +3,12 @@ package com.example.administrator.shadowapplication.Gallery
 import android.content.Context
 import android.graphics.Point
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-import android.support.v4.view.PagerAdapter
-import android.support.v4.view.ViewPager
-import android.support.v7.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
+import androidx.viewpager.widget.PagerAdapter
+import androidx.viewpager.widget.ViewPager
+import androidx.appcompat.app.AppCompatActivity
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
@@ -386,7 +386,7 @@ class ViewPagerChangeDataActivity : AppCompatActivity() {
             val fragments = adapter.mFragmentMap
             if (fragments.isNotEmpty()) {
                 for (i in 0 until fragments.size) {
-                    ft.remove(fragments[i.toString()])
+                    fragments[i.toString()]?.let { ft.remove(it) }
                 }
             }
             ft.commit()
@@ -407,7 +407,7 @@ class ViewPagerChangeDataActivity : AppCompatActivity() {
             val fragments = adapter.mFragmentMap
             if (fragments.isNotEmpty()) {
                 for (i in 0 until fragments.size) {
-                    ft.remove(fragments[i.toString()])
+                    fragments[i.toString()]?.let { ft.remove(it) }
                 }
             }
             ft.commit()

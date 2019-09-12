@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.*
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 import com.example.administrator.shadowapplication.R
 import com.example.administrator.shadowapplication.process_communication.content_provider.ContentProviderActivity

@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.service_demo.service;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.example.administrator.shadowapplication.crash_log.LogUtil;
 

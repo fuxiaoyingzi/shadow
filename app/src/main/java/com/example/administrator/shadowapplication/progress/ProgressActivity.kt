@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.progress
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import com.example.administrator.shadowapplication.R
 import kotlinx.android.synthetic.main.activity_progress.*

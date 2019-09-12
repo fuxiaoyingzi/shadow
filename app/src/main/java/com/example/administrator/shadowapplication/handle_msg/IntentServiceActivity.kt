@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.handle_msg
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import com.example.administrator.shadowapplication.R
 import kotlinx.android.synthetic.main.activity_intent_setvice.*

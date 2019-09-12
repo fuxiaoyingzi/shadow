@@ -2,23 +2,18 @@ package com.example.administrator.shadowapplication.setting;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.os.Build;
 import android.preference.Preference;
-import android.support.annotation.RequiresApi;
-import android.support.v4.view.LayoutInflaterFactory;
-import android.text.Layout;
+import androidx.annotation.RequiresApi;
+import androidx.core.view.LayoutInflaterFactory;
+
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.shadowapplication.R;
-
-import java.text.AttributedCharacterIterator;
-import java.util.zip.Inflater;
 
 /**
  *

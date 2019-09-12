@@ -19,7 +19,7 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="?attr/colorPrimary"
@@ -33,7 +33,7 @@
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
         <TextView
             style="@style/text"

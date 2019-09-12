@@ -1,10 +1,10 @@
 package com.example.administrator.shadowapplication.constraint
 
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
-import android.support.constraint.ConstraintSet
-import android.support.transition.TransitionManager
-import android.support.v7.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.transition.TransitionManager
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import com.example.administrator.shadowapplication.R

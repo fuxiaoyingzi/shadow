@@ -4,7 +4,7 @@ import android.media.AudioManager
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.SeekBar
 import com.example.administrator.shadowapplication.R
 import com.example.administrator.shadowapplication.crash_log.ToastUtil

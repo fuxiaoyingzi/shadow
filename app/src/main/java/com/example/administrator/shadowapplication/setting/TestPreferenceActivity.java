@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.setting;
 
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.administrator.shadowapplication.R;

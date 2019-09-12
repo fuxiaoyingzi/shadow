@@ -4,9 +4,8 @@ import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
-import android.os.Handler;
-import android.os.Message;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -14,8 +13,6 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.Scroller;
-
-import com.autonavi.amap.mapcore.interfaces.IglModel;
 
 /**
  * Author : shadow

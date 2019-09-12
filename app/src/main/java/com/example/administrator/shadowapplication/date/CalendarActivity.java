@@ -1,8 +1,8 @@
 package com.example.administrator.shadowapplication.date;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.crash_log.ToastUtil;
@@ -14,8 +14,6 @@ import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 
 import java.util.Calendar;
 import java.util.Date;
-
-import butterknife.BindView;
 
 import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.SELECTION_MODE_MULTIPLE;
 

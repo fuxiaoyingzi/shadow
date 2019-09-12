@@ -1,9 +1,7 @@
 package com.example.administrator.shadowapplication.activity;
 
-import android.animation.ObjectAnimator;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.animation.AnimationUtils;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.widget.CustomWatchView;

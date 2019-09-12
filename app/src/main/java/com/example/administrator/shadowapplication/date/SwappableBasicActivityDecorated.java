@@ -1,8 +1,8 @@
 package com.example.administrator.shadowapplication.date;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.date.decorators.HighlightWeekendsDecorator;

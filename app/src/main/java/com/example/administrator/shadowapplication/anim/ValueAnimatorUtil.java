@@ -4,7 +4,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
-import android.support.graphics.drawable.ArgbEvaluator;
+import androidx.vectordrawable.graphics.drawable.ArgbEvaluator;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 

@@ -10,9 +10,8 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.crash_log.ToastUtil;

@@ -1,6 +1,6 @@
 package com.example.administrator.shadowapplication.handle_msg
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TimeUtils
 import com.example.administrator.shadowapplication.R

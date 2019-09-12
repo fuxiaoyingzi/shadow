@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.ipc.share_file
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.administrator.shadowapplication.R
 import kotlinx.android.synthetic.main.activity_file_share1.*

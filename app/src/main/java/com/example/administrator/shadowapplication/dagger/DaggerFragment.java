@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.dagger;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import javax.inject.Inject;
 

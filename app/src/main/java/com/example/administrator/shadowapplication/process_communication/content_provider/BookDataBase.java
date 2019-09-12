@@ -3,7 +3,7 @@ package com.example.administrator.shadowapplication.process_communication.conten
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 /**
  * @author 付影影

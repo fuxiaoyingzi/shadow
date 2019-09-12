@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.jpush;
 
 
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.util.Log;
 
 import cn.jiguang.analytics.android.api.JAnalyticsInterface;

@@ -1,16 +1,14 @@
 package com.example.administrator.shadowapplication.album;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.administrator.shadowapplication.R;
 import com.yanzhenjie.album.Action;
 import com.yanzhenjie.album.Album;
 import com.yanzhenjie.album.AlbumFile;
-import com.yanzhenjie.album.api.widget.Widget;
 
 import java.util.ArrayList;
 

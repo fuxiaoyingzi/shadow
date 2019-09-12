@@ -1,8 +1,8 @@
 package com.example.administrator.shadowapplication.constraint
 
 import android.os.Bundle
-import android.support.constraint.ConstraintSet
-import android.support.v7.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.appcompat.app.AppCompatActivity
 import com.example.administrator.shadowapplication.R
 import kotlinx.android.synthetic.main.activity_constraint.constraintLayout
 import kotlinx.android.synthetic.main.activity_constraint5.*

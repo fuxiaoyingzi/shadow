@@ -7,7 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
@@ -15,7 +15,6 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 
 import com.example.administrator.shadowapplication.R;
-import com.example.administrator.shadowapplication.crash_log.ToastUtil;
 
 public class TestScrollviewActivity extends AppCompatActivity {
 

@@ -1,6 +1,6 @@
 package com.example.administrator.shadowapplication.crash_log;
 
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;

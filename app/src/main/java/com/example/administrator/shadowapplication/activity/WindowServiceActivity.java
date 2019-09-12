@@ -6,8 +6,8 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.PhoneStateListener;
 import android.telephony.SmsManager;
@@ -19,9 +19,6 @@ import android.widget.Toast;
 
 import com.example.administrator.shadowapplication.R;
 
-import java.io.FileNotFoundException;
-import java.io.OutputStream;
-import java.io.PrintStream;
 import java.util.Date;
 
 import static com.example.administrator.shadowapplication.R.array.number;

@@ -3,7 +3,7 @@ package com.example.administrator.shadowapplication.anim
 import android.animation.ObjectAnimator
 import android.graphics.Path
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.administrator.shadowapplication.R
 import kotlinx.android.synthetic.main.activity_path.*
 

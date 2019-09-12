@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.hot_fix.andfix
 
 import android.os.Bundle
 import android.os.Environment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import com.example.administrator.shadowapplication.R

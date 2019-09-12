@@ -1,8 +1,8 @@
 package com.example.administrator.shadowapplication.nine_gridlayout
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.administrator.shadowapplication.R
 import kotlinx.android.synthetic.main.activity_nine_gridlayout.*
 import org.jetbrains.anko.toast

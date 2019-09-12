@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.dispatch
 
 import android.graphics.Rect
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import com.example.administrator.shadowapplication.R

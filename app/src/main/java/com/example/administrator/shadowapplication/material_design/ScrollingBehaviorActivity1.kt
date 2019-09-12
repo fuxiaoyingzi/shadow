@@ -1,7 +1,7 @@
 package com.example.administrator.shadowapplication.material_design
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.administrator.shadowapplication.R
 
 class ScrollingBehaviorActivity1 : AppCompatActivity() {

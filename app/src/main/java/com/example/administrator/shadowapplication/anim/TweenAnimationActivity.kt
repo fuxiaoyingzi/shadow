@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.anim
 
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
 import android.widget.ArrayAdapter

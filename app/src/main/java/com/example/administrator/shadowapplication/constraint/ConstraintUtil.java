@@ -1,9 +1,9 @@
 package com.example.administrator.shadowapplication.constraint;
 
-import android.support.annotation.IdRes;
-import android.support.constraint.ConstraintLayout;
-import android.support.constraint.ConstraintSet;
-import android.support.transition.TransitionManager;
+import androidx.annotation.IdRes;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.transition.TransitionManager;
 
 /**
  * @author 付影影

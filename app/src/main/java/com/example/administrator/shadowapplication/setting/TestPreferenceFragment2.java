@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.setting;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.example.administrator.shadowapplication.R;
 

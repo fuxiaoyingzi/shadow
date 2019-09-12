@@ -2,7 +2,7 @@ package com.example.administrator.shadowapplication.eventbus;
 
 import android.content.Intent;
 import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.activity.CustomViewGroupActivity;
-import com.example.administrator.shadowapplication.timer.CustomTimer2Activity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

@@ -3,7 +3,7 @@ package com.example.administrator.shadowapplication.android_drawable
 import android.graphics.PixelFormat
 import android.graphics.drawable.ClipDrawable
 import android.graphics.drawable.TransitionDrawable
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
 import android.view.WindowManager
