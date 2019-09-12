@@ -15,6 +15,7 @@ import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.crash_log.LogUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -238,9 +239,9 @@ public class GalleryActivity extends AppCompatActivity {
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
-           /* mImageList = new ArrayList<>();
+            mImageList = new ArrayList<>();
             mFragmentMap = new HashMap<>();
-            this.fm = fm;*/
+            this.fm = fm;
            for (int i =0; i< mFragmentMap.size();i++){
                mFragmentMap.get(String.valueOf(i));
            }

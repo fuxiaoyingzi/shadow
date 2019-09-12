@@ -165,7 +165,7 @@ class AMapActivity : AppCompatActivity(), AMap.CancelableCallback {
         amapView.onPause()
     }
 
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         amapView.onSaveInstanceState(outState)
     }
