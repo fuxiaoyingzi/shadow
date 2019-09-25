@@ -20,6 +20,11 @@
                 style="@style/main_tab_item"
                 android:text="约束布局" />
 
+            <TextView
+                android:id="@+id/dagger"
+                style="@style/main_tab_item"
+                android:text="Dagger" />
+
 
         </LinearLayout>
 

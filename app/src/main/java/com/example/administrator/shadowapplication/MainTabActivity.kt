@@ -5,8 +5,8 @@ import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.administrator.shadowapplication.Gallery.GalleryActivity
 import com.example.administrator.shadowapplication.Gallery.GoodsDetailActivity
 import com.example.administrator.shadowapplication.Gallery.TestViewPagerChangeDataActivity
@@ -23,6 +23,7 @@ import com.example.administrator.shadowapplication.anim.TweenAnimationActivity
 import com.example.administrator.shadowapplication.anim.ValueAnimatorActivity
 import com.example.administrator.shadowapplication.broadcast_receive.BroadcastReceiveActivity
 import com.example.administrator.shadowapplication.constraint.ConstraintActivity
+import com.example.administrator.shadowapplication.dagger.test.WatchActivity
 import com.example.administrator.shadowapplication.databing.UserActivity
 import com.example.administrator.shadowapplication.date.CalendarActivity
 import com.example.administrator.shadowapplication.date.DateMainActivity
@@ -326,6 +327,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, ConstraintActivity::class.java))
             }
 
+            R.id.dagger -> {
+                startActivity(Intent(this, WatchActivity::class.java))
+            }
+
 
         }
     }
@@ -412,13 +417,14 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         processCommunication.setOnClickListener(this)
         dispatch.setOnClickListener(this)
         constraintLayout.setOnClickListener(this)
+        dagger.setOnClickListener(this)
 
     }
 
     //APP字体大小不随系统字体大小而改变
     override fun onConfigurationChanged(newConfig: Configuration) {
         //非默认值
-        if (newConfig.fontScale  !=   1.0f) {
+        if (newConfig.fontScale != 1.0f) {
             resources
         }
         super.onConfigurationChanged(newConfig)
