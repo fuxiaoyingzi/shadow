@@ -25,6 +25,11 @@
                 style="@style/main_tab_item"
                 android:text="Dagger" />
 
+            <TextView
+                android:id="@+id/threadPool"
+                style="@style/main_tab_item"
+                android:text="线程池" />
+
 
         </LinearLayout>
 
@@ -177,7 +182,7 @@
             <TextView
                 android:id="@+id/httpUrlConnection"
                 style="@style/main_tab_item"
-                android:text="HttpUrlConnection" />
+                android:text="网络请求" />
 
             <TextView
                 android:id="@+id/newCustomView"

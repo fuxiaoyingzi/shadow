@@ -32,6 +32,7 @@ import com.example.administrator.shadowapplication.dialog.CustomDialog
 import com.example.administrator.shadowapplication.dispatch.DispatchTouchEventActivity
 import com.example.administrator.shadowapplication.eventbus.EventBusTestActivity
 import com.example.administrator.shadowapplication.glide.GiphyActivity
+import com.example.administrator.shadowapplication.handle_msg.ThreadPoolActivity
 import com.example.administrator.shadowapplication.hot_fix.HotRestoreActivity
 import com.example.administrator.shadowapplication.http.HttpUrlConnectionActivity
 import com.example.administrator.shadowapplication.http.RetrofitActivity
@@ -330,6 +331,9 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
             R.id.dagger -> {
                 startActivity(Intent(this, WatchActivity::class.java))
             }
+            R.id.threadPool -> {
+                startActivity(Intent(this, ThreadPoolActivity::class.java))
+            }
 
 
         }
@@ -418,6 +422,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         dispatch.setOnClickListener(this)
         constraintLayout.setOnClickListener(this)
         dagger.setOnClickListener(this)
+        threadPool.setOnClickListener(this)
 
     }
 

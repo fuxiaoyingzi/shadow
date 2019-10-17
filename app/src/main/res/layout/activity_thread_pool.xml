@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".handle_msg.ThreadPoolActivity">
 
+    <TextView
+        android:id="@+id/tvFixThreadPool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fixThreadPool"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivDownImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_launchers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFixThreadPool" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
