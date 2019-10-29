@@ -210,4 +210,7 @@ dependencies {
     debugImplementation 'me.ele:uetool:1.2.3'
     releaseImplementation 'me.ele:uetool-no-op:1.2.3'
 
+    //BRVAH https://github.com/CymChad/BaseRecyclerViewAdapterHelper/blob/master/README-cn.md
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+
 }

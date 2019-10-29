@@ -1,7 +1,6 @@
-package com.example.administrator.shadowapplication.http;
+package com.example.administrator.shadowapplication.http.retrofit;
 
 import android.os.Environment;
-import android.view.ScaleGestureDetector;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;

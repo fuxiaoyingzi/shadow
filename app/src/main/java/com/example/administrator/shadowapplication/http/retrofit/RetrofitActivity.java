@@ -1,10 +1,11 @@
-package com.example.administrator.shadowapplication.http;
+package com.example.administrator.shadowapplication.http.retrofit;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.administrator.shadowapplication.R;
 import com.example.administrator.shadowapplication.crash_log.LogUtil;
+import com.example.administrator.shadowapplication.http.GitModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;

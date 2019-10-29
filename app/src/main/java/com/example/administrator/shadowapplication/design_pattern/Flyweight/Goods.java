@@ -6,7 +6,7 @@ package com.example.administrator.shadowapplication.design_pattern.Flyweight;
  * Date :2018/4/12/012
  */
 
-public class Goods implements IGoods{
+public class Goods implements IGoods {
     private String name;
     private String version;
 
@@ -16,9 +16,9 @@ public class Goods implements IGoods{
 
     @Override
     public void showGoodsPrice(String version) {
-        if (version.equals("32G")){
+        if (version.equals("32G")) {
             System.out.println("价格为1999元");
-        }else  if (version.equals("64G")){
+        } else if (version.equals("64G")) {
             System.out.println("价格为2999元");
         }
     }

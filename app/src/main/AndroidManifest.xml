@@ -44,7 +44,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Dark">
-        <activity android:name=".dagger.test.WatchActivity"></activity>
+        <activity android:name=".adapter.BaseRecycleAdapterActivity"></activity>
+        <activity android:name=".dagger.test.WatchActivity" />
         <activity android:name=".constraint.ConstraintActivity4" />
         <activity android:name=".constraint.ConstraintActivity3" />
         <activity android:name=".constraint.ConstraintActivity2" />
@@ -148,7 +149,7 @@
             android:name=".db.SqliteTestActivity"
             android:exported="true" />
         <activity
-            android:name=".http.RetrofitActivity"
+            android:name=".http.retrofit.RetrofitActivity"
             android:exported="true" />
         <activity
             android:name=".material_design.FooterBehaviorActivity"

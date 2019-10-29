@@ -1,5 +1,7 @@
-package com.example.administrator.shadowapplication.http;
+package com.example.administrator.shadowapplication.http.retrofit;
 
+
+import com.example.administrator.shadowapplication.http.GitModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

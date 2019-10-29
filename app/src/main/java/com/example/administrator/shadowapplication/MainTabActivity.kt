@@ -12,6 +12,7 @@ import com.example.administrator.shadowapplication.Gallery.GoodsDetailActivity
 import com.example.administrator.shadowapplication.Gallery.TestViewPagerChangeDataActivity
 import com.example.administrator.shadowapplication.Gallery.ViewPagerChangeDataActivity
 import com.example.administrator.shadowapplication.activity.*
+import com.example.administrator.shadowapplication.adapter.BaseRecycleAdapterActivity
 import com.example.administrator.shadowapplication.aidl.AidlBindServiceActivity
 import com.example.administrator.shadowapplication.album.AlbumActivity
 import com.example.administrator.shadowapplication.android_drawable.AndroidDrawableActivity
@@ -35,7 +36,7 @@ import com.example.administrator.shadowapplication.glide.GiphyActivity
 import com.example.administrator.shadowapplication.handle_msg.ThreadPoolActivity
 import com.example.administrator.shadowapplication.hot_fix.HotRestoreActivity
 import com.example.administrator.shadowapplication.http.HttpUrlConnectionActivity
-import com.example.administrator.shadowapplication.http.RetrofitActivity
+import com.example.administrator.shadowapplication.http.retrofit.RetrofitActivity
 import com.example.administrator.shadowapplication.ipc.IPCServiceActivity
 import com.example.administrator.shadowapplication.ipc.messenger.MessengerServiceActivity
 import com.example.administrator.shadowapplication.jpush.JpushMainActivity
@@ -334,6 +335,9 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
             R.id.threadPool -> {
                 startActivity(Intent(this, ThreadPoolActivity::class.java))
             }
+            R.id.BRVAH -> {
+                startActivity(Intent(this, BaseRecycleAdapterActivity::class.java))
+            }
 
 
         }
@@ -423,6 +427,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         constraintLayout.setOnClickListener(this)
         dagger.setOnClickListener(this)
         threadPool.setOnClickListener(this)
+        BRVAH.setOnClickListener(this)
 
     }
 
