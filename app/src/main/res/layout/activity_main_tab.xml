@@ -19,7 +19,12 @@
             <TextView
                 android:id="@+id/BRVAH"
                 style="@style/main_tab_item"
-                android:text="BaseRecycleViewAdapterHelp" />
+                android:text="BRVAHelp" />
+
+            <TextView
+                android:id="@+id/flutter"
+                style="@style/main_tab_item"
+                android:text="flutter" />
 
 
         </LinearLayout>

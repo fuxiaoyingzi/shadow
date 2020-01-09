@@ -32,6 +32,7 @@ import com.example.administrator.shadowapplication.db.SqliteTestActivity
 import com.example.administrator.shadowapplication.dialog.CustomDialog
 import com.example.administrator.shadowapplication.dispatch.DispatchTouchEventActivity
 import com.example.administrator.shadowapplication.eventbus.EventBusTestActivity
+import com.example.administrator.shadowapplication.flutter.FlutterActivity
 import com.example.administrator.shadowapplication.glide.GiphyActivity
 import com.example.administrator.shadowapplication.handle_msg.ThreadPoolActivity
 import com.example.administrator.shadowapplication.hot_fix.HotRestoreActivity
@@ -339,6 +340,10 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, BaseRecycleAdapterActivity::class.java))
             }
 
+            R.id.flutter -> {
+                startActivity(Intent(this, FlutterActivity::class.java))
+            }
+
 
         }
     }
@@ -428,6 +433,7 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         dagger.setOnClickListener(this)
         threadPool.setOnClickListener(this)
         BRVAH.setOnClickListener(this)
+        flutter.setOnClickListener(this)
 
     }
 

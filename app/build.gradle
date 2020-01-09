@@ -213,4 +213,6 @@ dependencies {
     //BRVAH https://github.com/CymChad/BaseRecyclerViewAdapterHelper/blob/master/README-cn.md
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
 
+    implementation project(':flutter')
+
 }
