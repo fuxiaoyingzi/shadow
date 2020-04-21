@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.bugtags.library.Bugtags;
 import com.example.administrator.shadowapplication.BuildConfig;
 import com.example.administrator.shadowapplication.crash_log.CrashHandle;
 import com.example.administrator.shadowapplication.crash_log.OtherProcessCrashListener;
@@ -67,6 +68,13 @@ public class MyApp extends Application implements HasActivityInjector {
         initJpush();
         initTinkerPatch();
         initUeTool();
+        //在这里初始化
+        //BTGInvocationEventNone    // 静默模式，只收集 Crash 信息（如果允许，默认为允许）
+        //
+        //BTGInvocationEventShake   // 通过摇一摇呼出 Bugtags
+        //
+        //BTGInvocationEventBubble  // 通过悬浮小球呼出 Bugtags
+        Bugtags.start("d0793be8fdbd9fe0b9eaf08e7ed93d73 ", this, Bugtags.BTGInvocationEventBubble);
     }
 
     /**

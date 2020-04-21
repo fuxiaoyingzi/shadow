@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/flutter_module/.android/Flutter/flutter.iml" filepath="$PROJECT_DIR$/flutter_module/.android/Flutter/flutter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/flutter_module/flutter_module.iml" filepath="$PROJECT_DIR$/flutter_module/flutter_module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="shadow/app" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_module/.android/Flutter/flutter.iml" filepath="$PROJECT_DIR$/flutter_module/.android/Flutter/flutter.iml" group="shadow/flutter" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_module/flutter_module.iml" filepath="$PROJECT_DIR$/flutter_module/flutter_module.iml" group="shadow/flutter_module" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" group="shadow/lib" />
       <module fileurl="file://$PROJECT_DIR$/.idea/shadow.iml" filepath="$PROJECT_DIR$/.idea/shadow.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shadow-shadow.iml" filepath="$PROJECT_DIR$/shadow-shadow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shadow-shadow.iml" filepath="$PROJECT_DIR$/shadow-shadow.iml" group="shadow" />
     </modules>
   </component>
 </project>

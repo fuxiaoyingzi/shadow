@@ -11,6 +11,7 @@ buildscript {
         maven {
             url "https://raw.githubusercontent.com/HyphenateInc/Hyphenate-SDK-Android/master/repository"
         }
+        mavenCentral()//如果 jcenter 很慢，尝试添加 mavenCentral 并调整到首行
         google()
         jcenter()
     }
@@ -19,7 +20,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // TinkerPatch 插件
         classpath "com.tinkerpatch.sdk:tinkerpatch-gradle-plugin:1.2.13.3"
-
+        //bugTags https://www.bugtags.cn/
+        classpath 'com.bugtags.library:bugtags-gradle:latest.integration'
 
     }
 }
@@ -33,6 +35,7 @@ allprojects {
         maven {
             url 'http://download.flutter.io'
         }
+        mavenCentral()//如果 jcenter 很慢，尝试添加 mavenCentral 并调整到首行
         jcenter()
         google()
     }

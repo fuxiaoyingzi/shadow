@@ -5,8 +5,10 @@ import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
+import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.bugtags.library.Bugtags
 import com.example.administrator.shadowapplication.Gallery.GalleryActivity
 import com.example.administrator.shadowapplication.Gallery.GoodsDetailActivity
 import com.example.administrator.shadowapplication.Gallery.TestViewPagerChangeDataActivity
@@ -453,5 +455,21 @@ class MainTabActivity : AppCompatActivity(), View.OnClickListener {
         config.setToDefaults()
         res.updateConfiguration(config, res.displayMetrics)
         return res
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        Bugtags.onResume(this);
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Bugtags.onPause(this);
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        Bugtags.onDispatchTouchEvent(this, ev)
+        return super.dispatchTouchEvent(ev)
     }
 }
